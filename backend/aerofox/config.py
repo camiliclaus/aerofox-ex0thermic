@@ -39,7 +39,8 @@ class Settings:
     app_version: str = "1.1.1"
     # A team-controlled loopback llama.cpp service is the default inference engine.
     llm_enabled: bool = os.environ.get("AEROFOX_LLM", "auto").lower() != "off"
-    model: str = os.environ.get("AEROFOX_MODEL", "aerofox-qwen-1.5b")
+    model: str = os.environ.get("AEROFOX_MODEL", os.environ.get("AEROFOX_LLM_MODEL", "aerofox-qwen-1.5b"))
+    llm_key: str = os.environ.get("AEROFOX_LLM_KEY", "")
     llm_url: str = os.environ.get("AEROFOX_LLM_URL", "http://127.0.0.1:8793")
     llm_timeout_s: float = float(os.environ.get("AEROFOX_LLM_TIMEOUT", "65"))
     llm_queue_wait_s: float = float(os.environ.get("AEROFOX_LLM_QUEUE_WAIT", "25"))

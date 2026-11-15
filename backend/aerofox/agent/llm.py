@@ -67,7 +67,7 @@ def _http(path, payload=None, *, timeout):
     else:
         full_url = base + path
 
-    headers = {"Content-Type": "application/json"}
+    headers = {"Content-Type": "application/json", "User-Agent": "AeroFox/1.1.1"}
     api_key = getattr(settings, "llm_key", None) or getattr(settings, "llm_api_key", None)
     if api_key:
         headers["Authorization"] = f"Bearer {api_key}"
