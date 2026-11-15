@@ -1,4 +1,4 @@
-"""Local llama.cpp inference with an allow-listed scientific tool loop."""
+"""Cloud (Groq/OpenAI) & Local llama.cpp inference with an allow-listed scientific tool loop."""
 from __future__ import annotations
 
 import json
@@ -46,12 +46,11 @@ class NoRedirect(HTTPRedirectHandler):
 
 
 def _base() -> str:
-    endpoint = urlsplit(settings.llm_url)
-    if (endpoint.scheme != "http" or endpoint.hostname not in {"127.0.0.1", "::1"}
-            or endpoint.username or endpoint.password or endpoint.query or endpoint.fragment
-            or endpoint.path.rstrip("/") or endpoint.port is None):
-        raise LLMUnavailable("expected a loopback inference address with an explicit port")
-    return settings.llm_url.rstrip("/")
+    url = settings.llm_url.rstrip("/")
+    endpoint = urlsplit(url)
+    if endpoint.scheme not in {"http", "https"}:
+        raise LLMUnavailable("expected http or https inference scheme")
+    return url
 
 
 def available() -> bool:
@@ -60,36 +59,52 @@ def available() -> bool:
 
 def _http(path, payload=None, *, timeout):
     data = None if payload is None else json.dumps(payload, ensure_ascii=False, allow_nan=False).encode()
-    request = Request(_base() + path, data, {"Content-Type": "application/json"})
+    base = _base()
+    
+    # Evita duplicar /v1 se a URL base já terminar com /v1 e o path começar com /v1/
+    if base.endswith("/v1") and path.startswith("/v1/"):
+        full_url = base + path[3:]
+    else:
+        full_url = base + path
+
+    headers = {"Content-Type": "application/json"}
+    api_key = getattr(settings, "llm_key", None) or getattr(settings, "llm_api_key", None)
+    if api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
+
+    request = Request(full_url, data, headers)
     opener = build_opener(ProxyHandler({}), NoRedirect())
     try:
         with opener.open(request, timeout=timeout) as response:
             return json.loads(response.read(262144))
     except TimeoutError as exc:
-        raise LLMUnavailable("local inference request timed out", "timeout") from exc
+        raise LLMUnavailable("inference request timed out", "timeout") from exc
     except OSError as exc:
-        raise LLMUnavailable("could not reach the local inference server", "connection") from exc
+        raise LLMUnavailable("could not reach the inference server", "connection") from exc
     except ValueError as exc:
-        raise LLMUnavailable("local inference server sent invalid JSON", "protocol") from exc
+        raise LLMUnavailable("inference server sent invalid JSON", "protocol") from exc
 
 
 def ready() -> bool:
     if not available():
         return False
     try:
+        api_key = getattr(settings, "llm_key", None) or getattr(settings, "llm_api_key", None)
+        if api_key and ("groq.com" in settings.llm_url or "openai.com" in settings.llm_url):
+            return True
         return any(model["id"] == settings.model for model in _http("/v1/models", timeout=1)["data"])
     except (LLMUnavailable, KeyError, TypeError, ValueError):
-        return False
+        return bool(getattr(settings, "llm_key", None) or getattr(settings, "llm_api_key", None))
 
 
 @contextmanager
 def _queue(deadline):
     if not JOIN.acquire(False):
-        raise LLMUnavailable("local model queue is full", "busy")
+        raise LLMUnavailable("model queue is full", "busy")
     try:
         wait = min(settings.llm_queue_wait_s, max(0, deadline - time.monotonic()))
         if not SLOT.acquire(timeout=wait):
-            raise LLMUnavailable("local model queue wait expired", "busy")
+            raise LLMUnavailable("model queue wait expired", "busy")
         try:
             yield
         finally:
@@ -102,10 +117,23 @@ def _complete(system, body, limit, deadline, usage, grammar=None, *, stage):
     remaining = deadline - time.monotonic()
     if remaining <= 1:
         raise LLMUnavailable("turn deadline exceeded", "deadline")
-    options = {"model": settings.model, "temperature": 0, "max_tokens": limit,
-               "messages": [{"role": "system", "content": system}, {"role": "user", "content": body}]}
-    if grammar:
+    
+    options = {
+        "model": settings.model, 
+        "temperature": 0, 
+        "max_tokens": limit,
+        "messages": [{"role": "system", "content": system}, {"role": "user", "content": body}]
+    }
+    
+    # Groq / OpenAI suportam response_format para JSON
+    if stage == "plan":
+        options["response_format"] = {"type": "json_object"}
+
+    # Gramáticas customizadas do llama.cpp só são aplicadas se for loopback local
+    is_local = "127.0.0.1" in settings.llm_url or "localhost" in settings.llm_url
+    if grammar and is_local:
         options["grammar"] = grammar
+
     started = time.monotonic()
     response = _http("/v1/chat/completions", options, timeout=min(remaining, settings.llm_timeout_s))
     try:
@@ -125,13 +153,17 @@ def _complete(system, body, limit, deadline, usage, grammar=None, *, stage):
         usage.setdefault("stages", []).append(step)
         log.info("stage=%s finish=%s output_tokens=%d limit=%d elapsed=%.3fs",
                  stage, reason, step["output_tokens"], limit, step["seconds"])
-        if response.get("model") != settings.model:
+        
+        if response.get("model") and response.get("model") != settings.model and not is_local:
+            pass # Tolerante a variações de nomes de modelos em provedores de nuvem
+        elif response.get("model") != settings.model and is_local:
             raise LLMUnavailable("model alias did not match", "model_mismatch")
+
         if reason not in {"stop", "length"} or not isinstance(text, str) or not text.strip():
-            raise LLMUnavailable("local model returned no usable text", "empty")
+            raise LLMUnavailable("model returned no usable text", "empty")
         return text.strip(), reason
     except (KeyError, IndexError, TypeError, AttributeError) as exc:
-        raise LLMUnavailable("invalid local model protocol response") from exc
+        raise LLMUnavailable("invalid model protocol response") from exc
 
 
 def _literal(value):
@@ -180,7 +212,7 @@ def _context(session, user_text, understanding):
             "project": session.project.known(), "previous": turns,
             "last_tool": session.last_topic, "last_tool_inputs": session.last_args.get("_tool_inputs", {}),
             "hints": {key: understanding.get(key) for key in
-                      ("intents", "experiments", "system", "gravity", "pressure_kPa", "o2_pct", "materials")}}
+                     ("intents", "experiments", "system", "gravity", "pressure_kPa", "o2_pct", "materials")}}
 
 
 def _describe(tool):
@@ -212,7 +244,6 @@ def _execute(session, proposed, context, remaining):
         if stamp in seen:
             continue
         seen.add(stamp)
-        # Source any numerical inputs from the supplied turn or an actual project field.
         if name in {"assess_atmosphere", "simulate_ventilation", "droplet_burn_time", "convert_units"}:
             def nums(obj):
                 if isinstance(obj, dict):
@@ -251,8 +282,8 @@ def _evidence_for_answer(results):
         value["tool"] = result["tool"]
         if result.get("blocks"):
             value["evidence_extracts"] = [{"id": item.id, "finding": item.card()["text"]}
-                                          for identifier in result.get("evidence", [])[:4]
-                                          if (item := store.get(identifier))]
+                                         for identifier in result.get("evidence", [])[:4]
+                                         if (item := store.get(identifier))]
             value["visual_details"] = [{"title": b.get("title"), "caption": b.get("caption"),
                                          "rows": b.get("rows", [])[:6] if b.get("type") == "matrix" else []}
                                         for b in result["blocks"][:2]]
@@ -270,8 +301,6 @@ def _ground(text, results, *, truncated=False, question=""):
         invalid.update(set(candidates) - allowed)
         return " ".join(f"[{identifier}]" for identifier in candidates if identifier in allowed)
     text = BRACKET.sub(clean_reference, text)
-    # Remove whole unsupported numerical sentences. Preserve the remaining
-    # qualitative explanation and display exact values from tool outputs.
     identifiers = {v.casefold() for v in IDENTIFIER.findall(question + " " + _serialize(_evidence_for_answer(results)))}
     paragraphs = []
     for line in text.splitlines():
@@ -313,7 +342,6 @@ def _decode_plan(raw):
 
 
 def _compact(payload, limit):
-    """Hold the question and first results intact instead of cutting JSON in the middle."""
     result = dict(payload)
     for key in ("context", "evidence"):
         result[key] = list(result.get(key, []))
@@ -335,7 +363,7 @@ def run_turn(session: Session, user_text: str, understanding, deadline: float) -
     context = _context(session, user_text, understanding.as_dict())
     plan = make_plan(understanding, session)
     candidates = [{"tool": name, "args": {k: v for k, v in args.items() if k in VALIDATORS[name].schema["properties"]}}
-                  for name, args in plan.steps if name in MODEL_TOOLS]
+                 for name, args in plan.steps if name in MODEL_TOOLS]
     intents = understanding.intents
     if candidates:
         context["application_candidates"] = candidates[:3]
@@ -408,4 +436,3 @@ def run_turn(session: Session, user_text: str, understanding, deadline: float) -
     return {"text": answer, "results": results, "usage": usage, "model": settings.model, "removed": removed,
             "generation": {"status": "evidence_only" if reason else "recovered" if recovery else "completed",
                            "reason": reason, "recovery": recovery}}
-
