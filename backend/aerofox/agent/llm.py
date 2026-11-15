@@ -80,6 +80,13 @@ def _http(path, payload=None, *, timeout):
     except TimeoutError as exc:
         raise LLMUnavailable("inference request timed out", "timeout") from exc
     except OSError as exc:
+        detail = getattr(exc, "code", None) or getattr(exc, "reason", None) or exc
+        body = ""
+        try:
+            body = exc.read(300).decode("utf-8", "replace")
+        except Exception:
+            pass
+        log.warning("inference http error url=%s detail=%r body=%s", full_url, detail, body)
         raise LLMUnavailable("could not reach the inference server", "connection") from exc
     except ValueError as exc:
         raise LLMUnavailable("inference server sent invalid JSON", "protocol") from exc
