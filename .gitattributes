@@ -1,0 +1,3 @@
+# NASA manifests verify the byte hashes of these files.
+/data/raw/psi/** -text
+/start_aerofox.sh text eol=lf

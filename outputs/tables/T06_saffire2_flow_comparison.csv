@@ -1,0 +1,10 @@
+sample,material,thickness_mm,direction,flow_nominal_cm_s,anem1_mean_cm_s,anem2_mean_cm_s,anem_mean_cm_s,anem_diff_cm_s,burn_time_s,ug_spread_rate_mm_s,published_flow_cm_s,table_minus_measured
+2-1,Silicone,0.27,Concurrent,20.0,19.92,20.1,20.01,-0.18,,,20,-0.01
+2-2,Silicone,0.61,Concurrent,20.0,19.96,20.05,20.0,-0.09,,,20,0.0
+2-3,Silicone,1.03,Concurrent,20.0,19.97,20.04,20.01,-0.07,,,20,-0.01
+2-4,Silicone,0.37,Opposed,20.0,19.98,20.03,20.0,-0.05,,,20,0.0
+2-5,Cotton-Fiberglass (SIBAL),0.37,Concurrent,20.0,20.04,19.98,20.01,0.07,145.0,2.1,20,-0.01
+2-6,Cotton-Fiberglass (SIBAL),0.37,Concurrent,20.0,25.2,24.81,25.01,0.39,115.0,2.6,25,-5.01
+2-7,PMMA & Nomex,0.85,Concurrent,20.0,20.01,20.02,20.02,-0.02,140.0,,20,-0.02
+2-8,PMMA,5.0,Concurrent,20.0,20.13,19.87,20.0,0.26,600.0,,20,0.0
+2-9,PMMA,10.0,Concurrent,20.0,21.28,18.65,19.96,2.63,900.0,,20,0.04

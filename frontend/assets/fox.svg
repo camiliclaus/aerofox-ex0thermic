@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 160 1150 910" role="img" aria-label="AeroFox">
+  <title>AeroFox</title>
+  <g fill="none" stroke="#0d2145" stroke-width="42" stroke-linecap="round" stroke-linejoin="round">
+    <!-- left ear, forehead, right ear -->
+    <path d="M190 548 C140 430 150 310 203 226 C285 278 345 345 372 425 C450 393 545 390 626 425 C660 340 718 274 792 226 C832 300 840 380 830 440"/>
+    <!-- left cheek down to the nose -->
+    <path d="M200 552 L130 752 C275 778 385 855 458 968"/>
+    <!-- S-curve from the wing root to the nose -->
+    <path d="M830 440 C650 515 560 625 548 760 C541 845 544 900 548 930" stroke-width="34"/>
+    <!-- wing outline -->
+    <path d="M830 440 C960 388 1085 318 1180 202 C1196 300 1178 388 1128 448 C1128 528 1098 580 1052 617 C1038 700 978 762 858 790 C720 822 622 862 562 932"/>
+  </g>
+  <g fill="#0d2145">
+    <!-- nose -->
+    <path d="M448 938 C482 902 534 902 562 934 C548 990 528 1026 505 1028 C478 1024 458 990 448 938 Z"/>
+    <!-- eyes -->
+    <path d="M302 640 C385 638 444 700 450 842 C432 768 404 734 372 722 C332 710 308 680 302 640 Z"/>
+    <path d="M712 650 C700 690 662 704 622 710 C598 722 582 748 573 742 C590 690 642 652 712 650 Z"/>
+    <!-- feathers -->
+    <path d="M768 610 C830 548 930 530 1088 488 C1048 556 950 566 768 610 Z"/>
+    <path d="M736 715 C800 655 880 640 1006 644 C960 690 880 690 736 715 Z"/>
+  </g>
+</svg>

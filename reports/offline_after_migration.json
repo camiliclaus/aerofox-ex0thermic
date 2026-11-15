@@ -1,0 +1,134 @@
+{
+  "summary": {
+    "engine": "offline",
+    "single_turn": {
+      "cases": 243,
+      "passed": 243,
+      "tool_selection_accuracy": 1.0,
+      "block_success": 1.0,
+      "error_free": 1.0,
+      "families": 120,
+      "families_all_passed": 120
+    },
+    "by_style": {
+      "en": "81/81",
+      "enx": "81/81",
+      "pt": "81/81"
+    },
+    "multi_turn": {
+      "conversations": 45,
+      "passed": 45,
+      "turns": 180,
+      "turns_passed": 180,
+      "state_retained": 45
+    },
+    "holdout": {
+      "cases": 30,
+      "passed": 27
+    },
+    "latency_s": {
+      "p50": 0.0,
+      "p95": 0.031,
+      "max": 0.062
+    },
+    "runtime_s": 2.4
+  },
+  "failures": {
+    "single": [],
+    "multi": [],
+    "holdout": [
+      {
+        "text": "I need to pick wall panels for a lunar lander cabin at 34% oxygen; what evidence exists?",
+        "expected_any": [
+          "fire_safety_factors",
+          "assess_atmosphere",
+          "materials_evidence",
+          "search_evidence"
+        ],
+        "tool_ok": false,
+        "blocks_ok": true,
+        "no_error": true,
+        "called": [
+          "evidence_coverage_matrix"
+        ],
+        "latency_s": 0.0,
+        "mode": "offline",
+        "pass": false
+      },
+      {
+        "text": "Show me the measured diameter curve for the heptane droplet that kept vaporizing",
+        "expected_any": [
+          "flex035_case_study"
+        ],
+        "tool_ok": false,
+        "blocks_ok": true,
+        "no_error": true,
+        "called": [
+          "chart_flex_burning_rate_vs_oxygen"
+        ],
+        "latency_s": 0.016,
+        "mode": "offline",
+        "pass": false
+      },
+      {
+        "text": "Is the ISS cabin atmosphere covered by solid-material tests?",
+        "expected_any": [
+          "assess_atmosphere",
+          "search_evidence",
+          "evidence_coverage_matrix"
+        ],
+        "tool_ok": false,
+        "blocks_ok": true,
+        "no_error": true,
+        "called": [
+          "fire_safety_factors"
+        ],
+        "latency_s": 0.016,
+        "mode": "offline",
+        "pass": false
+      }
+    ],
+    "topics": {
+      "flex_explain": "9/9",
+      "flex_o2": "6/6",
+      "flex035": "6/6",
+      "cool_flame": "6/6",
+      "saffire2": "6/6",
+      "saffire": "6/6",
+      "bass": "6/6",
+      "same": "6/6",
+      "detection": "6/6",
+      "lunar_review": "6/6",
+      "lunar_chart": "6/6",
+      "mars_review": "6/6",
+      "station_review": "6/6",
+      "rover": "6/6",
+      "eva": "6/6",
+      "battery": "6/6",
+      "atm_psi": "6/6",
+      "atm_kpa": "6/6",
+      "oxygen_general": "6/6",
+      "gravity": "6/6",
+      "materials_cmp": "6/6",
+      "materials_one": "6/6",
+      "ventilation": "6/6",
+      "vent_fail": "6/6",
+      "coverage": "6/6",
+      "droplet_calc": "6/6",
+      "suppression": "6/6",
+      "apollo1": "6/6",
+      "mir": "6/6",
+      "cfi": "6/6",
+      "acme": "6/6",
+      "sofie": "6/6",
+      "recommend_test": "6/6",
+      "help": "6/6",
+      "offtopic": "6/6",
+      "export_empty": "6/6",
+      "spice": "6/6",
+      "daft": "6/6",
+      "flex2": "6/6",
+      "o2_whatif_value": "6/6"
+    }
+  }
+}

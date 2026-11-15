@@ -1,0 +1,197 @@
+[
+  {
+    "answer": "First, check the suit atmosphere (O2 fraction and pressure) and cabin atmosphere at suit interfaces, as these are the decisive factors in preventing fire inside an EVA suit. [LIT-ATM-SUIT] The suit's internal atmosphere is a separate domain from the cabin, and O2 concentration affects flammability. Next, verify that materials are tested at the design atmosphere and consider ignition sources like electrical systems.",
+    "elapsed_s": 11.953,
+    "language": "en",
+    "mode": "llm",
+    "generation": {
+      "status": "completed",
+      "reason": null,
+      "recovery": []
+    },
+    "usage": {
+      "input": 3114,
+      "output": 125,
+      "rounds": 2,
+      "stages": [
+        {
+          "stage": "plan",
+          "finish": "stop",
+          "output_tokens": 30,
+          "limit": 240,
+          "seconds": 6.906
+        },
+        {
+          "stage": "answer",
+          "finish": "stop",
+          "output_tokens": 95,
+          "limit": 320,
+          "seconds": 5.0
+        }
+      ]
+    },
+    "question": "What should I check first to prevent a fire inside an EVA suit?",
+    "tools": [
+      "fire_safety_factors"
+    ],
+    "figures": [
+      "matrix"
+    ]
+  },
+  {
+    "answer": "For the inside layers of the EVA suit, materials must be tested at the design atmosphere (O2 fraction and pressure) to ensure flammability compliance. [LIT-ATM-SUIT] The suit's internal atmosphere is a separate domain, so materials should pass NASA-STD-6001 tests under the actual design conditions. [LIT-ATM-GENERAL] Next, verify that materials are qualified for the specific O2 level and pressure in the suit's environment.",
+    "elapsed_s": 8.906,
+    "language": "en",
+    "mode": "llm",
+    "generation": {
+      "status": "completed",
+      "reason": null,
+      "recovery": []
+    },
+    "usage": {
+      "input": 3361,
+      "output": 146,
+      "rounds": 2,
+      "stages": [
+        {
+          "stage": "plan",
+          "finish": "stop",
+          "output_tokens": 36,
+          "limit": 240,
+          "seconds": 2.687
+        },
+        {
+          "stage": "answer",
+          "finish": "stop",
+          "output_tokens": 110,
+          "limit": 320,
+          "seconds": 6.203
+        }
+      ]
+    },
+    "question": "Which material can I use for the inside layers of the suit?",
+    "tools": [
+      "fire_safety_factors"
+    ],
+    "figures": [
+      "matrix"
+    ]
+  },
+  {
+    "answer": "Damaged wiring can ignite material near the breathing circuit of the EVA suit if it creates an electrical ignition source in the suit's low-pressure atmosphere. [LIT-EVA-WIRE] The suit's internal atmosphere is a separate domain, so materials must be tested under actual design conditions to ensure flammability compliance. [LIT-ATM-SUIT] Next, verify that materials are qualified for the specific O2 level and pressure in the suit's environment.",
+    "elapsed_s": 6.985,
+    "language": "en",
+    "mode": "llm",
+    "generation": {
+      "status": "completed",
+      "reason": null,
+      "recovery": []
+    },
+    "usage": {
+      "input": 3513,
+      "output": 104,
+      "rounds": 2,
+      "stages": [
+        {
+          "stage": "plan",
+          "finish": "stop",
+          "output_tokens": 9,
+          "limit": 240,
+          "seconds": 2.235
+        },
+        {
+          "stage": "answer",
+          "finish": "stop",
+          "output_tokens": 95,
+          "limit": 320,
+          "seconds": 4.735
+        }
+      ]
+    },
+    "question": "Explain how damaged wiring can ignite material near the breathing circuit of the EVA suit.",
+    "tools": [
+      "fire_safety_factors"
+    ],
+    "figures": [
+      "matrix"
+    ]
+  },
+  {
+    "answer": "Aumentar a concentração de oxigênio eleva o risco de ignição de materiais próximos ao circuito respiratório da EVA. [LIT-EVA-WIRE] O aumento do oxigênio pode tornar materiais mais combustíveis, exigindo testes sob condições reais do ambiente da EVA. [LIT-ATM-SUIT] Verificar a qualificação dos materiais para o nível específico de oxigênio e pressão do ambiente da EVA é essencial.",
+    "elapsed_s": 8.704,
+    "language": "pt",
+    "mode": "llm",
+    "generation": {
+      "status": "completed",
+      "reason": null,
+      "recovery": []
+    },
+    "usage": {
+      "input": 3639,
+      "output": 136,
+      "rounds": 2,
+      "stages": [
+        {
+          "stage": "plan",
+          "finish": "stop",
+          "output_tokens": 24,
+          "limit": 240,
+          "seconds": 2.828
+        },
+        {
+          "stage": "answer",
+          "finish": "stop",
+          "output_tokens": 112,
+          "limit": 320,
+          "seconds": 5.86
+        }
+      ]
+    },
+    "question": "E no traje, o que muda com mais oxigênio?",
+    "tools": [
+      "fire_safety_factors"
+    ],
+    "figures": [
+      "matrix"
+    ]
+  },
+  {
+    "answer": "Traje EVA: verificação de segurança contra incêndio.\n- **Evidência**: A atmosfera local e as condições de pressão são críticas.\n- **Próximo passo**: Validar materiais sob condições reais do ambiente da EVA.\n\n[LIT-ATM-SUIT] [LIT-EVA-WIRE]",
+    "elapsed_s": 7.563,
+    "language": "pt",
+    "mode": "llm",
+    "generation": {
+      "status": "completed",
+      "reason": null,
+      "recovery": []
+    },
+    "usage": {
+      "input": 2607,
+      "output": 112,
+      "rounds": 2,
+      "stages": [
+        {
+          "stage": "plan",
+          "finish": "stop",
+          "output_tokens": 24,
+          "limit": 240,
+          "seconds": 3.063
+        },
+        {
+          "stage": "answer",
+          "finish": "stop",
+          "output_tokens": 88,
+          "limit": 320,
+          "seconds": 4.469
+        }
+      ]
+    },
+    "question": "Faça um fluxograma para essas etapas.",
+    "tools": [
+      "fire_safety_workflow"
+    ],
+    "figures": [
+      "flowchart"
+    ]
+  }
+]

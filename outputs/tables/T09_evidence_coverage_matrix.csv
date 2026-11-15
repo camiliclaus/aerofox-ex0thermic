@@ -1,0 +1,9 @@
+,Cabin solid materials (ISS-like air),Fire growth in ventilated modules,Elevated-O2 / reduced-p atmospheres,Smoke detection,Suppression and inerting,Liquid-fuel / droplet hazards,Gaseous leak flames,Lunar gravity (1.62 m/s²),Mars gravity (3.71 m/s²)
+Saffire I-III,2,2,0,1,0,0,0,0,0
+BASS / BASS-II,2,1,0,0,1,0,0,0,0
+FLEX / FLEX-2,0,0,1,0,2,2,0,0,0
+CFI,0,0,1,0,1,2,0,0,0
+SAME / SAME-R,1,0,0,2,0,0,0,0,0
+DAFT,0,0,0,1,0,0,0,0,0
+"ACME, SPICE, SLICE",0,0,1,1,0,0,2,0,0
+LUCI (literature),1,0,0,0,0,0,0,1,0

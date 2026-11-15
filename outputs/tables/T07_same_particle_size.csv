@@ -1,0 +1,10 @@
+flight,material,n,AMD_median_um,q1,q3
+SAME,Kapton,6,0.159,0.124,0.205
+SAME,Lampwick,6,0.236,0.174,0.274
+SAME,Silicone,7,0.227,0.207,0.301
+SAME,Teflon,6,0.18,0.159,0.186
+SAME-R,Kapton,27,0.112,0.075,0.155
+SAME-R,Lampwick,20,0.177,0.129,0.232
+SAME-R,Pyrell,20,0.302,0.229,0.359
+SAME-R,Silicone,22,0.362,0.243,0.452
+SAME-R,Teflon,17,0.172,0.14,0.267

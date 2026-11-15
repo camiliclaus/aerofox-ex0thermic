@@ -1,0 +1,14 @@
+.git
+.venv
+data/cache
+data/raw/psi/files
+data/raw/psi/tables
+data/raw/psi/catalog
+data/raw/psi/investigations
+notebooks
+reports
+tests
+docs
+**/__pycache__
+.env
+dist_zip

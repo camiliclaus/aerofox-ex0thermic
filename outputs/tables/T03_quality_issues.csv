@@ -1,0 +1,14 @@
+dataset,issue,extent,handling
+PSI-69 FLEX,'FLEX Test #' drifts from official FLEX numbering after test 155,119 of 274 rows offset by 1-6,Re-keyed on CIR identifier using NASA/TP-2015-216046; column flex_number
+PSI-69 FLEX,Burning-rate column labelled 'mm' (should be mm^2/s),all rows,"Interpreted as K in mm^2/s, confirmed by test sheets"
+PSI-69 FLEX,Ambient pressure of 0 mmHg for a burning test,1 row (CIR C11M201),Flagged; excluded from pressure analyses
+PSI-69 FLEX,"Composition columns labelled 'O', 'N', 'CO'",header,"Interpreted as O2, N2, CO2 mole fractions"
+PSI-99 Saffire-II,Flow listed as 20 cm/s for sample 2-6,1 row,Telemetry and NTRS 20170008805 show 25 cm/s (Section 5)
+PSI-99 Saffire-II,Thickness '037 mm',4 rows,Read as 0.37 mm (NTRS 20170008805)
+PSI-99 Saffire-II,Material blank for 2-6 and 2-9,2 rows,Filled from NTRS 20170008805 with provenance column
+PSI-99 Saffire-II,O2 'derived from measured CO2 production' (table note 1),column,"Labelled as derived, not measured"
+PSI-99 telemetry,'RelativeSeconds' holds milliseconds,column,Divided by 1000
+PSI-98 Saffire-I,Sample length/width appear transposed (40.6 x 94 cm),2 rows,Stored as tabulated; noted
+PSI-25 BASS-II,Final O2 above initial O2 by >1 vol%,2 rows,Flagged as implausible (no O2 source)
+PSI-25 BASS-II,"Multi-valued cells ('53   43', '2(?)') and 'none' strings",74 fan cells,Kept raw; numeric value NaN
+PSI-101 SAME,Particle moments recorded as 0 when not measured,DBP rows,Treated as missing

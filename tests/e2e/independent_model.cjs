@@ -1,0 +1,53 @@
+const assert = require("node:assert/strict");
+const { chromium } = require("playwright");
+const base = process.argv[2] || "http://127.0.0.1:8000";
+(async () => {
+ const browser=await chromium.launch();
+ try {
+  const desktop=await browser.newContext({viewport:{width:1440,height:1000}});
+  const page=await desktop.newPage();
+  const errors=[];
+  page.on("pageerror",error=>errors.push(error.message));
+  await page.goto(base);
+  await page.getByText(/Local model ready/).waitFor();
+  const ask=async (target, question) => {
+   const pending=target.waitForResponse(r=>r.url().endsWith("/api/chat"),{timeout:80000});
+   await target.locator("#input").fill(question);
+   await target.locator("#send").click();
+   const response=await pending;
+   assert.equal(response.status(),200);
+   const out=await response.json();
+   await target.locator(".msg-ai").last().getByText(/Local model|Modelo local/).waitFor();
+   assert.equal(out.mode,"llm");
+   assert.ok(out.usage.output>0);
+   return out;
+  };
+  await ask(page,"Do a chart about the main factor on fire safety I should consider while projecting a lunar base.");
+  const moon=page.locator(".msg-ai").last();
+  assert.ok(await moon.locator('[data-block-type="matrix"] tbody tr').count()>=4);
+  await ask(page,"And on Mars?");
+  const mars=page.locator(".msg-ai").last();
+  assert.match(await mars.locator('[data-block-type="matrix"] h4').innerText(),/mars habitat/i);
+  assert.ok(await mars.locator('[data-block-type="matrix"] tbody tr').count()>=4);
+  await mars.getByText("Verified results",{exact:true}).click();
+  const url=await mars.locator('a[download]').first().getAttribute('href');
+  const csv=await page.request.get(new URL(url, base).href);
+  assert.equal(csv.status(),200);
+  assert.match(await csv.text(),/priority tier/);
+  if (process.env.AEROFOX_SCREENSHOT) await page.screenshot({path:process.env.AEROFOX_SCREENSHOT});
+  const mobile=await browser.newPage({viewport:{width:390,height:844}});
+  await mobile.goto(base);
+  await ask(mobile,"Show the independent measurements for Saffire-II flow, especially sample 2-6.");
+  await mobile.locator('.plot[data-rendered="true"]').first().waitFor();
+  await ask(mobile,"Mostre um fluxograma de verificação contra incêndio para um traje EVA.");
+  const diagram = mobile.locator('[data-block-type="flowchart"]').last();
+  assert.equal(await diagram.locator(".decision-node").count(),3);
+  await diagram.getByText("Sim",{exact:true}).first().waitFor();
+  const mmd = await mobile.request.get(new URL(await diagram.locator("a[download]").getAttribute("href"), base).href);
+  assert.equal(mmd.status(),200);
+  assert.match(await mmd.text(),/flowchart TD[\s\S]+-->|Sim\|/);
+  assert.equal(await mobile.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+  assert.deepEqual(errors,[]);
+  console.log("Desktop and mobile passed: exact Moon→Mars context, populated visual, evidence and CSV, measured chart, actual model tokens, no JS exceptions.");
+ }finally{await browser.close();}
+})().catch(e=>{console.error(e);process.exitCode=1;});

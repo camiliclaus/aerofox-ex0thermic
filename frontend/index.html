@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AeroFox — Flame in Freefall</title>
+<meta name="description" content="AeroFox: an evidence-grounded assistant for spacecraft fire safety built on NASA microgravity combustion data.">
+<link rel="icon" href="assets/fox.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app" id="app">
+  <aside class="sidebar" id="sidebar" aria-label="Navigation">
+    <div class="brand">
+      <div class="brand-tile"><img src="assets/fox.svg" alt="" width="34" height="34"></div>
+      <div><div class="brand-name">Aerofox</div><div class="brand-sub">Flame in Freefall</div></div>
+      <button class="icon-btn only-mobile" id="closeSidebar" aria-label="Close menu">×</button>
+    </div>
+    <button class="new-chat" id="newChat"><span aria-hidden="true">+</span> New conversation</button>
+    <nav>
+      <div class="nav-label">Research library</div>
+      <button class="nav-item" data-view="datasets"><svg viewBox="0 0 20 20" aria-hidden="true"><ellipse cx="10" cy="5" rx="7" ry="2.5"/><path d="M3 5v10c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V5M3 10c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/></svg>NASA datasets<span class="count" id="datasetCount">–</span></button>
+      <button class="nav-item" data-view="findings"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16l4-5 3 3 5-7"/><path d="M3 3v14h14"/></svg>Findings<span class="count" id="findingCount">–</span></button>
+      <button class="nav-item" data-view="references"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="2.5" width="14" height="15" rx="1.5"/><path d="M7 2.5v15"/></svg>References</button>
+      <button class="nav-item" data-view="fields"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 9h14"/></svg>Field dictionary</button>
+      <div class="nav-label">Conversations</div>
+      <div id="history" class="history"></div>
+    </nav>
+    <div class="sidebar-foot">
+      <div class="mono"><span class="dot" id="statusDot"></span> Snapshot <span id="snapshot">–</span></div>
+      <div class="engine" id="engineLabel">Checking engine…</div>
+      <button class="link-btn" data-view="provenance">Coverage &amp; provenance ↗</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn only-mobile" id="openSidebar" aria-label="Open menu">☰</button>
+      <h1 class="topbar-title" id="viewTitle">Research assistant</h1>
+      <button class="ghost-btn" id="openProject"><svg viewBox="0 0 20 20" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M3 9h14"/></svg>Project inputs</button>
+    </header>
+
+    <section class="view" id="chatView">
+      <div class="scroll" id="scroll">
+        <div class="home" id="home">
+          <div class="home-tile"><img src="assets/fox.svg" alt="" width="52" height="52"></div>
+          <h2 class="hero">What would you like to investigate?</h2>
+          <p class="lede">Ask about NASA combustion experiments or describe a spacecraft fire-safety problem.</p>
+          <div class="cards">
+            <button class="card" data-prompt="Compare Saffire-II runs 2-5 and 2-6: were they tested at the same airflow?"><b>Compare Saffire-II runs</b><span>Telemetry-measured airflow in runs 2-5 and 2-6</span><i aria-hidden="true">↗</i></button>
+            <button class="card" data-prompt="I'm designing a lunar habitat. What are the main fire safety factors I should consider? Show me a chart."><b>Review a lunar habitat</b><span>Atmosphere, ignition sources and evidence gaps</span><i aria-hidden="true">↗</i></button>
+            <button class="card" data-prompt="Investigate FLEX-035: what happened after the visible flame went out?"><b>Investigate a droplet flame</b><span>FLEX-035 measured diameter over time</span><i aria-hidden="true">↗</i></button>
+            <button class="card" data-prompt="Compare ventilation designs for a battery bay: connected versus isolated compartments."><b>Compare ventilation designs</b><span>Synthetic connected and isolated bays</span><i aria-hidden="true">↗</i></button>
+          </div>
+        </div>
+        <div class="thread" id="thread" aria-live="polite"></div>
+      </div>
+      <form class="composer" id="composer" autocomplete="off">
+        <label for="input" class="sr-only">Message</label>
+        <textarea id="input" rows="2" maxlength="4000" placeholder="Ask about an experiment or your project…"></textarea>
+        <div class="composer-row">
+          <button type="button" class="chip-btn" id="composerProject"><span aria-hidden="true">+</span> Project inputs</button>
+          <button type="button" class="chip-btn" id="composerFilters">Data filters</button>
+          <span class="filter-state" id="filterState"></span>
+          <button type="submit" class="send" id="send" aria-label="Send"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 16V4M5 9l5-5 5 5"/></svg></button>
+        </div>
+      </form>
+      <div class="foot-note">English or Portuguese · Preliminary engineering analysis · Not NASA-endorsed</div>
+    </section>
+
+    <section class="view hidden" id="libraryView"><div class="scroll"><div class="library" id="library"></div></div></section>
+  </main>
+
+  <aside class="drawer" id="projectDrawer" aria-label="Project inputs" hidden>
+    <div class="drawer-head"><h3>Project inputs</h3><button class="icon-btn" data-close="projectDrawer" aria-label="Close">×</button></div>
+    <p class="muted small">Values you give here (or state in the chat) are used by every analysis in this conversation. Leave blank if unknown — AeroFox will not invent them.</p>
+    <form id="projectForm" class="form">
+      <label>System<select name="system"><option value="">—</option><option value="lunar_habitat">Lunar habitat</option><option value="mars_habitat">Mars habitat</option><option value="space_station">Space station</option><option value="crew_vehicle">Crew vehicle / capsule</option><option value="pressurized_rover">Pressurized rover</option><option value="eva_suit">EVA suit</option><option value="battery_system">Battery system</option></select></label>
+      <label>Gravity regime<select name="gravity"><option value="">—</option><option value="micro">Orbital microgravity</option><option value="lunar">Lunar (1.62 m/s²)</option><option value="mars">Mars (3.71 m/s²)</option><option value="earth">Earth (1 g)</option></select></label>
+      <div class="two"><label>Total pressure (kPa)<input name="pressure_kPa" type="number" step="any" min="5" max="1000"></label>
+      <label>O₂ (% by volume)<input name="o2_pct" type="number" step="any" min="0.1" max="100"></label></div>
+      <label>Materials (comma separated)<input name="materials" placeholder="e.g. Nomex, PMMA, silicone"></label>
+      <label>Ventilation<input name="ventilation" placeholder="e.g. 0.1 m³/s recirculation, fans can be isolated"></label>
+      <label>Detectors<input name="detectors" placeholder="e.g. photoelectric smoke detectors"></label>
+      <label>Suppression<input name="suppression" placeholder="e.g. water mist, CO₂ portable"></label>
+      <label>Crew size<input name="crew_size" type="number" min="0" max="100"></label>
+      <div class="form-actions"><button type="submit" class="primary">Save inputs</button><button type="button" class="ghost-btn" id="analyseProject">Run design review</button></div>
+      <div class="small muted" id="projectMsg" role="status"></div>
+    </form>
+  </aside>
+
+  <aside class="drawer" id="filterDrawer" aria-label="Data filters" hidden>
+    <div class="drawer-head"><h3>Data filters</h3><button class="icon-btn" data-close="filterDrawer" aria-label="Close">×</button></div>
+    <p class="muted small">Choose which kinds of evidence cards are shown under answers. Charts and calculations are unaffected.</p>
+    <form id="filterForm" class="form checks">
+      <label><input type="checkbox" name="measured" checked> Measured NASA data (re-analysed)</label>
+      <label><input type="checkbox" name="published" checked> Published NASA statements and measurements</label>
+      <label><input type="checkbox" name="incident" checked> Incident records (Apollo 1, Apollo 13, Mir)</label>
+      <label><input type="checkbox" name="metadata" checked> Investigation metadata and abstracts</label>
+    </form>
+  </aside>
+
+  <aside class="drawer wide" id="evidenceDrawer" aria-label="Evidence" hidden>
+    <div class="drawer-head"><h3>Evidence</h3><button class="icon-btn" data-close="evidenceDrawer" aria-label="Close">×</button></div>
+    <div id="evidenceBody"></div>
+  </aside>
+  <div class="scrim" id="scrim" hidden></div>
+</div>
+<script src="vendor/plotly-cartesian.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

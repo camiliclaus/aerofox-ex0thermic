@@ -1,0 +1,25 @@
+accession,acronym,project_type,flight_program,sub_research_area,license,n_experiment_tables,catalog_files,n_publications,catalog_GB
+PSI-10,ACME/Flame Design,Microgravity Investigation,International Space Station (ISS),Flames of Gaseous Fuels,unspecified,2,3807,33,2180.4
+PSI-159,ACME CFI-G,Microgravity Investigation,International Space Station (ISS),Flames of Gaseous Fuels,CC0-1.0,2,3756,2,2085.6
+PSI-20,ACME BRE,Microgravity Investigation,International Space Station (ISS),Flames of Gaseous Fuels,CC0-1.0,1,2361,16,2035.6
+PSI-21,ACME CLD Flame,Microgravity Investigation,International Space Station (ISS),Flames of gaseous fuel,CC0-1.0,1,4883,18,2005.5
+PSI-68,FLEX-2,Microgravity Investigation,International Space Station (ISS),Spacecraft Fire Safety,CC0-1.0,1,10156,48,1224.8
+PSI-22,ACME E-FIELD Flames,Microgravity Investigation,International Space Station (ISS),Laminar Flames,CC0-1.0,1,2590,25,950.2
+PSI-69,FLEX,Microgravity Investigation,International Space Station (ISS),Spacecraft Fire Safety,CC0-1.0,1,6555,51,923.8
+PSI-23,ACME s-Flame,Microgravity Investigation,International Space Station (ISS),Flames of gaseous fuels,CC0-1.0,1,4165,44,782.2
+PSI-39,CFI,Microgravity Investigation,International Space Station (ISS),Droplets,CC0-1.0,1,2812,7,718.9
+PSI-25,BASS-II,Microgravity Investigation,International Space Station (ISS),Spacecraft Fire Safety,CC0-1.0,1,695,17,274.6
+PSI-26,BASS,Microgravity Investigation,International Space Station (ISS),Spacecraft Fire Safety,CC0-1.0,1,210,10,163.6
+PSI-106,SLICE,Microgravity Investigation,International Space Station (ISS),,CC0-1.0,1,23463,5,72.9
+PSI-100,SAFFIRE-III,Microgravity Investigation,International Space Station (ISS),Spacecraft Fire Safety,CC0-1.0,1,87,3,35.2
+PSI-99,SAFFIRE-II,Microgravity Investigation,Cygnus Spacecraft,Surface Combustion,CC0-1.0,1,217,7,16.9
+PSI-98,SAFFIRE-I,Microgravity Investigation,International Space Station (ISS),"Spacecraft Fire, Smoke Distribution",CC0-1.0,1,76,6,12.3
+PSI-107,SPICE,Microgravity Investigation,International Space Station (ISS),Fire Safety,CC0-1.0,1,188,9,6.9
+PSI-101,SAME-R,Microgravity Investigation,International Space Station (ISS),Spacecraft Fire Safety,CC0-1.0,1,344,6,6.3
+PSI-102,SAME,Microgravity Investigation,International Space Station (ISS),Spacecraft Fire Safety,CC0-1.0,1,101,16,0.7
+PSI-115,,Ground Investigation,Not Applicable,"Smoke Aerosol, Combustion Simulation",CC0-1.0,0,47,0,0.3
+PSI-117,,Ground Investigation,,Droplet,CC0-1.0,0,16,10,0.1
+PSI-142,,Ground Investigation,Not Applicable,Spacecraft Fire Safety,CC0-1.0,1,3,12,0.0
+PSI-62,,Ground Investigation,,Spacecraft Fire Safety,CC0-1.0,0,1,4,0.0
+PSI-47,DAFT / DAFT-2,Microgravity Investigation,International Space Station (ISS),Spacecraft Fire Safety,CC0-1.0,1,33,2,0.0
+PSI-60,,Ground Investigation,,Gaseous,CC0-1.0,0,1,1,0.0

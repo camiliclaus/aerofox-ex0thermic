@@ -1,0 +1,15 @@
+{
+  "service": "Cloudflare Quick Tunnel",
+  "client_version": "2026.11.0",
+  "host": "Windows loopback port 8012",
+  "model": "Qwen3-4B Q4_K_M",
+  "local_api_port": 8796,
+  "https": true,
+  "signed_out_chromium": true,
+  "viewport_px": 390,
+  "real_model_answer": true,
+  "rendered_plot": true,
+  "download_link": true,
+  "public_history_route_status": 404,
+  "tunnel_closed": true
+}

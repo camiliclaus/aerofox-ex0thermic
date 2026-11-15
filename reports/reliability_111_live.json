@@ -1,0 +1,409 @@
+{
+  "total": 7,
+  "passed": 7,
+  "median_s": 9.078,
+  "turns": [
+    {
+      "case": "flex035",
+      "question": "Why does the curve keep descending after visible extinction in FLEX-035?",
+      "mode": "llm",
+      "model": "aerofox-qwen3-4b",
+      "latency_s": 14.562,
+      "usage": {
+        "input": 2075,
+        "output": 127,
+        "rounds": 2,
+        "stages": [
+          {
+            "stage": "plan",
+            "finish": "stop",
+            "output_tokens": 18,
+            "limit": 240,
+            "seconds": 9.735
+          },
+          {
+            "stage": "answer",
+            "finish": "stop",
+            "output_tokens": 109,
+            "limit": 320,
+            "seconds": 4.688
+          }
+        ]
+      },
+      "tools": [
+        {
+          "name": "flex035_case_study",
+          "ok": true,
+          "elapsed_s": 0.078,
+          "error": null
+        }
+      ],
+      "blocks": [
+        "FLEX-035: droplet regression before and after visible flame-out"
+      ],
+      "source_ids": [
+        "F04",
+        "LIT-FLEX035",
+        "LIT-FLEX035-PLATEAU"
+      ],
+      "notice": null,
+      "warnings": [
+        "One test; the cool flame is a published interpretation, not directly measured in these files."
+      ],
+      "answer": "The curve continues descending after visible extinction in FLEX-035 due to cool-flame burning, as noted in F04 and LIT-FLEX035. The FLEX report attributes this to cool-flame persistence, though it is not directly measured. Next, validate if cool-flame extinction is a distinct phenomenon requiring further experimental confirmation.\n\n[F04] [LIT-FLEX035] [LIT-FLEX035-PLATEAU]",
+      "pass": true
+    },
+    {
+      "case": "habitat-transfer",
+      "question": "We are planning a surface outpost on the Moon. Chart which fire barrier needs verification first.",
+      "mode": "llm",
+      "model": "aerofox-qwen3-4b",
+      "latency_s": 11.531,
+      "usage": {
+        "input": 4254,
+        "output": 184,
+        "rounds": 2,
+        "stages": [
+          {
+            "stage": "plan",
+            "finish": "stop",
+            "output_tokens": 27,
+            "limit": 240,
+            "seconds": 2.437
+          },
+          {
+            "stage": "answer",
+            "finish": "stop",
+            "output_tokens": 157,
+            "limit": 320,
+            "seconds": 9.062
+          }
+        ]
+      },
+      "tools": [
+        {
+          "name": "fire_safety_factors",
+          "ok": true,
+          "elapsed_s": 0.0,
+          "error": null
+        }
+      ],
+      "blocks": [
+        "Fire-safety factors: lunar habitat (lunar gravity)"
+      ],
+      "source_ids": [
+        "LIT-MOON-EXTERIOR",
+        "LIT-ATM-GENERAL",
+        "LIT-ATM-MOC",
+        "LIT-ATM-ARTEMIS",
+        "LIT-ATM-TABLE",
+        "LIT-APOLLO1",
+        "F09",
+        "LIT-APOLLO13",
+        "LIT-SAF2-IGNITION",
+        "LIT-MIR",
+        "F06",
+        "LIT-SAF2-SILICONE"
+      ],
+      "notice": null,
+      "warnings": [
+        "This is a preliminary, evidence-weighted prioritisation, not a certified hazard analysis.",
+        "Most measured fire data are from orbital microgravity or 1 g; lunar gravity is covered only by literature from simulated lunar gravity (LUCI)."
+      ],
+      "answer": "The fire barrier requiring verification first is the cabin atmosphere (O2 fraction and total pressure).\n- **Evidence**: LIT-ATM-GENERAL, LIT-ATM-MOC, LIT-ATM-ARTEMIS, LIT-ATM-TABLE, LIT-APOLLO1, F09.\n- **Next step**: Confirm O2 fraction and total pressure against tested conditions to ensure safety.\n\n[LIT-MOON-EXTERIOR] [LIT-ATM-GENERAL] [LIT-ATM-MOC] [LIT-ATM-ARTEMIS]",
+      "pass": true
+    },
+    {
+      "case": "habitat-transfer",
+      "question": "And on Mars?",
+      "mode": "llm",
+      "model": "aerofox-qwen3-4b",
+      "latency_s": 9.078,
+      "usage": {
+        "input": 4554,
+        "output": 94,
+        "rounds": 2,
+        "stages": [
+          {
+            "stage": "plan",
+            "finish": "stop",
+            "output_tokens": 9,
+            "limit": 240,
+            "seconds": 2.64
+          },
+          {
+            "stage": "answer",
+            "finish": "stop",
+            "output_tokens": 85,
+            "limit": 320,
+            "seconds": 6.391
+          }
+        ]
+      },
+      "tools": [
+        {
+          "name": "fire_safety_factors",
+          "ok": true,
+          "elapsed_s": 0.0,
+          "error": null
+        }
+      ],
+      "blocks": [
+        "Fire-safety factors: mars habitat (mars gravity)"
+      ],
+      "source_ids": [
+        "LIT-MARS-EXTERIOR",
+        "LIT-ATM-GENERAL",
+        "LIT-ATM-MOC",
+        "LIT-ATM-ARTEMIS",
+        "LIT-ATM-TABLE",
+        "LIT-APOLLO1",
+        "F09",
+        "F06",
+        "LIT-SAF2-SILICONE",
+        "LIT-FM2-GOLDILOCKS",
+        "LIT-SAFFIRE-OBJ",
+        "F10"
+      ],
+      "notice": null,
+      "warnings": [
+        "This is a preliminary, evidence-weighted prioritisation, not a certified hazard analysis.",
+        "Most measured fire data are from orbital microgravity or 1 g; mars gravity is covered only by no measurements in this snapshot."
+      ],
+      "answer": "The fire barrier requiring verification first on Mars is the cabin atmosphere (O2 fraction and total pressure). **Evidence**: LIT-MARS-EXTERIOR, LIT-ATM-GENERAL, LIT-ATM-MOC, LIT-ATM-ARTEMIS. **Next step**: Confirm O2 fraction and total pressure against tested conditions to ensure safety in Mars gravity, where data is limited.\n\n[LIT-MARS-EXTERIOR] [LIT-ATM-GENERAL] [LIT-ATM-MOC] [LIT-ATM-ARTEMIS]",
+      "pass": true
+    },
+    {
+      "case": "oxygen-pt",
+      "question": "Mostre um gráfico de como o oxigênio se relaciona com a taxa de queima de gotas no FLEX.",
+      "mode": "llm",
+      "model": "aerofox-qwen3-4b",
+      "latency_s": 9.765,
+      "usage": {
+        "input": 2256,
+        "output": 194,
+        "rounds": 2,
+        "stages": [
+          {
+            "stage": "plan",
+            "finish": "stop",
+            "output_tokens": 24,
+            "limit": 240,
+            "seconds": 2.297
+          },
+          {
+            "stage": "answer",
+            "finish": "stop",
+            "output_tokens": 170,
+            "limit": 320,
+            "seconds": 7.406
+          }
+        ]
+      },
+      "tools": [
+        {
+          "name": "chart_flex_burning_rate_vs_oxygen",
+          "ok": true,
+          "elapsed_s": 0.062,
+          "error": null
+        }
+      ],
+      "blocks": [
+        "FLEX burning-rate constant vs ambient O2"
+      ],
+      "source_ids": [
+        "F03",
+        "F02",
+        "PSI-69"
+      ],
+      "notice": null,
+      "warnings": [
+        "Liquid-droplet burning rates do not transfer directly to solid cabin materials.",
+        "Descriptive regression on a non-factorial test matrix; not a predictive model."
+      ],
+      "answer": "A evidência é baseada em regresão descritiva, não em modelo preditivo. Próxima etapa: validar a aplicação dos resultados a materiais sólidos, considerando limitações de transferência direta.\n\n[F03] [F02] [PSI-69]",
+      "pass": true
+    },
+    {
+      "case": "isolation",
+      "question": "How could shared return air move contamination from a battery bay? Model the difference if I isolate it.",
+      "mode": "llm",
+      "model": "aerofox-qwen3-4b",
+      "latency_s": 8.812,
+      "usage": {
+        "input": 3418,
+        "output": 136,
+        "rounds": 2,
+        "stages": [
+          {
+            "stage": "plan",
+            "finish": "stop",
+            "output_tokens": 48,
+            "limit": 240,
+            "seconds": 2.953
+          },
+          {
+            "stage": "answer",
+            "finish": "stop",
+            "output_tokens": 88,
+            "limit": 320,
+            "seconds": 5.765
+          }
+        ]
+      },
+      "tools": [
+        {
+          "name": "compare_ventilation_designs",
+          "ok": true,
+          "elapsed_s": 0.079,
+          "error": null
+        },
+        {
+          "name": "fire_safety_factors",
+          "ok": true,
+          "elapsed_s": 0.0,
+          "error": null
+        }
+      ],
+      "blocks": [
+        "Smoke surrogate reaching the crew module: connected vs isolated bays",
+        "Passive tracer concentration by compartment"
+      ],
+      "source_ids": [
+        "LIT-APOLLO1",
+        "LIT-APOLLO13",
+        "LIT-SAF2-IGNITION",
+        "LIT-MIR",
+        "F05",
+        "LIT-SAF2-FLOW",
+        "LIT-SAF-UPWARD",
+        "LIT-BASS2-N2",
+        "F07",
+        "F08",
+        "F04",
+        "LIT-SAME2"
+      ],
+      "notice": null,
+      "warnings": [
+        "Passive-tracer model: it does not predict flame spread, toxicity, detector alarm timing or suppression.",
+        "Scenario values are user or example inputs (synthetic), not NASA measurements.",
+        "This is a preliminary, evidence-weighted prioritisation, not a certified hazard analysis.",
+        "Removed 2 citation(s) that were not returned by the tools."
+      ],
+      "answer": "This suggests that isolation limits cross-compartment contamination. Next, validate the ventilation design with real-world testing to ensure isolation truly blocks airflow, as synthetic models may not capture all variables.\n\n[LIT-APOLLO1] [LIT-APOLLO13] [LIT-SAF2-IGNITION] [LIT-MIR]",
+      "pass": true
+    },
+    {
+      "case": "saffire",
+      "question": "Show the independent measurements for Saffire-II flow, especially sample 2-6.",
+      "mode": "llm",
+      "model": "aerofox-qwen3-4b",
+      "latency_s": 7.5,
+      "usage": {
+        "input": 2177,
+        "output": 140,
+        "rounds": 2,
+        "stages": [
+          {
+            "stage": "plan",
+            "finish": "stop",
+            "output_tokens": 19,
+            "limit": 240,
+            "seconds": 2.172
+          },
+          {
+            "stage": "answer",
+            "finish": "stop",
+            "output_tokens": 121,
+            "limit": 320,
+            "seconds": 5.219
+          }
+        ]
+      },
+      "tools": [
+        {
+          "name": "saffire2_flow_case_study",
+          "ok": true,
+          "elapsed_s": 0.078,
+          "error": null
+        }
+      ],
+      "blocks": [
+        "Saffire-II duct flow per sample"
+      ],
+      "source_ids": [
+        "F05",
+        "LIT-SAF2-FLOW",
+        "PSI-99"
+      ],
+      "notice": null,
+      "warnings": [
+        "One sample per flow speed: the flow effect cannot be separated from run-to-run variability."
+      ],
+      "answer": "Next step: validate if this flow deviation affects fire growth models in low-gravity environments.\n\n[F05] [LIT-SAF2-FLOW] [PSI-99]",
+      "pass": true
+    },
+    {
+      "case": "new-engineering",
+      "question": "What should a verification plan measure for wiring faults near the breathing circuit in an EVA suit?",
+      "mode": "llm",
+      "model": "aerofox-qwen3-4b",
+      "latency_s": 8.641,
+      "usage": {
+        "input": 3127,
+        "output": 127,
+        "rounds": 2,
+        "stages": [
+          {
+            "stage": "plan",
+            "finish": "stop",
+            "output_tokens": 30,
+            "limit": 240,
+            "seconds": 2.782
+          },
+          {
+            "stage": "answer",
+            "finish": "stop",
+            "output_tokens": 97,
+            "limit": 320,
+            "seconds": 5.828
+          }
+        ]
+      },
+      "tools": [
+        {
+          "name": "fire_safety_factors",
+          "ok": true,
+          "elapsed_s": 0.0,
+          "error": null
+        }
+      ],
+      "blocks": [
+        "Fire-safety factors: EVA suit (lunar gravity)"
+      ],
+      "source_ids": [
+        "LIT-EVA-WIRE",
+        "LIT-ATM-SUIT",
+        "LIT-ATM-GENERAL",
+        "LIT-ATM-MOC",
+        "LIT-ATM-ARTEMIS",
+        "LIT-ATM-TABLE",
+        "LIT-APOLLO1",
+        "F09",
+        "LIT-APOLLO13",
+        "LIT-SAF2-IGNITION",
+        "LIT-MIR",
+        "F06"
+      ],
+      "notice": null,
+      "warnings": [
+        "This is a preliminary, evidence-weighted prioritisation, not a certified hazard analysis.",
+        "The matrix uses lunar gravity as a reference scenario. The suit's mission environment remains unspecified.",
+        "Most measured fire data are from orbital microgravity or 1 g; lunar gravity is covered only by literature from simulated lunar gravity (LUCI).",
+        "The suit's internal atmosphere is a separate, low-pressure domain from the cabin (4.3 or 5.2 psi suit pressure in early Artemis architectures, LIT-ATM-SUIT); cabin-air test data do not describe it."
+      ],
+      "answer": "A verification plan should measure the suit atmosphere's O2 fraction and pressure, as these are critical for flammability risks. Key evidence includes LIT-ATM-SUIT, which clarifies the suit's low-pressure domain, and LIT-ATM-GENERAL, which links O2 concentration to flammability. Next, test materials under the design atmosphere using NASA-STD-6001 to validate fire resistance. Limitations include uncertainty in lunar gravity simulations.\n\n[LIT-EVA-WIRE] [LIT-ATM-SUIT] [LIT-ATM-GENERAL] [LIT-ATM-MOC]",
+      "pass": true
+    }
+  ]
+}

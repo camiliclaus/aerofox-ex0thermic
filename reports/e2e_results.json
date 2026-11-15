@@ -1,0 +1,130 @@
+{
+ "base": "http://127.0.0.1:8000",
+ "results": [
+  {
+   "name": "home headline",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "four investigation cards",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "dataset count from API",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "snapshot label",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Saffire card renders a chart",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "table rendered",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "evidence cards shown",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "lunar-base chart request renders decision matrix",
+   "ok": true,
+   "detail": "30 coded cells"
+  },
+  {
+   "name": "follow-up renders atmosphere chart",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "project state shown as updated",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "CSV download returns data",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "evidence drawer opens with source",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "project drawer prefilled",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "project inputs saved",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "Portuguese simplification",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "library view: datasets",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "library view: findings",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "library view: references",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "library view: fields",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "library view: provenance",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "new conversation resets thread",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "previous conversation restored",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "mobile: no horizontal scroll",
+   "ok": true,
+   "detail": "overflow 0px"
+  },
+  {
+   "name": "mobile: answer fits",
+   "ok": true,
+   "detail": "overflow 0px"
+  },
+  {
+   "name": "no browser console errors",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

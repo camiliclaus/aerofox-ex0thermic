@@ -1,0 +1,11 @@
+fuel,term,coef,ci95_lo,ci95_hi,n_tests,R2
+Heptane,intercept,0.159,0.012,0.341,107,0.418
+Heptane,X_O2,1.918,1.17,2.569,107,0.418
+Heptane,ln(p/1 atm),0.08,-0.087,0.201,107,0.418
+Heptane,CO2 vs N2,-0.085,-0.135,-0.041,107,0.418
+Heptane,He vs N2,0.144,0.06,0.228,107,0.418
+Methanol,intercept,0.146,0.108,0.18,150,0.791
+Methanol,X_O2,1.621,1.42,1.829,150,0.791
+Methanol,ln(p/1 atm),0.009,-0.028,0.058,150,0.791
+Methanol,CO2 vs N2,-0.034,-0.051,-0.016,150,0.791
+Methanol,He vs N2,0.144,0.119,0.171,150,0.791

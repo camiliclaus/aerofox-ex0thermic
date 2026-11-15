@@ -1,0 +1,7 @@
+# Runtime dependencies for the AeroFox server (Python 3.10+).
+fastapi>=0.110
+uvicorn>=0.29
+pandas>=2.1
+numpy>=1.26
+pydantic>=2.6
+jsonschema>=4.24,<5

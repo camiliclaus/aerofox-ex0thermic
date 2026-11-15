@@ -1,0 +1,140 @@
+accession,category,files,bytes
+PSI-10,Engineering Documents,1,7496324
+PSI-10,Experimental table,2,44247
+PSI-10,Raw Data,3792,2180419708029
+PSI-10,Reports,3,4534713
+PSI-10,Representative Image(s),5,871708
+PSI-10,Science Documents,3,2632279
+PSI-10,metadata,1,17047
+PSI-100,Engineering Documents,2,1737185
+PSI-100,Experimental table,1,239
+PSI-100,Presentations,3,10246234
+PSI-100,Raw Data,75,35182666847
+PSI-100,Science Documents,5,16106163
+PSI-100,metadata,1,8384
+PSI-101,Analyzed Data,86,495127960
+PSI-101,Engineering Documents,24,55122338
+PSI-101,Experimental table,1,5674
+PSI-101,Presentations,4,33297074
+PSI-101,Raw Data,223,5718363731
+PSI-101,Reference Data,2,671373
+PSI-101,Reports,1,4578437
+PSI-101,Science Documents,2,947126
+PSI-101,metadata,1,11037
+PSI-102,Analyzed Data,59,228109998
+PSI-102,Engineering Documents,28,362007454
+PSI-102,Experimental table,1,331
+PSI-102,Presentations,6,61451442
+PSI-102,Reference Data,3,1365855
+PSI-102,Reports,1,3712845
+PSI-102,Science Documents,2,947126
+PSI-102,metadata,1,13127
+PSI-106,Experimental table,1,734
+PSI-106,Raw Data,23461,72914176094
+PSI-106,metadata,1,8743
+PSI-107,Engineering Documents,4,5431916
+PSI-107,Experimental table,1,31205
+PSI-107,Presentations,5,36912183
+PSI-107,Raw Data,172,6899317356
+PSI-107,Reference Data,1,1060135
+PSI-107,Reports,3,2990401
+PSI-107,Science Documents,1,1112064
+PSI-107,metadata,1,9313
+PSI-115,Analyzed Data,44,253683467
+PSI-115,Reports,1,10617514
+PSI-115,Science Documents,1,96899
+PSI-115,metadata,1,7021
+PSI-117,Analyzed Data,10,281272
+PSI-117,Presentations,4,62456587
+PSI-117,Reports,1,8072629
+PSI-117,metadata,1,10382
+PSI-142,Analyzed Data,1,735232
+PSI-142,Experimental table,1,727
+PSI-142,metadata,1,12158
+PSI-159,Engineering Documents,1,7496324
+PSI-159,Experimental table,2,61588
+PSI-159,Raw Data,3749,2085580830202
+PSI-159,Reports,1,3894907
+PSI-159,Representative Image(s),2,137834
+PSI-159,metadata,1,8404
+PSI-20,Engineering Documents,25,161416828
+PSI-20,Experimental table,1,1113
+PSI-20,Presentations,13,184287964
+PSI-20,Raw Data,2297,2035132220077
+PSI-20,Reports,2,18391525
+PSI-20,Science Documents,22,72094928
+PSI-20,metadata,1,15061
+PSI-21,Experimental table,1,2454
+PSI-21,Raw Data,4881,2005536277311
+PSI-21,metadata,1,15476
+PSI-22,Engineering Documents,26,183892385
+PSI-22,Experimental table,1,2475
+PSI-22,Presentations,32,808342989
+PSI-22,Raw Data,2502,949170887602
+PSI-22,Reference Data,2,3851588
+PSI-22,Reports,9,18707698
+PSI-22,Representative Image(s),4,351087
+PSI-22,Science Documents,13,26440117
+PSI-22,metadata,1,15166
+PSI-23,Engineering Documents,29,190421311
+PSI-23,Experimental table,1,2456
+PSI-23,Presentations,17,50663477
+PSI-23,Raw Data,4058,780797309850
+PSI-23,Reference Data,50,1120419099
+PSI-23,Reports,2,3483328
+PSI-23,Science Documents,7,9806480
+PSI-23,metadata,1,20061
+PSI-25,Engineering Documents,2,2235212
+PSI-25,Experimental table,1,16590
+PSI-25,Raw Data,685,274578648152
+PSI-25,Reference Data,1,23973
+PSI-25,Reports,1,48972416
+PSI-25,Representative Image(s),1,37525
+PSI-25,Science Documents,3,1158834
+PSI-25,metadata,1,13439
+PSI-26,Engineering Documents,24,13805316
+PSI-26,Experimental table,1,4726
+PSI-26,Presentations,6,14968330
+PSI-26,Raw Data,173,163511551209
+PSI-26,Science Documents,5,9923798
+PSI-26,metadata,1,11647
+PSI-39,Analyzed Data,32,13614684
+PSI-39,Engineering Documents,1,115496
+PSI-39,Experimental table,1,7792
+PSI-39,Presentations,2,5945283
+PSI-39,Raw Data,2771,718850418928
+PSI-39,Reports,1,811459
+PSI-39,Science Documents,3,16099538
+PSI-39,metadata,1,10237
+PSI-47,Analyzed Data,12,3454976
+PSI-47,Engineering Documents,6,7955514
+PSI-47,Experimental table,1,518
+PSI-47,Presentations,3,15065420
+PSI-47,Raw Data,6,18573
+PSI-47,Reports,3,13949744
+PSI-47,Representative Image(s),1,1312134
+PSI-47,metadata,1,8454
+PSI-60,metadata,1,7743
+PSI-62,metadata,1,9694
+PSI-68,Calibration,63,4365667173
+PSI-68,Engineering Documents,7,8596147
+PSI-68,Experimental table,1,1029
+PSI-68,Raw Data,10081,1220376129822
+PSI-68,Science Documents,3,1694804
+PSI-68,metadata,1,24115
+PSI-69,Calibration,120,5492705004
+PSI-69,Engineering Documents,3,5745120
+PSI-69,Experimental table,1,24776
+PSI-69,Presentations,4,7072984
+PSI-69,Raw Data,6424,918326758436
+PSI-69,Science Documents,2,204557
+PSI-69,metadata,1,24780
+PSI-98,Engineering Documents,2,1710886
+PSI-98,Experimental table,1,469
+PSI-98,Raw Data,68,12236039093
+PSI-98,Science Documents,4,12839722
+PSI-98,metadata,1,10031
+PSI-99,Experimental table,1,1973
+PSI-99,Raw Data,211,16895467188
+PSI-99,Science Documents,4,21896345
+PSI-99,metadata,1,10539

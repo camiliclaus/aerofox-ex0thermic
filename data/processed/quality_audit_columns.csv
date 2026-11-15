@@ -1,0 +1,568 @@
+table,column,rows,missing_or_blank,missing_pct,n_unique,dtype
+investigations,accession,24,0,0.0,24,str
+investigations,acronym,24,5,20.8,20,str
+investigations,title,24,0,0.0,24,str
+investigations,project_type,24,0,0.0,2,str
+investigations,flight_program,24,3,12.5,4,str
+investigations,sub_research_area,24,1,4.2,13,str
+investigations,hardware,24,5,20.8,16,str
+investigations,managing_center,24,0,0.0,1,str
+investigations,start,24,3,12.5,20,str
+investigations,end,24,4,16.7,20,str
+investigations,release_date,24,0,0.0,14,str
+investigations,license,24,0,0.0,2,str
+investigations,doi,24,0,0.0,24,str
+investigations,psi_version,24,0,0.0,7,int64
+investigations,n_publications,24,0,0.0,19,int64
+investigations,n_experiment_tables,24,0,0.0,3,int64
+investigations,catalog_files,24,0,0.0,23,int64
+investigations,catalog_bytes,24,0,0.0,24,int64
+investigations,declared_total_bytes,24,0,0.0,24,float64
+investigations,objective,24,0,0.0,24,str
+investigations,hypothesis,24,0,0.0,22,str
+investigations,approach,24,0,0.0,24,str
+investigations,impacts,24,0,0.0,23,str
+investigations,psi_url,24,0,0.0,24,str
+catalog_summary,accession,139,0,0.0,24,str
+catalog_summary,category,139,0,0.0,11,str
+catalog_summary,files,139,0,0.0,42,int64
+catalog_summary,bytes,139,0,0.0,137,int64
+flex_tests,test,274,0,0.0,274,Int64
+flex_tests,table_identifier,274,0,0.0,273,str
+flex_tests,date,274,0,0.0,80,str
+flex_tests,gmt,274,1,0.4,270,str
+flex_tests,fuel,274,0,0.0,2,str
+flex_tests,p_mmHg_raw,274,0,0.0,183,str
+flex_tests,x_o2_raw,274,0,0.0,15,str
+flex_tests,x_n2_raw,274,0,0.0,33,str
+flex_tests,x_co2_raw,274,0,0.0,14,str
+flex_tests,x_he_raw,274,0,0.0,10,str
+flex_tests,d0_mm_raw,274,6,2.2,165,str
+flex_tests,dext_mm_raw,274,49,17.9,147,str
+flex_tests,K_mm2s_raw,274,16,5.8,61,str
+flex_tests,burn_time_s_raw,274,6,2.2,165,str
+flex_tests,test_end,274,0,0.0,3,str
+flex_tests,p_mmHg,274,0,0.0,183,float64
+flex_tests,x_o2,274,0,0.0,15,float64
+flex_tests,x_n2,274,0,0.0,33,float64
+flex_tests,x_co2,274,0,0.0,14,float64
+flex_tests,x_he,274,0,0.0,10,float64
+flex_tests,d0_mm,274,12,4.4,163,float64
+flex_tests,dext_mm,274,77,28.1,145,float64
+flex_tests,K_mm2s,274,16,5.8,60,float64
+flex_tests,burn_time_s,274,8,2.9,162,float64
+flex_tests,p_kPa,274,0,0.0,183,float64
+flex_tests,p_atm,274,0,0.0,183,float64
+flex_tests,pO2_kPa,274,0,0.0,251,float64
+flex_tests,x_sum,274,0,0.0,5,float64
+flex_tests,diluent,274,0,0.0,3,str
+flex_tests,cir_id,274,0,0.0,273,str
+flex_tests,flex_number,274,0,0.0,274,float64
+flex_tests,flex_number_source,274,0,0.0,2,str
+flex_tests,table_number_offset,274,0,0.0,7,float64
+flex_tests,sheet_test,274,3,1.1,269,str
+flex_tests,sheet_date,274,3,1.1,81,str
+flex_tests,sheet_cir_id,274,3,1.1,270,str
+flex_tests,sheet_p_atm,274,3,1.1,15,float64
+flex_tests,sheet_x_o2,274,3,1.1,17,float64
+flex_tests,sheet_x_n2,274,3,1.1,33,float64
+flex_tests,sheet_x_co2,274,3,1.1,15,float64
+flex_tests,sheet_x_he,274,4,1.5,12,float64
+flex_tests,sheet_T_K,274,3,1.1,181,float64
+flex_tests,sheet_fuel,274,3,1.1,3,str
+flex_tests,sheet_d0_mm,274,13,4.7,163,object
+flex_tests,sheet_kavg_mm2s,274,13,4.7,63,object
+flex_tests,sheet_fiber,274,3,1.1,2,str
+flex_tests,sheet_dext_mm,274,49,17.9,162,object
+flex_tests,sheet_comment,274,3,1.1,270,str
+flex_tests,sheet_number,274,3,1.1,270,float64
+flex_tests,sheet_file,274,3,1.1,270,str
+flex_tests,sheet_cir_upper,274,3,1.1,270,str
+flex_tests,has_sheet,274,0,0.0,2,bool
+flex_tests,agree_d0_mm,274,14,5.1,2,object
+flex_tests,agree_K_mm2s,274,17,6.2,2,object
+flex_tests,agree_x_o2,274,3,1.1,2,object
+flex_tests,agree_p_atm,274,3,1.1,1,object
+flex_tests,flag_zero_pressure,274,0,0.0,2,bool
+flex_tests,K_fit_mm2s,274,27,9.9,247,float64
+flex_tests,K_fit_se,274,27,9.9,247,float64
+flex_tests,K_fit_r2,274,27,9.9,247,float64
+flex_tests,K_fit_n,274,17,6.2,170,float64
+flex_tests,K_post_mm2s,274,153,55.8,121,float64
+flex_droplet_fits,n_samples,260,0,0.0,192,int64
+flex_droplet_fits,t_first,260,0,0.0,74,float64
+flex_droplet_fits,t_last,260,0,0.0,208,float64
+flex_droplet_fits,d0_hist_mm,260,5,1.9,251,float64
+flex_droplet_fits,K_fit_mm2s,260,13,5.0,247,float64
+flex_droplet_fits,K_fit_se,260,13,5.0,247,float64
+flex_droplet_fits,K_fit_r2,260,13,5.0,247,float64
+flex_droplet_fits,K_fit_n,260,3,1.2,170,float64
+flex_droplet_fits,flex_number,260,0,0.0,260,int64
+flex_droplet_fits,file,260,0,0.0,260,str
+flex_droplet_fits,burn_time_s,260,2,0.8,158,float64
+flex_droplet_fits,K_post_mm2s,260,139,53.5,121,float64
+flex_droplet_fits,K_post_se,260,139,53.5,121,float64
+flex_droplet_fits,K_post_r2,260,139,53.5,121,float64
+flex_droplet_fits,K_post_n,260,139,53.5,86,float64
+flex035_timeseries,t_s,1165,0,0.0,1165,float64
+flex035_timeseries,d_mm,1165,0,0.0,1083,float64
+flex035_timeseries,d2_mm2,1165,0,0.0,1083,float64
+flex035_timeseries,test,1165,0,0.0,1,int64
+flex035_timeseries,lluv,1165,888,76.2,266,float64
+cfi_tests,test,87,0,0.0,79,Int64
+cfi_tests,date,87,0,0.0,23,str
+cfi_tests,local_time,87,0,0.0,79,str
+cfi_tests,cir_id,87,0,0.0,79,str
+cfi_tests,pressure_raw,87,0,0.0,9,str
+cfi_tests,x_o2_raw,87,0,0.0,2,str
+cfi_tests,x_n2_raw,87,0,0.0,5,str
+cfi_tests,x_he_raw,87,0,0.0,3,str
+cfi_tests,fiber,87,9,10.3,3,str
+cfi_tests,fuel,87,0,0.0,3,str
+cfi_tests,p_atm,87,0,0.0,7,float64
+cfi_tests,x_o2,87,0,0.0,2,float64
+cfi_tests,x_n2,87,0,0.0,5,float64
+cfi_tests,x_he,87,0,0.0,3,float64
+cfi_tests,pO2_kPa,87,0,0.0,9,float64
+cfi_tests,sheet_test,87,75,86.2,12,str
+cfi_tests,sheet_date,87,75,86.2,4,str
+cfi_tests,sheet_cir_id,87,75,86.2,12,str
+cfi_tests,sheet_p_atm,87,75,86.2,3,float64
+cfi_tests,sheet_x_o2,87,75,86.2,2,float64
+cfi_tests,sheet_x_n2,87,75,86.2,2,float64
+cfi_tests,sheet_x_co2,87,75,86.2,1,float64
+cfi_tests,sheet_x_he,87,75,86.2,1,float64
+cfi_tests,sheet_T_K,87,75,86.2,12,float64
+cfi_tests,sheet_fuel,87,75,86.2,1,str
+cfi_tests,sheet_d0_mm,87,75,86.2,9,float64
+cfi_tests,sheet_kavg_mm2s,87,75,86.2,9,float64
+cfi_tests,sheet_fiber,87,75,86.2,2,str
+cfi_tests,sheet_dext_mm,87,75,86.2,11,float64
+cfi_tests,sheet_comment,87,75,86.2,11,str
+cfi_tests,cir_match,87,75,86.2,1,object
+cfi_tests,n_samples,87,74,85.1,13,float64
+cfi_tests,t_last,87,74,85.1,12,float64
+cfi_tests,d0_hist_mm,87,74,85.1,13,float64
+saffire_samples,experiment,13,0,0.0,3,str
+saffire_samples,accession,13,0,0.0,3,str
+saffire_samples,sample,13,0,0.0,11,str
+saffire_samples,material,13,0,0.0,5,str
+saffire_samples,thickness_mm,13,0,0.0,9,float64
+saffire_samples,length_cm,13,0,0.0,4,float64
+saffire_samples,width_cm,13,0,0.0,3,float64
+saffire_samples,flow_nominal_cm_s,13,0,0.0,2,float64
+saffire_samples,o2_pct_raw,13,2,15.4,5,str
+saffire_samples,o2_pct,13,2,15.4,3,float64
+saffire_samples,ignition_power_W,13,2,15.4,3,float64
+saffire_samples,ignition_time_s,13,2,15.4,3,float64
+saffire_samples,burn_time_s,13,6,46.2,7,float64
+saffire_samples,direction,13,0,0.0,2,str
+saffire_samples,material_source,13,4,30.8,3,str
+saffire_samples,thickness_raw,13,4,30.8,7,str
+saffire_samples,o2_basis,13,4,30.8,1,str
+saffire_samples,burn_time_raw,13,4,30.8,6,str
+saffire_samples,ug_burn_length_raw,13,4,30.8,5,str
+saffire_samples,ug_spread_rate_mm_s,13,11,84.6,2,float64
+saffire_samples,onegee_burn_length_raw,13,4,30.8,4,str
+saffire_samples,onegee_spread_raw,13,5,38.5,5,str
+saffire_samples,ignition_energy_J,13,2,15.4,3,float64
+saffire2_flow,sample,9,0,0.0,9,str
+saffire2_flow,ignition_t_s,9,0,0.0,9,float64
+saffire2_flow,igniter_active_samples,9,0,0.0,7,int64
+saffire2_flow,anem1_mean_cm_s,9,0,0.0,9,float64
+saffire2_flow,anem1_sd,9,0,0.0,9,float64
+saffire2_flow,anem2_mean_cm_s,9,0,0.0,9,float64
+saffire2_flow,anem2_sd,9,0,0.0,9,float64
+saffire2_flow,anem_mean_cm_s,9,0,0.0,9,float64
+saffire2_flow,anem_diff_cm_s,9,0,0.0,9,float64
+saffire2_flow,fan_tach_mean,9,0,0.0,9,float64
+saffire2_flow,n_window,9,0,0.0,1,int64
+saffire2_flow,anem1_pre_mean,9,0,0.0,9,float64
+bass2_tests,pi,129,0,0.0,6,str
+bass2_tests,test,129,0,0.0,129,str
+bass2_tests,date,129,0,0.0,30,str
+bass2_tests,sample,129,0,0.0,107,str
+bass2_tests,material_raw,129,0,0.0,51,str
+bass2_tests,flow_restrictor_raw,129,0,0.0,3,str
+bass2_tests,fan_display_raw,129,13,10.1,100,str
+bass2_tests,o2_init_pct_raw,129,0,0.0,50,str
+bass2_tests,o2_final_pct_raw,129,2,1.6,66,str
+bass2_tests,co2_init_pct_raw,129,2,1.6,53,str
+bass2_tests,co2_final_pct_raw,129,6,4.7,82,str
+bass2_tests,co_init_ppm_raw,129,2,1.6,67,str
+bass2_tests,co_final_ppm_raw,129,5,3.9,101,str
+bass2_tests,o2_init_pct,129,0,0.0,50,float64
+bass2_tests,o2_final_pct,129,2,1.6,65,float64
+bass2_tests,co2_init_pct,129,2,1.6,52,float64
+bass2_tests,co2_final_pct,129,6,4.7,80,float64
+bass2_tests,co_init_ppm,129,3,2.3,65,float64
+bass2_tests,co_final_ppm,129,9,7.0,96,float64
+bass2_tests,fan_display,129,110,85.3,14,float64
+bass2_tests,multi_valued_fan,129,0,0.0,2,bool
+bass2_tests,material_class,129,0,0.0,4,str
+bass2_tests,thickness_um,129,114,88.4,4,float64
+bass2_tests,o2_drop_pct,129,2,1.6,40,float64
+bass2_tests,flag_o2_increase,129,0,0.0,2,bool
+same_r_tests,material,109,0,0.0,5,str
+same_r_tests,test,109,0,0.0,108,str
+same_r_tests,description,109,0,0.0,34,str
+same_r_tests,date,109,0,0.0,17,str
+same_r_tests,inlet_velocity_cm_s_raw,109,0,0.0,5,str
+same_r_tests,rt_r0_raw,109,0,0.0,20,str
+same_r_tests,duration_s_raw,109,41,37.6,3,str
+same_r_tests,primary_aging_s_raw,109,42,38.5,4,str
+same_r_tests,primary_mixing_s_raw,109,42,38.5,2,str
+same_r_tests,net_aging_s_raw,109,5,4.6,67,str
+same_r_tests,inlet_velocity_cm_s,109,0,0.0,5,float64
+same_r_tests,rt_r0,109,0,0.0,20,float64
+same_r_tests,duration_s,109,41,37.6,2,float64
+same_r_tests,primary_aging_s,109,42,38.5,3,float64
+same_r_tests,primary_mixing_s,109,42,38.5,1,float64
+same_r_tests,net_aging_s,109,5,4.6,66,float64
+same_r_tests,is_aged_segment,109,0,0.0,2,bool
+same_reduced,flight,154,0,0.0,2,str
+same_reduced,material,154,0,0.0,6,str
+same_reduced,same_test,154,0,0.0,154,object
+same_reduced,description,154,0,0.0,48,str
+same_reduced,inlet_velocity_cm_s,154,0,0.0,7,float64
+same_reduced,rt_r0,154,0,0.0,25,float64
+same_reduced,net_aging_s,154,4,2.6,137,float64
+same_reduced,M0_per_cm3,154,23,14.9,131,float64
+same_reduced,M1_mm_per_cm3,154,20,13.0,134,float64
+same_reduced,amd_um,154,23,14.9,131,float64
+same_reduced,d_avg_mass_um,154,1,0.6,131,float64
+same_reduced,sigma_g,154,30,19.5,124,float64
+same_reduced,dg_um,154,30,19.5,124,float64
+same_reduced,sample_T_C,154,4,2.6,93,float64
+same_reduced,mass_loss_mg,154,23,14.9,67,float64
+same_r_detectors,material,109,0,0.0,5,str
+same_r_detectors,same_test,109,0,0.0,109,str
+same_r_detectors,description,109,0,0.0,29,str
+same_r_detectors,inlet_velocity_cm_s,109,0,0.0,5,float64
+same_r_detectors,rt_r0,109,0,0.0,20,float64
+same_r_detectors,net_aging_s,109,4,3.7,98,float64
+same_r_detectors,iss_obscuration_V,109,109,100.0,0,float64
+same_r_detectors,iss_scatter_V,109,0,0.0,103,float64
+same_r_detectors,sts_detector_V,109,0,0.0,18,float64
+same_r_detectors,sts_offset_V,109,0,0.0,18,float64
+same_r_detectors,amd_um,109,3,2.8,106,float64
+same_r_detectors,mass_loss_mg,109,19,17.4,51,float64
+table_PSI-10_flame_design_inverse_flame,Flame Type,120,0,0.0,1,str
+table_PSI-10_flame_design_inverse_flame,Day,120,0,0.0,8,str
+table_PSI-10_flame_design_inverse_flame,Test,120,0,0.0,120,str
+table_PSI-10_flame_design_inverse_flame,XO2,120,0,0.0,60,str
+table_PSI-10_flame_design_inverse_flame,mO2 (mg/s),120,0,0.0,114,str
+table_PSI-10_flame_design_inverse_flame,mN2 (mg/s),120,0,0.0,111,str
+table_PSI-10_flame_design_inverse_flame,mtot (mg/s),120,0,0.0,111,str
+table_PSI-10_flame_design_inverse_flame,XC2H4 initial,120,0,0.0,120,str
+table_PSI-10_flame_design_inverse_flame,XC2H4 final,120,0,0.0,120,str
+table_PSI-10_flame_design_inverse_flame,pinit (atm),120,0,0.0,69,str
+table_PSI-10_flame_design_inverse_flame,pfinal (atm),120,0,0.0,72,str
+table_PSI-10_flame_design_inverse_flame,pmean (atm),120,0,0.0,89,str
+table_PSI-10_flame_design_inverse_flame,mean Zst,120,0,0.0,111,str
+table_PSI-10_flame_design_inverse_flame,Tad (K),120,0,0.0,111,str
+table_PSI-10_flame_design_normal_flame,Flame Type,207,0,0.0,1,str
+table_PSI-10_flame_design_normal_flame,Day,207,0,0.0,14,str
+table_PSI-10_flame_design_normal_flame,Fuel,207,0,0.0,2,str
+table_PSI-10_flame_design_normal_flame,Test,207,0,0.0,207,str
+table_PSI-10_flame_design_normal_flame,Xfuel,207,0,0.0,98,str
+table_PSI-10_flame_design_normal_flame,mfuel (mg/s),207,0,0.0,142,str
+table_PSI-10_flame_design_normal_flame,mN2 (mg/s),207,0,0.0,99,str
+table_PSI-10_flame_design_normal_flame,mtot (mg/s),207,0,0.0,144,str
+table_PSI-10_flame_design_normal_flame,XO2 (init),207,0,0.0,188,str
+table_PSI-10_flame_design_normal_flame,XO2 (final),207,20,9.7,188,str
+table_PSI-10_flame_design_normal_flame,pinit (atm),207,0,0.0,80,str
+table_PSI-10_flame_design_normal_flame,pfinal (atm),207,20,9.7,92,str
+table_PSI-10_flame_design_normal_flame,pmean (atm),207,20,9.7,113,str
+table_PSI-10_flame_design_normal_flame,mean Zst,207,0,0.0,135,str
+table_PSI-10_flame_design_normal_flame,Tad (K),207,0,0.0,135,str
+table_PSI-102_same,Sample #,8,0,0.0,8,str
+table_PSI-102_same,Sample Material,8,0,0.0,5,str
+table_PSI-102_same,Air Flow (cm/s),8,4,50.0,3,str
+table_PSI-102_same,Weight loss rate (mg/min),8,4,50.0,3,str
+table_PSI-102_same,Aging Duration (minutes),8,4,50.0,3,str
+table_PSI-106_slice,Test Date,12,0,0.0,12,str
+table_PSI-106_slice,Fuel Type,12,0,0.0,11,str
+table_PSI-107_spice,GMT date,469,0,0.0,11,str
+table_PSI-107_spice,GMT ignition,469,1,0.2,151,str
+table_PSI-107_spice,GMT Flame Off,469,12,2.6,144,str
+table_PSI-107_spice,Fuel,469,0,0.0,7,str
+table_PSI-107_spice,Nozzle (mm),469,0,0.0,3,str
+table_PSI-107_spice,Fuel Rate (sccm),469,12,2.6,285,str
+table_PSI-107_spice,Fuel Rate (mg/s),469,12,2.6,276,str
+table_PSI-107_spice,HC Fuel Rate (mg/s),469,0,0.0,269,str
+table_PSI-107_spice,Air Rate (cm/s),469,25,5.3,63,str
+table_PSI-142_data_summary_table,Data ID,8,0,0.0,8,str
+table_PSI-142_data_summary_table,Data Description,8,0,0.0,8,str
+table_PSI-142_data_summary_table,Reference Publication Link,8,0,0.0,6,str
+table_PSI-142_data_summary_table,Figure ID in Reference,8,0,0.0,6,str
+table_PSI-159_cfi_g_inverse_flames,Flame Type,154,0,0.0,2,str
+table_PSI-159_cfi_g_inverse_flames,Day,154,0,0.0,12,str
+table_PSI-159_cfi_g_inverse_flames,Fuel,154,0,0.0,3,str
+table_PSI-159_cfi_g_inverse_flames,Test,154,0,0.0,154,str
+table_PSI-159_cfi_g_inverse_flames,Xf before test,154,0,0.0,140,str
+table_PSI-159_cfi_g_inverse_flames,Xf after test,154,0,0.0,141,str
+table_PSI-159_cfi_g_inverse_flames,approx p (bar),154,0,0.0,6,str
+table_PSI-159_cfi_g_inverse_flames,XO2,154,0,0.0,12,str
+table_PSI-159_cfi_g_inverse_flames,HC burnrate (mg/s),154,0,0.0,17,str
+table_PSI-159_cfi_g_inverse_flames,O2 flow rate (mg/s),154,0,0.0,30,str
+table_PSI-159_cfi_g_inverse_flames,TFP,154,0,0.0,2,str
+table_PSI-159_cfi_g_inverse_flames,Tad (K),154,0,0.0,145,str
+table_PSI-159_cfi_g_inverse_flames,Zst,154,0,0.0,145,str
+table_PSI-159_cfi_g_inverse_flames,Hot ignition,154,0,0.0,5,str
+table_PSI-159_cfi_g_inverse_flames,burn time (sec),154,0,0.0,51,str
+table_PSI-159_cfi_g_inverse_flames,Self -ext or flow term,154,0,0.0,3,str
+table_PSI-159_cfi_g_inverse_flames,Peak burner Temp (C),154,1,0.6,143,str
+table_PSI-159_cfi_g_inverse_flames,Peak burner temp (K),154,0,0.0,143,str
+table_PSI-159_cfi_g_inverse_flames,Color,154,10,6.5,9,str
+table_PSI-159_cfi_g_inverse_flames,Comments,154,115,74.7,22,str
+table_PSI-159_cfi_g_normal_flames,Flame Type,179,0,0.0,1,str
+table_PSI-159_cfi_g_normal_flames,Day,179,0,0.0,11,str
+table_PSI-159_cfi_g_normal_flames,Fuel,179,0,0.0,6,str
+table_PSI-159_cfi_g_normal_flames,Test,179,0,0.0,179,str
+table_PSI-159_cfi_g_normal_flames,Cool flame?,179,171,95.5,9,str
+table_PSI-159_cfi_g_normal_flames,XO2 before test,179,0,0.0,139,str
+table_PSI-159_cfi_g_normal_flames,XO2 after test,179,0,0.0,136,str
+table_PSI-159_cfi_g_normal_flames,approx p (bar),179,0,0.0,5,str
+table_PSI-159_cfi_g_normal_flames,Xf,179,0,0.0,14,str
+table_PSI-159_cfi_g_normal_flames,mHC (mg/s),179,0,0.0,25,str
+table_PSI-159_cfi_g_normal_flames,TFP,179,0,0.0,2,str
+table_PSI-159_cfi_g_normal_flames,Tad (K),179,0,0.0,145,str
+table_PSI-159_cfi_g_normal_flames,Zst,179,0,0.0,145,str
+table_PSI-159_cfi_g_normal_flames,Hot ignition,179,0,0.0,2,str
+table_PSI-159_cfi_g_normal_flames,burn time (sec),179,4,2.2,79,str
+table_PSI-159_cfi_g_normal_flames,Self-ext or flow term,179,0,0.0,3,str
+table_PSI-159_cfi_g_normal_flames,Peak burner T (C ),179,0,0.0,130,str
+table_PSI-159_cfi_g_normal_flames,Comments,179,135,75.4,33,str
+table_PSI-20_acme_bre,Year,18,0,0.0,3,str
+table_PSI-20_acme_bre,Month,18,0,0.0,7,str
+table_PSI-20_acme_bre,Date,18,0,0.0,12,str
+table_PSI-20_acme_bre,Burner Size (mm),18,0,0.0,2,str
+table_PSI-20_acme_bre,Fuel Bottle,18,0,0.0,4,str
+table_PSI-20_acme_bre,Oxygen Conc (percent),18,0,0.0,10,str
+table_PSI-20_acme_bre,Flames Ignited,18,0,0.0,12,str
+table_PSI-20_acme_bre,Notes,18,16,88.9,3,str
+table_PSI-21_cld_flame,Test Type,32,0,0.0,3,str
+table_PSI-21_cld_flame,Test Day,32,0,0.0,32,str
+table_PSI-21_cld_flame,Fuel MFC,32,0,0.0,2,str
+table_PSI-21_cld_flame,N2 MFC,32,0,0.0,4,str
+table_PSI-21_cld_flame,Fuel Bottle,32,0,0.0,30,str
+table_PSI-21_cld_flame,Fuel conc. Range,32,0,0.0,18,str
+table_PSI-21_cld_flame,Flames ignited,32,0,0.0,15,str
+table_PSI-21_cld_flame,Notes,32,31,96.9,2,str
+table_PSI-22_acme_e_field_flames,Test Type,32,11,34.4,3,str
+table_PSI-22_acme_e_field_flames,Test Day,32,11,34.4,21,str
+table_PSI-22_acme_e_field_flames,Year,32,11,34.4,2,str
+table_PSI-22_acme_e_field_flames,Month,32,11,34.4,7,str
+table_PSI-22_acme_e_field_flames,Date,32,11,34.4,19,str
+table_PSI-22_acme_e_field_flames,Mesh Polarity,32,11,34.4,3,str
+table_PSI-22_acme_e_field_flames,Fuel Bottle,32,11,34.4,5,str
+table_PSI-22_acme_e_field_flames,Fuel Conc,32,0,0.0,7,str
+table_PSI-22_acme_e_field_flames,Flames Ignited,32,11,34.4,8,str
+table_PSI-22_acme_e_field_flames,Notes,32,28,87.5,5,str
+table_PSI-23_acme_s_flame,Test Type,18,0,0.0,2,str
+table_PSI-23_acme_s_flame,Test Day*,18,0,0.0,18,str
+table_PSI-23_acme_s_flame,Year,18,0,0.0,2,str
+table_PSI-23_acme_s_flame,Month,18,0,0.0,8,str
+table_PSI-23_acme_s_flame,Date,18,0,0.0,13,str
+table_PSI-23_acme_s_flame,Atmosphere*,18,0,0.0,9,str
+table_PSI-23_acme_s_flame,Fuel Bottle,18,0,0.0,16,str
+table_PSI-23_acme_s_flame,Flames Ignited*,18,0,0.0,12,str
+table_PSI-23_acme_s_flame,Notes,18,15,83.3,4,str
+table_PSI-26_bass,Date,122,0,0.0,33,str
+table_PSI-26_bass,GMT,122,0,0.0,31,str
+table_PSI-26_bass,As Run Test #,122,1,0.8,117,str
+table_PSI-26_bass,Test #,122,1,0.8,118,str
+table_PSI-26_bass,Sample #,122,1,0.8,41,str
+table_PSI-26_bass,Fuel Sample Material,122,0,0.0,34,str
+table_PSI-47_daft,Session Name,2,0,0.0,2,str
+table_PSI-47_daft,Actual Day,2,0,0.0,2,str
+table_PSI-47_daft,Hardware Description,2,0,0.0,2,str
+table_PSI-47_daft,Sample Material,2,0,0.0,1,str
+table_PSI-47_daft,Sampled Location,2,0,0.0,2,str
+table_PSI-68_flex2,Sample (Fuel Type),8,0,0.0,8,str
+table_PSI-68_flex2,Initial Droplet Diameter (mm),8,0,0.0,1,str
+table_PSI-68_flex2,Ambient Gas Mixture,8,0,0.0,1,str
+table_PSI-68_flex2,Oxygen Mole Fraction,8,0,0.0,1,str
+table_PSI-68_flex2,Ambient Pressure (atm),8,0,0.0,1,str
+table_PSI-68_flex2,Ambient Temperature (C),8,0,0.0,1,str
+table_PSI-68_flex2,Flow Velocity (cm/s),8,0,0.0,1,str
+psi117_mst_2024_burning_history_flame_diameter,Unnamed: 0,683,682,99.9,2,str
+psi117_mst_2024_burning_history_flame_diameter,t,683,617,90.3,67,str
+psi117_mst_2024_burning_history_flame_diameter,d^2 (mm^2),683,617,90.3,67,str
+psi117_mst_2024_burning_history_flame_diameter,Unnamed: 3,683,683,100.0,1,str
+psi117_mst_2024_burning_history_flame_diameter,t.1,683,564,82.6,120,str
+psi117_mst_2024_burning_history_flame_diameter,dflame (mm),683,564,82.6,120,str
+psi117_mst_2024_burning_history_flame_diameter,Unnamed: 6,683,683,100.0,1,str
+psi117_mst_2024_burning_history_flame_diameter,time ,683,600,87.8,84,str
+psi117_mst_2024_burning_history_flame_diameter,Q (W),683,600,87.8,84,str
+psi117_mst_2024_burning_history_flame_diameter,time .1,683,620,90.8,64,str
+psi117_mst_2024_burning_history_flame_diameter,Q (W).1,683,620,90.8,64,str
+psi117_mst_2024_burning_history_flame_diameter,Unnamed: 11,683,683,100.0,1,str
+psi117_mst_2024_burning_history_flame_diameter,Model,683,680,99.6,3,str
+psi117_mst_2024_burning_history_flame_diameter,t.2,683,274,40.1,409,str
+psi117_mst_2024_burning_history_flame_diameter,d^2 (mm^2).1,683,274,40.1,355,str
+psi117_mst_2024_burning_history_flame_diameter,dflame (mm).1,683,274,40.1,390,str
+psi117_mst_2024_burning_history_flame_diameter,Unnamed: 16,683,683,100.0,1,str
+psi117_mst_2024_burning_history_flame_diameter,Model.1,683,680,99.6,4,str
+psi117_mst_2024_burning_history_flame_diameter,t.3,683,0,0.0,531,str
+psi117_mst_2024_burning_history_flame_diameter,Q (W).2,683,0,0.0,577,str
+psi117_mst_2024_dext,Model,9,9,100.0,1,str
+psi117_mst_2024_dext,Pressure,9,4,44.4,6,str
+psi117_mst_2024_dext,Dext_cool,9,4,44.4,6,str
+psi117_mst_2024_dext,Dext_hot,9,4,44.4,6,str
+psi117_mst_2024_dext,Unnamed: 4,9,9,100.0,1,str
+psi117_mst_2024_dext,Expt,9,9,100.0,1,str
+psi117_mst_2024_dext,Pressure.1,9,0,0.0,4,str
+psi117_mst_2024_dext,Dext_cool_Expt,9,0,0.0,9,str
+psi117_mst_2024_kavg,Experiment,19,19,100.0,1,str
+psi117_mst_2024_kavg,Pressure,19,0,0.0,7,str
+psi117_mst_2024_kavg,Kavg_CF,19,0,0.0,17,str
+psi117_mst_2024_kavg,Unnamed: 3,19,19,100.0,1,str
+psi117_mst_2024_kavg,Model,19,19,100.0,1,str
+psi117_mst_2024_kavg,Pressure.1,19,13,68.4,7,str
+psi117_mst_2024_kavg,kb (mm2/s),19,13,68.4,7,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 0,683,681,99.7,3,str
+psi117_mst_2024_radiance_flame_diameter,time ,683,644,94.3,40,str
+psi117_mst_2024_radiance_flame_diameter,Radiance (W),683,644,94.3,40,str
+psi117_mst_2024_radiance_flame_diameter,time,683,665,97.4,19,str
+psi117_mst_2024_radiance_flame_diameter,df (mm),683,665,97.4,19,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 5,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 6,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 7,683,681,99.7,3,str
+psi117_mst_2024_radiance_flame_diameter,time .1,683,641,93.9,42,str
+psi117_mst_2024_radiance_flame_diameter,Radiance (W).1,683,641,93.9,42,str
+psi117_mst_2024_radiance_flame_diameter,time.1,683,618,90.5,62,str
+psi117_mst_2024_radiance_flame_diameter,df (mm).1,683,618,90.5,51,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 12,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 13,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Simulation,683,682,99.9,2,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 15,683,682,99.9,2,str
+psi117_mst_2024_radiance_flame_diameter,time (s),683,355,52.0,280,str
+psi117_mst_2024_radiance_flame_diameter,Q(W),683,355,52.0,326,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 18,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Simulation.1,683,682,99.9,2,str
+psi117_mst_2024_radiance_flame_diameter,time (s).1,683,0,0.0,635,str
+psi117_mst_2024_radiance_flame_diameter,Q (W),683,0,0.0,592,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 22,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 23,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Simulation.2,683,682,99.9,2,str
+psi117_mst_2024_radiance_flame_diameter,Time(sec),683,333,48.8,344,str
+psi117_mst_2024_radiance_flame_diameter,Dflame (mm),683,333,48.8,323,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 27,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Simulation ,683,682,99.9,2,str
+psi117_mst_2024_radiance_flame_diameter,Time(sec).1,683,44,6.4,639,str
+psi117_mst_2024_radiance_flame_diameter,Dflame (mm).1,683,44,6.4,621,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 31,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 32,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Simulation.3,683,682,99.9,2,str
+psi117_mst_2024_radiance_flame_diameter,Time(sec).2,683,320,46.9,352,str
+psi117_mst_2024_radiance_flame_diameter,T_max(K),683,320,46.9,338,str
+psi117_mst_2024_radiance_flame_diameter,Unnamed: 36,683,683,100.0,1,str
+psi117_mst_2024_radiance_flame_diameter,Simulation.4,683,682,99.9,2,str
+psi117_mst_2024_radiance_flame_diameter,Time(sec).3,683,44,6.4,639,str
+psi117_mst_2024_radiance_flame_diameter,T_max(K).1,683,44,6.4,621,str
+psi117_proci_2019_oscillatory_cool_flame,Time(sec),640,0,0.0,635,str
+psi117_proci_2019_oscillatory_cool_flame,Diameter(mm),640,0,0.0,603,str
+psi117_proci_2019_oscillatory_cool_flame,K(mm^2/sec),640,0,0.0,621,str
+psi117_proci_2019_oscillatory_cool_flame,T_max(K),640,0,0.0,626,str
+psi117_proci_2019_oscillatory_cool_flame,D_Tmax/D_drop,640,0,0.0,632,str
+psi117_proci_2019_oscillatory_cool_flame,D_OHm/D_drop,640,0,0.0,640,str
+psi117_proci_2019_oscillatory_cool_flame,(D/Do)2,640,0,0.0,566,str
+psi117_proci_2019_stable_cool,Time(sec),243,0,0.0,243,str
+psi117_proci_2019_stable_cool,Diameter(mm),243,0,0.0,206,str
+psi117_proci_2019_stable_cool,K(mm^2/sec),243,0,0.0,242,str
+psi117_proci_2019_stable_cool,T_max(K),243,0,0.0,223,str
+psi117_proci_2019_stable_cool,D_Tmax/D_drop,243,0,0.0,236,str
+psi117_proci_2019_stable_cool,D_OHm/D_drop,243,0,0.0,243,str
+psi117_proci_2019_stable_cool,(D/Do)2,243,0,0.0,206,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,C7,6,5,83.3,2,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Do,6,1,16.7,6,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_HF,6,1,16.7,6,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_CF,6,1,16.7,6,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Unnamed: 4,6,6,100.0,1,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,C7.1,6,5,83.3,2,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Do.1,6,0,0.0,6,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_HF.1,6,0,0.0,5,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_CF.1,6,0,0.0,5,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Unnamed: 9,6,6,100.0,1,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,C10,6,5,83.3,2,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Do.2,6,0,0.0,6,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_HF.2,6,0,0.0,6,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_CF.2,6,0,0.0,6,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Unnamed: 14,6,6,100.0,1,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,C10.1,6,5,83.3,2,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Do.3,6,0,0.0,6,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_HF.3,6,0,0.0,5,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_CF.3,6,0,0.0,5,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Unnamed: 19,6,6,100.0,1,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,C12,6,5,83.3,2,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Do.4,6,2,33.3,5,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_HF.4,6,2,33.3,5,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_CF.4,6,2,33.3,4,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Unnamed: 24,6,6,100.0,1,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,C12.1,6,5,83.3,2,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Do.5,6,0,0.0,6,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_HF.5,6,0,0.0,6,str
+psi117_proci_2023_alkane_extinction_diameter_1atm,Dext_CF.5,6,0,0.0,6,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,P (atm),6,1,16.7,6,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Dext_HF_EXPT,6,1,16.7,5,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Unnamed: 2,6,6,100.0,1,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,P (atm).1,6,1,16.7,6,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Dext_HF_model,6,1,16.7,6,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Unnamed: 5,6,6,100.0,1,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,P (atm).2,6,0,0.0,5,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Dext_CF_EXPT,6,0,0.0,6,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Unnamed: 8,6,6,100.0,1,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,P (atm).3,6,1,16.7,6,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Dext_CF_Model,6,1,16.7,6,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Unnamed: 11,6,6,100.0,1,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,P (atm).4,6,1,16.7,6,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Dext_CF_ErrorBar+,6,1,16.7,6,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Unnamed: 14,6,6,100.0,1,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,P (atm).5,6,1,16.7,6,str
+psi117_proci_2023_c12_extinction_diameter_vs_pressure,Dext_CF_ErrorBar-,6,1,16.7,6,str
+psi117_proci_c12_2019_three_stage,Unnamed: 0,571,570,99.8,2,str
+psi117_proci_c12_2019_three_stage,t/(Do)2 (s/mm2),571,366,64.1,185,str
+psi117_proci_c12_2019_three_stage,(D/Do)2,571,366,64.1,158,str
+psi117_proci_c12_2019_three_stage,Unnamed: 3,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,Unnamed: 4,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,t/(Do)2 (s/mm2).1,571,434,76.0,80,str
+psi117_proci_c12_2019_three_stage,Dflame/Dodrop,571,434,76.0,104,str
+psi117_proci_c12_2019_three_stage,Unnamed: 7,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,t/(Do)2 (s/mm2).2,571,478,83.7,73,str
+psi117_proci_c12_2019_three_stage,Dflame (mm),571,478,83.7,50,str
+psi117_proci_c12_2019_three_stage,Unnamed: 10,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,Flame Radiance I,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,t/(Do)2,571,208,36.4,255,str
+psi117_proci_c12_2019_three_stage,Flame Radiance (W),571,208,36.4,208,str
+psi117_proci_c12_2019_three_stage,Unnamed: 14,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,Flame Radiance II,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,t/(Do)2.1,571,347,60.8,177,str
+psi117_proci_c12_2019_three_stage,Flame Radiance (W).1,571,347,60.8,128,str
+psi117_proci_c12_2019_three_stage,Unnamed: 18,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,Unnamed: 19,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,t/(Do)2.2,571,453,79.3,88,str
+psi117_proci_c12_2019_three_stage,Cool Flame Dia (HWFM),571,453,79.3,62,str
+psi117_proci_c12_2019_three_stage,Unnamed: 22,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,t/(Do)2.3,571,413,72.3,112,str
+psi117_proci_c12_2019_three_stage,Cool Flame Dia (peak-peak),571,413,72.3,59,str
+psi117_proci_c12_2019_three_stage,Unnamed: 25,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,Unnamed: 26,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,Simulations,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,t (s),571,1,0.2,570,str
+psi117_proci_c12_2019_three_stage,D (mm),571,1,0.2,534,str
+psi117_proci_c12_2019_three_stage,K(mm^2/sec),571,1,0.2,553,str
+psi117_proci_c12_2019_three_stage,T_max(K),571,1,0.2,556,str
+psi117_proci_c12_2019_three_stage,D_Tmax/D_drop,571,1,0.2,553,str
+psi117_proci_c12_2019_three_stage,D_OHm/D_drop,571,1,0.2,570,str
+psi117_proci_c12_2019_three_stage,Unnamed: 34,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,t/do^2 (s/mm2),571,1,0.2,570,str
+psi117_proci_c12_2019_three_stage,(d/do)^2,571,1,0.2,534,str
+psi117_proci_c12_2019_three_stage,Dflame(mm),571,1,0.2,554,str
+psi117_proci_c12_2019_three_stage,Unnamed: 38,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,t/do2(s/mm2),571,499,87.4,72,str
+psi117_proci_c12_2019_three_stage,Radiance (W),571,499,87.4,66,str
+psi117_proci_c12_2019_three_stage,Unnamed: 41,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,Unnamed: 42,571,571,100.0,1,str
+psi117_proci_c12_2019_three_stage,Unnamed: 43,571,571,100.0,1,str

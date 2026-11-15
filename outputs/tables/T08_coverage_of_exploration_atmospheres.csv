@@ -1,0 +1,16 @@
+atmosphere,family,tests_within_10kPa_3pctO2,nearest_p_kPa,nearest_x_o2
+ISS cabin (nominal),FLEX (droplets),90,101.3,0.21
+ISS cabin (nominal),CFI (droplets),28,101.3,0.21
+ISS cabin (nominal),ACME gaseous flames,116,101.3,0.21
+ISS cabin (nominal),BASS-II (solids),68,101.3,0.21
+ISS cabin (nominal),Saffire I/II (solids),11,101.3,0.215
+Artemis sustained target,FLEX (droplets),0,71.2,0.34
+Artemis sustained target,CFI (droplets),0,50.7,0.21
+Artemis sustained target,ACME gaseous flames,13,50.7,0.341
+Artemis sustained target,BASS-II (solids),0,101.3,0.222
+Artemis sustained target,Saffire I/II (solids),0,101.3,0.221
+Alternative vehicle atmosphere,FLEX (droplets),8,71.2,0.3
+Alternative vehicle atmosphere,CFI (droplets),0,76.0,0.21
+Alternative vehicle atmosphere,ACME gaseous flames,0,55.2,0.3
+Alternative vehicle atmosphere,BASS-II (solids),0,101.3,0.222
+Alternative vehicle atmosphere,Saffire I/II (solids),0,101.3,0.221

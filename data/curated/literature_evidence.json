@@ -1,0 +1,643 @@
+{
+ "_about": "Short verbatim quotations from public NASA sources, each with a locator. Quotes are kept brief for attribution; full texts are not redistributed. 'claim' is the AeroFox paraphrase used in answers. Conditions describe the regime the statement applies to.",
+ "sources": {
+  "NTRS-20170008805": {
+   "title": "Results of Large-Scale Spacecraft Flammability Tests",
+   "authors": "Ferkul P., Olson S., Urban D.L., Ruff G.A., et al.",
+   "year": 2017,
+   "venue": "47th International Conference on Environmental Systems (ICES), presentation",
+   "url": "https://ntrs.nasa.gov/citations/20170008805"
+  },
+  "NTRS-20150023456": {
+   "title": "Detailed Results from the Flame Extinguishment Experiment (FLEX) March 2009 to December 2011",
+   "authors": "Dietrich D.L., Ferkul P.V., Bryg V.M., Nayagam M.V., Hicks M.C., Williams F.A., Dryer F.L., Shaw B.D., Choi M.Y., Avedisian C.T.",
+   "year": 2015,
+   "venue": "NASA/TP-2015-216046",
+   "url": "https://ntrs.nasa.gov/citations/20150023456"
+  },
+  "NTRS-20260002050": {
+   "title": "Surface Vehicle Atmospheric Considerations for Moon to Mars Exploration",
+   "authors": "Alpert B.K., Kennedy L., Welsh L.D., Young A.",
+   "year": 2026,
+   "venue": "ICES 2026 conference paper",
+   "url": "https://ntrs.nasa.gov/citations/20260002050"
+  },
+  "NTRS-20250010653": {
+   "title": "Lunar Combustion Investigation: Flammability Results from a Rotating Sounding Rocket",
+   "authors": "Ferkul P.V., Johnston M.C., Kralik N., Liao Y.-T.",
+   "year": 2025,
+   "venue": "NASA GRC presentation",
+   "url": "https://ntrs.nasa.gov/citations/20250010653"
+  },
+  "NTRS-20240008623": {
+   "title": "Flammability of Materials on the Moon",
+   "authors": "Zayac J., Johnston M., Ruff G., Ferkul P.",
+   "year": 2024,
+   "venue": "poster",
+   "url": "https://ntrs.nasa.gov/citations/20240008623"
+  },
+  "NTRS-20210011385": {
+   "title": "Burning and Suppression of Solids-II (BASS-II) Summary Report",
+   "authors": "Olson S.L., Ferkul P.V., Bhattacharjee S., Miller F.J., et al.",
+   "year": 2021,
+   "venue": "NASA Technical Memorandum",
+   "url": "https://ntrs.nasa.gov/citations/20210011385"
+  },
+  "NTRS-20130000422": {
+   "title": "Particle Morphology and Size Results from the Smoke Aerosol Measurement Experiment-2",
+   "authors": "Urban D.L., Ruff G.A., Greenberg P.S., Fischer D., et al.",
+   "year": 2012,
+   "venue": "ICES 2012",
+   "url": "https://ntrs.nasa.gov/citations/20130000422"
+  },
+  "NTRS-20170000230": {
+   "title": "Operation and Development Status of the Spacecraft Fire Experiments (Saffire)",
+   "authors": "Ruff G.A., Urban D.L.",
+   "year": 2016,
+   "venue": "ICES 2016",
+   "url": "https://ntrs.nasa.gov/citations/20170000230"
+  },
+  "NTRS-20200000361": {
+   "title": "Solid Fuel Ignition and Extinction (SoFIE) Project on ISS",
+   "authors": "Ferkul P., Brown L., Mroczka C., Bhattacharjee S.",
+   "year": 2019,
+   "venue": "presentation",
+   "url": "https://ntrs.nasa.gov/citations/20200000361"
+  },
+  "WEB-APOLLO1": {
+   "title": "Apollo 1 (AS-204) - Agency Close Calls & Lessons Learned",
+   "authors": "NASA Office of Safety and Mission Assurance",
+   "year": null,
+   "venue": "sma.nasa.gov",
+   "url": "https://sma.nasa.gov/sma-disciplines/accllp/apollo-1"
+  },
+  "WEB-APOLLO13": {
+   "title": "Apollo 13 - Agency Close Calls & Lessons Learned",
+   "authors": "NASA Office of Safety and Mission Assurance",
+   "year": null,
+   "venue": "sma.nasa.gov",
+   "url": "https://sma.nasa.gov/sma-disciplines/accllp/apollo-13"
+  },
+  "WEB-MIR": {
+   "title": "25 Years Ago: Fire Aboard Space Station Mir",
+   "authors": "Uri J. (NASA JSC)",
+   "year": 2022,
+   "venue": "nasa.gov history article",
+   "url": "https://www.nasa.gov/history/25-years-ago-fire-aboard-space-station-mir/"
+  },
+  "WEB-GUIDE": {
+   "title": "A Researcher's Guide to: Combustion Science (October 2015 edition)",
+   "authors": "Gokoglu S.A., Dietrich D.L., Stocker D.P., Ferkul P.V., Olson S.L., Hicks M.C.",
+   "year": 2015,
+   "venue": "NASA ISS Research Integration Office",
+   "url": "https://www.nasa.gov/missions/station/a-researchers-guide-to-combustion-science/"
+  },
+  "WEB-GRC-COMBUSTION": {
+   "title": "Combustion Science (Glenn Research Center Physical Sciences)",
+   "authors": "NASA GRC",
+   "year": null,
+   "venue": "nasa.gov",
+   "url": "https://www.nasa.gov/glenn/glenn-expertise-space-exploration/physical-sciences-program/combustion-science/"
+  },
+  "WEB-SPINOFF-DETECTOR": {
+   "title": "Fire Detector (NASA Spinoff, 1978)",
+   "authors": "NASA Spinoff",
+   "year": 1978,
+   "venue": "spinoff.nasa.gov",
+   "url": "https://spinoff.nasa.gov/node/9407"
+  },
+  "WEB-SPINOFF-TANKS": {
+   "title": "Fireman's Air Tanks (NASA Spinoff, 1976)",
+   "authors": "NASA Spinoff",
+   "year": 1976,
+   "venue": "spinoff.nasa.gov",
+   "url": "https://spinoff.nasa.gov/node/9582"
+  },
+  "WEB-SPINOFF-ATTIRE": {
+   "title": "New Technology for the Fire Attire (NASA Spinoff, 1982)",
+   "authors": "NASA Spinoff",
+   "year": 1982,
+   "venue": "spinoff.nasa.gov",
+   "url": "https://spinoff.nasa.gov/node/9918"
+  },
+  "NTRS-20240006315": {
+   "title": "Wire-break Ignition Testing of Materials for Spacesuit Fire Hazard Control",
+   "authors": "Campbell et al.",
+   "year": 2024,
+   "venue": "ICES-2024-476",
+   "url": "https://ntrs.nasa.gov/citations/20240006315"
+  },
+  "NASA-MARS-FACTS": {
+   "title": "Mars Facts",
+   "authors": "NASA Science",
+   "year": null,
+   "venue": "NASA Solar System Exploration",
+   "url": "https://science.nasa.gov/mars/facts/"
+  },
+  "NASA-MOON-FACTS": {
+   "title": "Moon Facts",
+   "authors": "NASA Science",
+   "year": null,
+   "venue": "NASA Solar System Exploration",
+   "url": "https://science.nasa.gov/moon/facts/"
+  }
+ },
+ "evidence": [
+  {
+   "id": "LIT-SAF2-FLOW",
+   "source": "NTRS-20170008805",
+   "locator": "Saffire-2 Description slide (sample matrix)",
+   "quote": "20 cm/s flow for all tests except for Sample 2-6 (25 cm/s)",
+   "claim": "Saffire-II samples were run at a nominal 20 cm/s duct flow except sample 2-6, which was run at 25 cm/s.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "saffire",
+    "ventilation",
+    "flow",
+    "flame spread"
+   ],
+   "conditions": {
+    "gravity": "microgravity (Cygnus)",
+    "o2_pct": 22.1,
+    "pressure_kPa": 101
+   }
+  },
+  {
+   "id": "LIT-SAF2-O2",
+   "source": "NTRS-20170008805",
+   "locator": "Saffire-2 Description slide",
+   "quote": "Initial oxygen concentration 22.1% (ISS reading, slightly higher than Saffire-1's 21.7%)",
+   "claim": "Saffire-II started at 22.1% O2 according to the ISS reading.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "saffire",
+    "oxygen"
+   ],
+   "conditions": {
+    "gravity": "microgravity (Cygnus)"
+   }
+  },
+  {
+   "id": "LIT-SAF2-SILICONE",
+   "source": "NTRS-20170008805",
+   "locator": "Saffire-2; Silicone Results slide",
+   "quote": "Results were convincing although rather anticlimactic as none of the silicone samples burned.",
+   "claim": "Silicone sheets that burn partially or completely in 1-g upward tests (0.27 and 0.61 mm) did not sustain flame spread in microgravity at 20 cm/s concurrent flow and ~22% O2.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "saffire",
+    "materials",
+    "silicone",
+    "flammability screening",
+    "NASA-STD-6001"
+   ],
+   "conditions": {
+    "gravity": "microgravity",
+    "flow_cm_s": 20,
+    "o2_pct": 22.1
+   }
+  },
+  {
+   "id": "LIT-SAF2-SILICONE-1G",
+   "source": "NTRS-20170008805",
+   "locator": "Saffire-2; Why Silicone? slide",
+   "quote": "In upward-burning, normal-gravity tests, these three thicknesses spanned the flammability limits from significant burn, to partial burn, to no burn.",
+   "claim": "The silicone thicknesses were chosen to bracket the 1-g upward flammability limit.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "saffire",
+    "silicone",
+    "1-g comparison"
+   ],
+   "conditions": {
+    "gravity": "1 g (ground)"
+   }
+  },
+  {
+   "id": "LIT-SAF-UPWARD",
+   "source": "NTRS-20170008805",
+   "locator": "Introduction slide",
+   "quote": "An upward-spreading (concurrent-flow) flame on Earth is nearly always more hazardous than a downward-spreading (opposed-flow) flame.",
+   "claim": "Concurrent (upward) spread is the more hazardous configuration on Earth; in microgravity the comparison depends on the forced flow speed.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "flame spread",
+    "concurrent",
+    "opposed",
+    "ventilation"
+   ],
+   "conditions": {
+    "gravity": "1 g and microgravity"
+   }
+  },
+  {
+   "id": "LIT-SAF2-IGNITION",
+   "source": "NTRS-20170008805",
+   "locator": "Saffire-2 Description (con't) slide",
+   "quote": "The ignition energy and time for samples 2-1 through 2-7 were chosen to mimic the NASA 6001 Test 1 ignition, 736 J applied uniformly for 9.2 s.",
+   "claim": "Saffire-II ignition replicated the NASA-STD-6001 Test 1 igniter energy (736 J over 9.2 s, i.e. 80 W).",
+   "evidence_type": "published_statement",
+   "topics": [
+    "saffire",
+    "ignition",
+    "NASA-STD-6001"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-FLEX035",
+   "source": "NTRS-20150023456",
+   "locator": "Figure 39 caption (p. 63)",
+   "quote": "After the flame extinguished, the droplet vaporized very vigorously with droplet-diameter-squared versus time behavior that was nearly perfectly linear.",
+   "claim": "For FLEX-035 (heptane, air, 1 atm) the droplet kept regressing at nearly the burning rate after the visible flame went out; the authors interpret this as cool-flame burning followed by cool-flame extinction.",
+   "evidence_type": "published_interpretation",
+   "topics": [
+    "flex",
+    "droplet",
+    "cool flame",
+    "extinction",
+    "heptane"
+   ],
+   "conditions": {
+    "gravity": "microgravity (ISS CIR)",
+    "pressure_kPa": 102.4,
+    "o2_mole_fraction": 0.21,
+    "diluent": "N2"
+   }
+  },
+  {
+   "id": "LIT-FLEX035-PLATEAU",
+   "source": "NTRS-20150023456",
+   "locator": "Figure 39 caption (p. 63)",
+   "quote": "The droplet vaporization rate then plateaued coincident with the formation of a very large vapor cloud. This behavior is indicative of cool flame burning and extinction.",
+   "claim": "A vapor cloud forming when the post-extinction regression stops is used in the FLEX report as the signature of cool-flame extinction.",
+   "evidence_type": "published_interpretation",
+   "topics": [
+    "flex",
+    "cool flame",
+    "vapor cloud"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-ATM-ARTEMIS",
+   "source": "NTRS-20260002050",
+   "locator": "Section I (Introduction)",
+   "quote": "NASA Artemis requirements for sustained missions are targeting an average pressure of 8.2 psi (56.5 kPa) and a 34% oxygen concentration as one solution to those trade-offs.",
+   "claim": "Sustained Artemis surface missions target 56.5 kPa total pressure at 34% O2 (about 19.2 kPa O2 partial pressure).",
+   "evidence_type": "published_statement",
+   "topics": [
+    "atmosphere",
+    "lunar habitat",
+    "exploration atmosphere",
+    "oxygen",
+    "pressure"
+   ],
+   "conditions": {
+    "pressure_kPa": 56.5,
+    "o2_pct": 34
+   }
+  },
+  {
+   "id": "LIT-ATM-ALT",
+   "source": "NTRS-20260002050",
+   "locator": "Section I (Introduction)",
+   "quote": "NASA teams have alternatively performed testing utilizing a vehicle atmopshere that stays below 30% (average pressure of 9.6 psi (66.2 kPa) and a 28.5% oxygen concentration)",
+   "claim": "An alternative vehicle atmosphere kept below 30% O2 (66.2 kPa, 28.5% O2) has been tested because less is known above 30% O2.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "atmosphere",
+    "lunar habitat",
+    "oxygen"
+   ],
+   "conditions": {
+    "pressure_kPa": 66.2,
+    "o2_pct": 28.5
+   }
+  },
+  {
+   "id": "LIT-ATM-MOC",
+   "source": "NTRS-20260002050",
+   "locator": "Section II.A (Flammability)",
+   "quote": "historically materials used onboard have been tested up to a maximum oxygen concentration (MOC) of 30% at sea level pressure to account for life support system control, error bands, etc",
+   "claim": "ISS materials have historically been qualified up to 30% O2 at sea-level pressure; above 30% some materials are less likely to pass.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "materials",
+    "maximum oxygen concentration",
+    "NASA-STD-6001",
+    "oxygen"
+   ],
+   "conditions": {
+    "pressure_kPa": 101.3,
+    "o2_pct": 30
+   }
+  },
+  {
+   "id": "LIT-ATM-TABLE",
+   "source": "NTRS-20260002050",
+   "locator": "Table 1",
+   "quote": "Vehicle Pressure 8.2 psi 9.6 psi / Vehicle MOC 37% 30%",
+   "claim": "Early Artemis architecture options pair 8.2 psi with a 37% maximum oxygen concentration and 9.6 psi with 30%.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "atmosphere",
+    "lunar habitat",
+    "oxygen",
+    "maximum oxygen concentration"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-ATM-GENERAL",
+   "source": "NTRS-20260002050",
+   "locator": "Section II.A (Flammability)",
+   "quote": "Generally, higher oxygen concentrations and/or higher oxygen partial pressures equate to a higher flammability risk.",
+   "claim": "Raising O2 concentration or O2 partial pressure generally raises flammability risk.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "oxygen",
+    "flammability",
+    "atmosphere"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-LUCI-RATES",
+   "source": "NTRS-20250010653",
+   "locator": "Combined Results: SIBAL slide",
+   "quote": "Flame Base .9 1.5 .6 / Flame Tip 1.1 2.8 .39",
+   "claim": "In simulated lunar gravity (rotating New Shepard), downward flame spread over SIBAL fabric in air was slower than in 1 g: flame base 0.9 vs 1.5 mm/s (ratio 0.6), flame tip 1.1 vs 2.8 mm/s (ratio 0.39).",
+   "evidence_type": "published_measurement",
+   "topics": [
+    "lunar",
+    "partial gravity",
+    "flame spread",
+    "sibal"
+   ],
+   "conditions": {
+    "gravity": "simulated lunar g (centrifugal, sounding rocket)",
+    "o2_pct": 21,
+    "pressure_kPa": 101
+   }
+  },
+  {
+   "id": "LIT-LUCI-SETUP",
+   "source": "NTRS-20250010653",
+   "locator": "abstract",
+   "quote": "These are the first-ever, extended-duration (greater than 25 seconds) combustion tests performed in simulated Lunar gravity.",
+   "claim": "LUCI produced the first >25 s solid-fuel burns in simulated lunar gravity; the platform rotation also introduces Coriolis effects.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "lunar",
+    "partial gravity",
+    "platform"
+   ],
+   "conditions": {
+    "gravity": "simulated lunar g"
+   }
+  },
+  {
+   "id": "LIT-FM2-GOLDILOCKS",
+   "source": "NTRS-20240008623",
+   "locator": "abstract",
+   "quote": "Some materials have recently been found to exhibit increased flammability in Lunar gravity.",
+   "claim": "Reduced buoyant flow on the Moon may lower convective cooling while still supplying oxidizer, so some materials can be more flammable in lunar gravity than in 1 g.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "lunar",
+    "partial gravity",
+    "flammability",
+    "materials"
+   ],
+   "conditions": {
+    "gravity": "lunar g"
+   }
+  },
+  {
+   "id": "LIT-BASS2-N2",
+   "source": "NTRS-20210011385",
+   "locator": "abstract",
+   "quote": "For the first time on ISS, BASS-II utilized MSG working volume dilution with gaseous N2.",
+   "claim": "BASS-II reduced the O2 concentration in the Microgravity Science Glovebox by N2 dilution, adding ambient O2 as a controlled variable; O2 levels were set with a perfectly-stirred-reactor model calibrated against CSA-CP readings.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "bass",
+    "suppression",
+    "oxygen",
+    "nitrogen dilution",
+    "well-mixed model"
+   ],
+   "conditions": {
+    "gravity": "microgravity (ISS MSG)"
+   }
+  },
+  {
+   "id": "LIT-SAME2",
+   "source": "NTRS-20130000422",
+   "locator": "abstract",
+   "quote": "Five different materials representative of those found in spacecraft (Teflon, Kapton, cotton, silicone rubber and Pyrell) were heated to temperatures below the ignition point",
+   "claim": "SAME-R measured smoke from overheated (non-flaming) spacecraft materials, with aging times from 11 to 1800 s to emulate transport to a detector.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "smoke",
+    "detection",
+    "same",
+    "aerosol",
+    "pyrolysis"
+   ],
+   "conditions": {
+    "gravity": "microgravity (ISS)"
+   }
+  },
+  {
+   "id": "LIT-SOFIE",
+   "source": "NTRS-20200000361",
+   "locator": "abstract",
+   "quote": "The CIR chamber provides a level of containment and permits testing at variable oxygen concentrations and pressures representative of current and planned NASA Space Exploration Atmospheres.",
+   "claim": "SoFIE (in CIR) is designed to test solid-material ignition and flammability at exploration-atmosphere pressures and O2 levels.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "sofie",
+    "materials",
+    "exploration atmosphere"
+   ],
+   "conditions": {
+    "gravity": "microgravity (ISS CIR)"
+   }
+  },
+  {
+   "id": "LIT-SAFFIRE-OBJ",
+   "source": "NTRS-20170000230",
+   "locator": "abstract",
+   "quote": "investigate the low-g flammability limits compared to those obtained in NASA's normal gravity material flammability screening test",
+   "claim": "Saffire aims to measure large-scale fire growth in low gravity and compare low-g flammability limits with the 1-g NASA screening test.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "saffire",
+    "NASA-STD-6001",
+    "flammability screening"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-APOLLO1",
+   "source": "WEB-APOLLO1",
+   "locator": "Investigation section",
+   "quote": "Because of the pure oxygen atmosphere, the fire spread quickly, causing a rapid rise in temperature and pressure that led to the rupture of the Command Module pressure vessel.",
+   "claim": "Apollo 1 (1967): with a 100% O2 cabin, a fire near arcing wiring spread too fast for the crew to open the hatch; the crew died of asphyxia from CO and toxic gases.",
+   "evidence_type": "incident_record",
+   "topics": [
+    "incident",
+    "oxygen",
+    "electrical",
+    "egress",
+    "toxicity"
+   ],
+   "conditions": {
+    "o2_pct": 100
+   }
+  },
+  {
+   "id": "LIT-APOLLO1-LESSON",
+   "source": "WEB-APOLLO1",
+   "locator": "Lessons Learned section",
+   "quote": "NASA also replaced the three-piece hatch with a unified hatch",
+   "claim": "Apollo 1 led to a quick-opening unified hatch and the Block II spacecraft; egress time is a fire-safety design variable.",
+   "evidence_type": "incident_record",
+   "topics": [
+    "incident",
+    "egress",
+    "hatch"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-APOLLO13",
+   "source": "WEB-APOLLO13",
+   "locator": "Accident Review Board section",
+   "quote": "the heaters were left on for an extended period and reached temperatures around 1000 degrees Fahrenheit, degrading the Teflon insulation.",
+   "claim": "Apollo 13 (1970): heater thermostats not rated for a 28 V to 65 V change failed, overheating damaged Teflon wire insulation inside an oxygen tank, which later failed in flight.",
+   "evidence_type": "incident_record",
+   "topics": [
+    "incident",
+    "oxygen system",
+    "electrical",
+    "wiring insulation"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-MIR",
+   "source": "WEB-MIR",
+   "locator": "paragraph 1",
+   "quote": "a fire ignited in an oxygen generating system. The searing flame, lasting several minutes, not only cut off access to one of the two Soyuz escape vehicles but also filled the station's modules with smoke.",
+   "claim": "Mir (24 Feb 1997): a solid-fuel oxygen generator ignited, the flame blocked an escape-vehicle route and smoke filled the modules; life support cleared the atmosphere over several hours.",
+   "evidence_type": "incident_record",
+   "topics": [
+    "incident",
+    "oxygen generator",
+    "egress",
+    "smoke",
+    "post-fire recovery"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-GUIDE",
+   "source": "WEB-GUIDE",
+   "locator": "overview",
+   "quote": "In the absence of gravity, buoyancy can be suppressed, and the analyses can be reduced to much simpler one-dimensional systems",
+   "claim": "Microgravity removes buoyant convection, simplifying flames for fundamental study and exposing transport processes masked on Earth.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "background",
+    "buoyancy",
+    "microgravity"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-SPINOFF-DETECTOR",
+   "source": "WEB-SPINOFF-DETECTOR",
+   "locator": "article text",
+   "quote": "can discriminate between combustion particles and extraneous matters such as dust. This gives an important advantage; it is less susceptible to false alarms.",
+   "claim": "A Shuttle-era incipient fire detector discriminated smoke from dust, reducing nuisance alarms; dust discrimination remains relevant for lunar habitats.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "detection",
+    "dust",
+    "false alarm",
+    "spinoff"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-ATM-SUIT",
+   "source": "NTRS-20260002050",
+   "locator": "Table 1",
+   "quote": "Suit Pressure 4.3 psi 5.2 psi",
+   "claim": "Early Artemis architectures pair the vehicle atmosphere with EVA suit pressures of 4.3 psi (29.6 kPa) or 5.2 psi (35.9 kPa); the suit is a separate, low-pressure atmosphere domain from the cabin.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "eva",
+    "suit",
+    "atmosphere",
+    "pressure"
+   ],
+   "conditions": {
+    "pressure_kPa": 29.6
+   }
+  },
+  {
+   "id": "LIT-EVA-WIRE",
+   "source": "NTRS-20240006315",
+   "locator": "Abstract and wire-break test method",
+   "quote": "",
+   "claim": "Tests evaluate electrical ignition of representative suit materials after wire break in oxygen-rich conditions. Arc and resistive heating are credible mechanisms. Verify wire gauge, circuit current limiting, nearby materials and geometry under the actual suit atmosphere; the test conditions do not qualify a different assembly.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "suit",
+    "eva",
+    "breathing circuit",
+    "wiring",
+    "fault",
+    "verification"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-MARS-EXTERIOR",
+   "source": "NASA-MARS-FACTS",
+   "locator": "Atmosphere and structure",
+   "quote": "",
+   "claim": "Mars has a thin, mostly carbon-dioxide exterior atmosphere. These exterior facts do not specify the gas mixture or pressure inside a sealed habitat.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "mars",
+    "habitat",
+    "exterior",
+    "airlock",
+    "atmosphere"
+   ],
+   "conditions": {}
+  },
+  {
+   "id": "LIT-MOON-EXTERIOR",
+   "source": "NASA-MOON-FACTS",
+   "locator": "Atmosphere and gravity",
+   "quote": "",
+   "claim": "The Moon has a tenuous exosphere and about one sixth of Earth's surface gravity. A pressurized base has its own internal gas composition and pressure.",
+   "evidence_type": "published_statement",
+   "topics": [
+    "moon",
+    "lunar",
+    "habitat",
+    "exterior",
+    "airlock",
+    "atmosphere"
+   ],
+   "conditions": {}
+  }
+ ]
+}

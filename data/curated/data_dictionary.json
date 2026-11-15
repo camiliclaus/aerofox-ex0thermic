@@ -1,0 +1,38 @@
+{
+ "flex_tests": {"description": "FLEX droplet tests (PSI-69). One row = one droplet ignition. Raw PSI values kept in *_raw columns.", "source": "PSI-69 experiment table + per-test TestSheet files + NASA/TP-2015-216046", "fields": {
+  "test": ["-", "Row number in the PSI table ('FLEX Test #'). Not the official FLEX number after test 155."],
+  "flex_number": ["-", "Official FLEX test number assigned via CIR identifier from NASA/TP-2015-216046."],
+  "table_number_offset": ["-", "flex_number minus PSI table number (0 for 155 rows; 1-6 after row 155)."],
+  "cir_id": ["-", "Combustion Integrated Rack test identifier (e.g. 181F001). Reliable join key."],
+  "fuel": ["-", "Methanol or n-heptane."],
+  "p_mmHg": ["mmHg", "Ambient pressure as tabulated."], "p_kPa": ["kPa", "Ambient pressure, p_mmHg x 0.133322."], "p_atm": ["atm", "p_kPa / 101.325."],
+  "x_o2": ["mole fraction", "Initial ambient O2 mole fraction (0-1). Not a percentage."],
+  "x_n2": ["mole fraction", "N2 mole fraction."], "x_co2": ["mole fraction", "CO2 mole fraction."], "x_he": ["mole fraction", "He mole fraction."],
+  "pO2_kPa": ["kPa", "O2 partial pressure = x_o2 x p_kPa (derived)."],
+  "diluent": ["-", "Dominant inert (N2, CO2 or He) derived from mole fractions."],
+  "d0_mm": ["mm", "Initial droplet diameter."], "dext_mm": ["mm", "Droplet diameter at visible flame extinction."],
+  "K_mm2s": ["mm^2/s", "Average burning-rate constant (PSI column labelled 'Burning rate; mm')."],
+  "burn_time_s": ["s", "Duration of visible flame."], "test_end": ["-", "Extinction, Disruption or Completion."],
+  "K_fit_mm2s": ["mm^2/s", "K refitted by AeroFox: OLS of d^2 vs t on 0.2-0.9 of burn time from the raw DropletData file."],
+  "K_fit_r2": ["-", "Coefficient of determination of that fit."], "K_post_mm2s": ["mm^2/s", "Regression rate of d^2 after visible extinction (if >=10 samples)."],
+  "flag_zero_pressure": ["bool", "True if tabulated pressure <= 0 (data error)."]}},
+ "flex_droplet_fits": {"description": "One row per FLEX DropletData file: AeroFox fits of the d^2-law.", "source": "PSI-69 raw DropletData files", "fields": {
+  "flex_number": ["-", "Official FLEX number from file name."], "n_samples": ["-", "Diameter samples in file (30 Hz)."], "K_fit_mm2s": ["mm^2/s", "See flex_tests."], "K_fit_se": ["mm^2/s", "Standard error of the fitted slope."]}},
+ "flex035_timeseries": {"description": "FLEX-035 droplet history with UV-camera (LLUV) signal.", "source": "PSI-69 FLEX-035 DropletData and LLUVData", "fields": {
+  "t_s": ["s", "Time from ignition."], "d_mm": ["mm", "Droplet diameter."], "d2_mm2": ["mm^2", "Diameter squared."], "lluv": ["arb.", "LLUV camera flame signal (sparser than diameter)."]}},
+ "saffire_samples": {"description": "Saffire I, II, III burned samples.", "source": "PSI-98, PSI-99, PSI-100 tables; NTRS 20170008805 for filled values", "fields": {
+  "experiment": ["-", "Saffire-I, -II or -III."], "sample": ["-", "Sample ID."], "material": ["-", "Fuel material."], "material_source": ["-", "Where the material name came from (psi_table or NTRS)."],
+  "thickness_mm": ["mm", "Sample thickness."], "length_cm": ["cm", "Sample length as tabulated."], "width_cm": ["cm", "Sample width as tabulated."],
+  "flow_nominal_cm_s": ["cm/s", "Duct air speed as tabulated (nominal)."], "o2_pct": ["vol %", "O2 concentration; Saffire-II values derived from CO2 production."],
+  "ignition_energy_J": ["J", "Ignition power x ignition time."], "burn_time_s": ["s", "Burn duration."], "ug_spread_rate_mm_s": ["mm/s", "Microgravity flame spread rate (Saffire-II)."], "direction": ["-", "Concurrent or opposed flow."]}},
+ "saffire2_flow": {"description": "Measured duct flow per Saffire-II sample from the telemetry workbook.", "source": "PSI-99 'Saffire-II Telemetry Data.xlsx' (RawData sheet)", "fields": {
+  "ignition_t_s": ["s", "Time of first igniter activity, mission-relative."], "anem1_mean_cm_s": ["cm/s", "Mean anemometer 1 reading over 0-120 s after ignition."], "anem2_mean_cm_s": ["cm/s", "Mean anemometer 2 reading."], "anem_mean_cm_s": ["cm/s", "Average of both anemometers."], "anem_diff_cm_s": ["cm/s", "Anemometer 1 minus anemometer 2."]}},
+ "bass2_tests": {"description": "BASS-II test points in the Microgravity Science Glovebox.", "source": "PSI-25 experiment table", "fields": {
+  "material_raw": ["-", "Fuel description as tabulated."], "material_class": ["-", "AeroFox grouping (PMMA, SIBAL, ...)."], "o2_init_pct": ["vol %", "Calibrated initial O2."], "o2_final_pct": ["vol %", "Calibrated final O2."], "o2_drop_pct": ["vol %", "Initial minus final O2."], "co_final_ppm": ["ppm", "Final CO."], "flag_o2_increase": ["bool", "Final O2 exceeds initial by >1 vol% (implausible)."]}},
+ "same_reduced": {"description": "SAME and SAME-R smoke particle statistics per test.", "source": "PSI-101 'SAME, SAME-R_Results.xlsx', Reduced data sheet", "fields": {
+  "flight": ["-", "SAME (2007) or SAME-R (2010)."], "material": ["-", "Heated material."], "net_aging_s": ["s", "Time smoke was held before measurement."], "amd_um": ["um", "Arithmetic mean diameter M1/M0."], "sigma_g": ["-", "Hatch-Choate geometric standard deviation."], "dg_um": ["um", "Hatch-Choate geometric mean diameter."], "sample_T_C": ["degC", "Sample temperature."], "mass_loss_mg": ["mg", "Sample mass loss."]}},
+ "same_r_detectors": {"description": "SAME-R smoke detector responses.", "source": "PSI-101 results workbook, 'SAME R Results' sheet", "fields": {
+  "iss_scatter_V": ["V", "ISS smoke detector scatter channel; ~50% of tests at 6.2-6.3 V (apparent range limit)."], "sts_detector_V": ["V", "Shuttle (STS) detector output when used."]}},
+ "investigations": {"description": "The 24 PSI combustion investigations.", "source": "PSI /repo/investigations API", "fields": {
+  "accession": ["-", "PSI accession (PSI-nn)."], "acronym": ["-", "Investigation acronym."], "license": ["-", "Data license (CC0-1.0 for 23 of 24)."], "catalog_files": ["-", "Entries in the PSI file catalog."], "catalog_bytes": ["bytes", "Referenced bytes (not downloaded)."]}}
+}

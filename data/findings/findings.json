@@ -1,0 +1,239 @@
+{
+ "generated_by": "notebooks/AeroFox_Comprehensive_Data_Analysis.ipynb",
+ "findings": [
+  {
+   "id": "F01",
+   "question": "Is the FLEX experiment table internally consistent with the per-test files?",
+   "result": "The PSI table's 'FLEX Test #' differs from official FLEX numbering for 119 of 274 rows (offset 1-6). Matching on the CIR identifier restores agreement: refitted K vs tabulated K r = 0.987 (n=206) versus r = 0.729 with the table numbering.",
+   "dataset": "PSI-69 experiment table, TestSheet and DropletData files; NASA/TP-2015-216046",
+   "locator": "flex_tests.csv columns flex_number, table_number_offset; Figure 4",
+   "conditions": "All FLEX tests 2009-2012",
+   "method": "CIR-id join; OLS of d^2 vs t on 0.2-0.9 tb",
+   "uncertainty": "IQR of K difference [-0.007, +0.007] mm^2/s",
+   "limitations": "Tests without CIR id or with duplicate CIR id keep the table number.",
+   "implication": "Any reuse of the FLEX table must join on CIR id.",
+   "applicability": "Data engineering for FLEX",
+   "feature": "dataset integrity check; experiment lookup by official number",
+   "evidence_type": "measured"
+  },
+  {
+   "id": "F02",
+   "question": "Can the published FLEX burning-rate constants be reproduced from raw droplet histories?",
+   "result": "Yes: median difference -0.0011 mm^2/s, IQR [-0.0069, +0.0069] across 206 tests with R^2>0.95.",
+   "dataset": "PSI-69 DropletData files",
+   "locator": "flex_droplet_fits.csv; Figure 4",
+   "conditions": "Methanol and heptane, 0.5-3 atm",
+   "method": "OLS d^2 = a - K t on 0.2-0.9 of tabulated burn time",
+   "uncertainty": "Fit SE per test in flex_droplet_fits.csv",
+   "limitations": "Window choice affects K for short burns (tb < 2 s).",
+   "implication": "Tabulated K can be used with confidence once correctly keyed.",
+   "applicability": "Droplet combustion, microgravity",
+   "feature": "burning-rate tool",
+   "evidence_type": "measured"
+  },
+  {
+   "id": "F03",
+   "question": "How does K depend on O2 and diluent in FLEX?",
+   "result": "Per 0.1 increase in X_O2, K rises by 0.162 mm^2/s (methanol, 95% CI 0.142-0.183) and 0.192 mm^2/s (heptane, CI 0.117-0.257), holding pressure and diluent fixed. Helium vs N2 shift: methanol +0.144, heptane +0.144 mm^2/s.",
+   "dataset": "PSI-69 table",
+   "locator": "Table T05; Figure 5",
+   "conditions": "Microgravity, 0.5-3 atm, X_O2 0.12-0.34",
+   "method": "OLS with bootstrap (2000 resamples of tests)",
+   "uncertainty": "Bootstrap 95% CI; measurement error in K not reported",
+   "limitations": "Non-factorial design; droplet size pooled; descriptive model only.",
+   "implication": "Higher O2 increases burning rate of liquid fuels; He diluent does not slow burning.",
+   "applicability": "Liquid fuels in microgravity only",
+   "feature": "what-if O2 comparison for droplets",
+   "evidence_type": "model_of_measurements"
+  },
+  {
+   "id": "F04",
+   "question": "Does combustion stop when the visible flame goes out (FLEX-035)?",
+   "result": "No. After visible extinction at 8.9 s the droplet regresses at 0.419\u00b10.003 mm^2/s versus 0.412\u00b10.004 while burning (ratio 1.02); regression stalls about 27 s later. The FLEX report attributes this to cool-flame burning.",
+   "dataset": "PSI-69 FLEX-035 DropletData and LLUVData; NASA/TP-2015-216046 Fig. 39",
+   "locator": "Figure 7",
+   "conditions": "Heptane, air, 102.4 kPa, microgravity",
+   "method": "OLS on d^2 before/after tabulated extinction time",
+   "uncertainty": "Standard errors of fitted slopes; extinction time from table",
+   "limitations": "One test; cool flame inferred from literature, not measured here.",
+   "implication": "Optical flame-out is not a reliable end-of-event signal for hydrocarbon liquid fires in microgravity.",
+   "applicability": "Hydrocarbon droplets, microgravity, near-atmospheric pressure",
+   "feature": "FLEX-035 case study; detection caveats",
+   "evidence_type": "measured + published interpretation"
+  },
+  {
+   "id": "F05",
+   "question": "Were Saffire-II samples 2-5 and 2-6 tested at the same flow?",
+   "result": "No. Telemetry gives 20.0 cm/s for 2-5 and 25.0 cm/s for 2-6 (table: 20 for both; NTRS: 25 for 2-6). Spread rates 2.1 and 2.6 mm/s.",
+   "dataset": "PSI-99 telemetry workbook; PSI-99 table; NTRS 20170008805",
+   "locator": "Table T06; Figure 8",
+   "conditions": "Cygnus, ~22% O2, concurrent flow, cotton-fiberglass fabric 5 x 29 cm",
+   "method": "Mean of two anemometers over 120 s after ignition",
+   "uncertainty": "Anemometer SD within window <0.1 cm/s; inter-anemometer difference up to 3 cm/s (sample 2-9)",
+   "limitations": "Single sample per flow; no spread-rate uncertainty.",
+   "implication": "Use measured flow (25 cm/s) for 2-6 in any model validation.",
+   "applicability": "Concurrent spread over thin fabric in microgravity",
+   "feature": "Saffire comparison tool",
+   "evidence_type": "measured"
+  },
+  {
+   "id": "F06",
+   "question": "Did materials that burn in 1-g screening burn in microgravity Saffire-II?",
+   "result": "Silicone sheets 0.27 and 0.61 mm thick, which burn completely or partially in 1-g upward tests, did not propagate in Saffire-II at 20 cm/s and ~22% O2 (table: insignificant burn).",
+   "dataset": "PSI-99 table; NTRS 20170008805",
+   "locator": "saffire_samples.csv rows 2-1..2-4",
+   "conditions": "Microgravity, 20 cm/s, ~22% O2",
+   "method": "Tabulated outcomes",
+   "uncertainty": "Qualitative outcome",
+   "limitations": "One flow speed and O2 level; result may not hold at higher flow or O2.",
+   "implication": "For these conditions 1-g upward screening was conservative for silicone.",
+   "applicability": "Thin silicone sheets, ISS-like air",
+   "feature": "materials comparison",
+   "evidence_type": "measured"
+  },
+  {
+   "id": "F07",
+   "question": "What smoke particle sizes must spacecraft detectors see?",
+   "result": "SAME-R median arithmetic mean diameters: Kapton 0.11 \u00b5m, Lampwick 0.18 \u00b5m, Pyrell 0.30 \u00b5m, Silicone 0.36 \u00b5m, Teflon 0.17 \u00b5m.",
+   "dataset": "PSI-101 results workbook",
+   "locator": "Table T07; Figure 10",
+   "conditions": "Overheated (non-flaming) materials, microgravity, aging 11-1800 s",
+   "method": "Group medians of per-test M1/M0",
+   "uncertainty": "IQR per material in Table T07",
+   "limitations": "Non-flaming smoke only; instrument-specific moments.",
+   "implication": "Detectors must respond to sub-micrometre particles; particle size depends on material and transport time.",
+   "applicability": "Smoke detection in pressurised modules",
+   "feature": "detection evidence card",
+   "evidence_type": "measured"
+  },
+  {
+   "id": "F08",
+   "question": "Can detector alarm performance be inferred from SAME-R?",
+   "result": "Not from the PSI tables: the ISS scatter channel is at or above 6.2 V in 50% of 109 SAME-R tests, consistent with range saturation; no alarm thresholds or times are recorded.",
+   "dataset": "PSI-101 results workbook",
+   "locator": "same_r_detectors.csv",
+   "conditions": "SAME-R",
+   "method": "Distribution of detector voltage",
+   "uncertainty": "n/a",
+   "limitations": "Saturation inferred from value clustering, not from instrument documentation.",
+   "implication": "AeroFox must not claim detector response times from these data.",
+   "applicability": "Detection",
+   "feature": "limitation statement",
+   "evidence_type": "measured"
+  },
+  {
+   "id": "F09",
+   "question": "Do PSI solid-material tests cover exploration atmospheres?",
+   "result": "No PSI solid-fuel flight test lies within 10 kPa and 3 percentage points O2 of 56.5 kPa/34% or 66.2 kPa/28.5%; all Saffire and BASS-II tests were at ~101 kPa and <=22.2% O2. The closest liquid-fuel data are FLEX droplet tests near 72 kPa and X_O2 = 0.34, and ACME gaseous flames near 50-55 kPa with X_O2 0.3-0.4, which do not transfer to cabin solids.",
+   "dataset": "PSI tables; NTRS 20260002050",
+   "locator": "Table T08; Figure 12",
+   "conditions": "as tabulated",
+   "method": "Nearest-condition search",
+   "uncertainty": "n/a",
+   "limitations": "Literature-only data (e.g. ground NASA-STD-6001 tests) not included.",
+   "implication": "Lunar-habitat material decisions at elevated O2 need ground testing at the target atmosphere and SoFIE/FM2 results.",
+   "applicability": "Lunar/Mars habitat atmosphere selection",
+   "feature": "atmosphere-applicability tool",
+   "evidence_type": "measured coverage + published atmosphere"
+  },
+  {
+   "id": "F10",
+   "question": "Can lunar-gravity fire behaviour be interpolated between 1 g and microgravity?",
+   "result": "No. In simulated lunar gravity (LUCI) downward spread over SIBAL was 0.6x (flame base) and 0.39x (flame tip) the 1-g rate, while FM2 reports materials more flammable at lunar gravity than in 1 g.",
+   "dataset": "NTRS 20250010653, 20240008623",
+   "locator": "LUCI combined results slide; FM2 abstract",
+   "conditions": "Simulated lunar g, air, 1 atm",
+   "method": "Published measurements",
+   "uncertainty": "Not reported",
+   "limitations": "Short duration, rotating platform, Coriolis effects.",
+   "implication": "Treat lunar and Martian fire behaviour as unknown unless tested; do not interpolate.",
+   "applicability": "Partial gravity",
+   "feature": "gravity-regime guardrail",
+   "evidence_type": "published measurement"
+  },
+  {
+   "id": "F11",
+   "question": "What drives radiative extinction of droplets?",
+   "result": "Extinction diameter as a fraction of initial diameter increases as X_O2 decreases (Spearman rho Heptane -0.49, Methanol -0.64).",
+   "dataset": "PSI-69 table",
+   "locator": "Figure 6",
+   "conditions": "FLEX extinction tests",
+   "method": "Spearman rank correlation",
+   "uncertainty": "n/a",
+   "limitations": "Mixed pressures and diluents.",
+   "implication": "Large fuel volumes in low O2 may self-extinguish early, but cool flames can persist.",
+   "applicability": "Droplets, microgravity",
+   "feature": "extinction explanation",
+   "evidence_type": "measured"
+  },
+  {
+   "id": "F12",
+   "question": "How much of the PSI combustion archive is analysis-ready?",
+   "result": "66,567 catalog entries (13.50 TB). AeroFox's verified snapshot uses 40 MB: 22 experiment tables, 260 FLEX droplet histories, 272 FLEX test sheets, CFI files and reduced aerosol data.",
+   "dataset": "PSI catalog",
+   "locator": "Figure 1; Table T01",
+   "conditions": "n/a",
+   "method": "Catalog enumeration",
+   "uncertainty": "n/a",
+   "limitations": "Video and image archives not analysed.",
+   "implication": "Offline operation is feasible.",
+   "applicability": "Data engineering",
+   "feature": "offline snapshot",
+   "evidence_type": "measured"
+  }
+ ],
+ "figures": [
+  {
+   "file": "outputs/figures/fig01_catalog_by_category.png",
+   "caption": "Figure 1. Number of PSI catalog entries per combustion investigation, split by the PSI file category (third path component of the object key). Source: PSI /files/v2 catalog retrieved in this run. Unit: catalog entry."
+  },
+  {
+   "file": "outputs/figures/fig02_missingness_heatmap.png",
+   "caption": "Figure 2. Percentage of empty/'none'/'n/a' cells per column in each raw PSI experiment table (grey = column does not exist). Source: data/raw/psi/tables. Unit: table column."
+  },
+  {
+   "file": "outputs/figures/fig03_flex_condition_map.png",
+   "caption": "Figure 3. Ambient conditions of FLEX tests by fuel and diluent; dashed lines are constant O2 partial pressure. Source: PSI-69 experiment table (test with 0 mmHg excluded). Unit: droplet test."
+  },
+  {
+   "file": "outputs/figures/fig04_flex_k_verification.png",
+   "caption": "Figure 4. Burning-rate constant from the PSI table versus an independent OLS fit of d\u00b2 against t on 0.2\u20130.9 of the visible burn time of each raw droplet history. Left: files matched through the CIR identifier and NASA/TP-2015-216046 numbering. Right: files matched by the table's row number. Unit: droplet test."
+  },
+  {
+   "file": "outputs/figures/fig05_flex_k_vs_o2.png",
+   "caption": "Figure 5. FLEX burning-rate constant versus ambient O2 mole fraction, by diluent. Source: PSI-69 table (K) re-keyed to official FLEX numbering. Unit: droplet test. Regression coefficients with bootstrap 95% intervals (2,000 resamples of tests) are in Table T05."
+  },
+  {
+   "file": "outputs/figures/fig06_flex_extinction_ratio.png",
+   "caption": "Figure 6. Ratio of visible-flame extinction diameter to initial droplet diameter versus X_O2 for FLEX tests that ended in extinction with a measured diameter. Source: PSI-69 table. Unit: droplet test."
+  },
+  {
+   "file": "outputs/figures/fig07_flex035.png",
+   "caption": "Figure 7. FLEX-035 (heptane, air, 102.4 kPa). Top: measured d\u00b2 with OLS fits during visible burning and after visible extinction. Bottom: UV (LLUV) camera signal as provided in PSI (sparser sampling). Vertical dashed line: tabulated visible burn time; dotted line: time when the rolling regression rate first falls below 10% of K. Source: PSI-69 raw files."
+  },
+  {
+   "file": "outputs/figures/fig08_saffire2_flow.png",
+   "caption": "Figure 8. Duct anemometer readings around ignition (red line) for Saffire-II samples 2-5 and 2-6. Source: PSI-99 telemetry workbook (RawData sheet, 1 Hz), extracted to data/processed/saffire2_telemetry_windows.csv."
+  },
+  {
+   "file": "outputs/figures/fig09_bass2.png",
+   "caption": "Figure 9. BASS-II: distribution of calibrated initial O2 and final CO versus O2 drop per test point (points with physically implausible O2 increase excluded). Source: PSI-25 experiment table. Unit: test point."
+  },
+  {
+   "file": "outputs/figures/fig10_same_particles.png",
+   "caption": "Figure 10. SAME-R smoke particle arithmetic mean diameter by material and versus aging time. Source: PSI-101 results workbook, reduced data sheet. Unit: smoke-generation test."
+  },
+  {
+   "file": "outputs/figures/fig11_c12_extinction.png",
+   "caption": "Figure 11. n-Dodecane droplet extinction diameters for hot and cool flames versus pressure, experiment and model, as provided in PSI-117 analysed data (PROCI 2023). Source: PSI-117. Unit: experimental condition (values as published)."
+  },
+  {
+   "file": "outputs/figures/fig12_conditions_vs_exploration_atmospheres.png",
+   "caption": "Figure 12. Ambient pressure and O2 mole fraction of individual PSI combustion tests versus proposed exploration atmospheres (stars; NTRS 20260002050) and the ISS cabin. Unit: test."
+  },
+  {
+   "file": "outputs/figures/fig13_evidence_matrix.png",
+   "caption": "Figure 13. Coded evidence coverage. 'Direct' = measured in the regime the decision concerns; 'partial' = related measurement in a different regime, conditions only, or literature-only result; 'none' = no relevant data. Coding rules are documented in SCIENTIFIC_METHODS.md. Mars gravity has no test data in any source examined."
+  }
+ ]
+}

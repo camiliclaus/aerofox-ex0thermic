@@ -1,0 +1,6718 @@
+{
+ "summary": {
+  "engine": "offline",
+  "single_turn": {
+   "cases": 243,
+   "passed": 224,
+   "tool_selection_accuracy": 0.9465,
+   "block_success": 0.93,
+   "error_free": 0.9918,
+   "families": 120,
+   "families_all_passed": 104
+  },
+  "by_style": {
+   "en": "73/81",
+   "enx": "74/81",
+   "pt": "77/81"
+  },
+  "multi_turn": {
+   "conversations": 45,
+   "passed": 45,
+   "turns": 180,
+   "turns_passed": 180,
+   "state_retained": 45
+  },
+  "holdout": {
+   "cases": 30,
+   "passed": 26
+  },
+  "latency_s": {
+   "p50": 0.001,
+   "p95": 0.008,
+   "max": 0.02
+  },
+  "runtime_s": 1.1
+ },
+ "failures": {
+  "single": [
+   {
+    "id": "flex_explain-en-2",
+    "family": "flex_explain:en",
+    "topic": "flex_explain",
+    "style": "en",
+    "text": "Describe the Flame Extinguishment Experiment.",
+    "tools": [
+     "experiment_overview"
+    ],
+    "blocks": [
+     "table"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "chart_flex_burning_rate_vs_oxygen",
+     "get_evidence"
+    ],
+    "latency_s": 0.02,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "cool_flame-en-0",
+    "family": "cool_flame:en",
+    "topic": "cool_flame",
+    "style": "en",
+    "text": "Can a droplet keep burning after the flame is no longer visible?",
+    "tools": [
+     "flex035_case_study"
+    ],
+    "blocks": [
+     "chart"
+    ],
+    "tool_ok": false,
+    "blocks_ok": true,
+    "no_error": true,
+    "called": [
+     "chart_flex_burning_rate_vs_oxygen"
+    ],
+    "latency_s": 0.006,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "cool_flame-pt-0",
+    "family": "cool_flame:pt",
+    "topic": "cool_flame",
+    "style": "pt",
+    "text": "Uma gota pode continuar queimando depois que a chama n\u00e3o \u00e9 mais vis\u00edvel?",
+    "tools": [
+     "flex035_case_study"
+    ],
+    "blocks": [
+     "chart"
+    ],
+    "tool_ok": false,
+    "blocks_ok": true,
+    "no_error": true,
+    "called": [
+     "chart_flex_burning_rate_vs_oxygen"
+    ],
+    "latency_s": 0.006,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "station_review-pt-1",
+    "family": "station_review:pt",
+    "topic": "station_review",
+    "style": "pt",
+    "text": "Revise a seguran\u00e7a contra inc\u00eandio de uma esta\u00e7\u00e3o orbital",
+    "tools": [
+     "fire_safety_factors"
+    ],
+    "blocks": [
+     "matrix"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "search_evidence"
+    ],
+    "latency_s": 0.001,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "atm_psi-enx-1",
+    "family": "atm_psi:enx",
+    "topic": "atm_psi",
+    "style": "enx",
+    "text": "pO2 for 8.2 psi at 34 percent oxygen",
+    "tools": [
+     "assess_atmosphere"
+    ],
+    "blocks": [
+     "chart",
+     "table"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "search_evidence"
+    ],
+    "latency_s": 0.001,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "gravity-enx-1",
+    "family": "gravity:enx",
+    "topic": "gravity",
+    "style": "enx",
+    "text": "partial gravity vs microgravity flames",
+    "tools": [
+     "compare_gravity_regimes"
+    ],
+    "blocks": [
+     "chart",
+     "table"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "search_evidence"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "vent_fail-en-1",
+    "family": "vent_fail:en",
+    "topic": "vent_fail",
+    "style": "en",
+    "text": "What if the fans stop during a fire?",
+    "tools": [
+     "compare_ventilation_designs"
+    ],
+    "blocks": [
+     "chart"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "search_evidence"
+    ],
+    "latency_s": 0.001,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "cfi-en-0",
+    "family": "cfi:en",
+    "topic": "cfi",
+    "style": "en",
+    "text": "What did the Cool Flames Investigation study?",
+    "tools": [
+     "experiment_overview"
+    ],
+    "blocks": [
+     "table"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": false,
+    "called": [],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "cfi-enx-0",
+    "family": "cfi:enx",
+    "topic": "cfi",
+    "style": "enx",
+    "text": "cool flames investigation ISS",
+    "tools": [
+     "experiment_overview"
+    ],
+    "blocks": [
+     "table"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": false,
+    "called": [],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "acme-enx-1",
+    "family": "acme:enx",
+    "topic": "acme",
+    "style": "enx",
+    "text": "Advanced Combustion via Microgravity Experiments overview",
+    "tools": [
+     "experiment_overview"
+    ],
+    "blocks": [
+     "table"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "search_evidence"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "export_empty-en-0",
+    "family": "export_empty:en",
+    "topic": "export_empty",
+    "style": "en",
+    "text": "Export the data",
+    "tools": [
+     "export_data"
+    ],
+    "blocks": [
+     "downloads"
+    ],
+    "tool_ok": true,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "export_data"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "export_empty-en-1",
+    "family": "export_empty:en",
+    "topic": "export_empty",
+    "style": "en",
+    "text": "Can you export the data behind that graph?",
+    "tools": [
+     "export_data"
+    ],
+    "blocks": [
+     "downloads"
+    ],
+    "tool_ok": true,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "export_data"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "export_empty-enx-0",
+    "family": "export_empty:enx",
+    "topic": "export_empty",
+    "style": "enx",
+    "text": "download csv",
+    "tools": [
+     "export_data"
+    ],
+    "blocks": [
+     "downloads"
+    ],
+    "tool_ok": true,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "export_data"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "export_empty-enx-1",
+    "family": "export_empty:enx",
+    "topic": "export_empty",
+    "style": "enx",
+    "text": "give me the raw data",
+    "tools": [
+     "export_data"
+    ],
+    "blocks": [
+     "downloads"
+    ],
+    "tool_ok": true,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "export_data"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "export_empty-pt-0",
+    "family": "export_empty:pt",
+    "topic": "export_empty",
+    "style": "pt",
+    "text": "Exportar os dados",
+    "tools": [
+     "export_data"
+    ],
+    "blocks": [
+     "downloads"
+    ],
+    "tool_ok": true,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "export_data"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "export_empty-pt-1",
+    "family": "export_empty:pt",
+    "topic": "export_empty",
+    "style": "pt",
+    "text": "Baixar o CSV",
+    "tools": [
+     "export_data"
+    ],
+    "blocks": [
+     "downloads"
+    ],
+    "tool_ok": true,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "export_data"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "spice-en-1",
+    "family": "spice:en",
+    "topic": "spice",
+    "style": "en",
+    "text": "Tell me about the Smoke Point In Co-flow Experiment",
+    "tools": [
+     "experiment_overview"
+    ],
+    "blocks": [
+     "table"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "smoke_particle_sizes"
+    ],
+    "latency_s": 0.005,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "daft-en-1",
+    "family": "daft:en",
+    "topic": "daft",
+    "style": "en",
+    "text": "Tell me about the Dust and Aerosol Measurement Feasibility Test",
+    "tools": [
+     "experiment_overview"
+    ],
+    "blocks": [
+     "table"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "smoke_particle_sizes"
+    ],
+    "latency_s": 0.005,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "id": "o2_whatif_value-enx-0",
+    "family": "o2_whatif_value:enx",
+    "topic": "o2_whatif_value",
+    "style": "enx",
+    "text": "oxygen raised to 30 percent at 1 atm",
+    "tools": [
+     "assess_atmosphere"
+    ],
+    "blocks": [
+     "chart"
+    ],
+    "tool_ok": false,
+    "blocks_ok": false,
+    "no_error": true,
+    "called": [
+     "search_evidence"
+    ],
+    "latency_s": 0.001,
+    "mode": "offline",
+    "pass": false
+   }
+  ],
+  "multi": [],
+  "holdout": [
+   {
+    "text": "I need to pick wall panels for a lunar lander cabin at 34% oxygen; what evidence exists?",
+    "expected_any": [
+     "fire_safety_factors",
+     "assess_atmosphere",
+     "materials_evidence",
+     "search_evidence"
+    ],
+    "tool_ok": false,
+    "blocks_ok": true,
+    "no_error": true,
+    "called": [
+     "evidence_coverage_matrix"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "text": "Could a fire on Mars spread faster than on the Moon?",
+    "expected_any": [
+     "compare_gravity_regimes",
+     "fire_safety_factors"
+    ],
+    "tool_ok": false,
+    "blocks_ok": true,
+    "no_error": true,
+    "called": [
+     "search_evidence"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "text": "Show me the measured diameter curve for the heptane droplet that kept vaporizing",
+    "expected_any": [
+     "flex035_case_study"
+    ],
+    "tool_ok": false,
+    "blocks_ok": true,
+    "no_error": true,
+    "called": [
+     "chart_flex_burning_rate_vs_oxygen"
+    ],
+    "latency_s": 0.005,
+    "mode": "offline",
+    "pass": false
+   },
+   {
+    "text": "Is the ISS cabin atmosphere covered by solid-material tests?",
+    "expected_any": [
+     "assess_atmosphere",
+     "search_evidence",
+     "evidence_coverage_matrix"
+    ],
+    "tool_ok": false,
+    "blocks_ok": true,
+    "no_error": true,
+    "called": [
+     "fire_safety_factors"
+    ],
+    "latency_s": 0.0,
+    "mode": "offline",
+    "pass": false
+   }
+  ],
+  "topics": {
+   "flex_explain": "8/9",
+   "flex_o2": "6/6",
+   "flex035": "6/6",
+   "cool_flame": "4/6",
+   "saffire2": "6/6",
+   "saffire": "6/6",
+   "bass": "6/6",
+   "same": "6/6",
+   "detection": "6/6",
+   "lunar_review": "6/6",
+   "lunar_chart": "6/6",
+   "mars_review": "6/6",
+   "station_review": "5/6",
+   "rover": "6/6",
+   "eva": "6/6",
+   "battery": "6/6",
+   "atm_psi": "5/6",
+   "atm_kpa": "6/6",
+   "oxygen_general": "6/6",
+   "gravity": "5/6",
+   "materials_cmp": "6/6",
+   "materials_one": "6/6",
+   "ventilation": "6/6",
+   "vent_fail": "5/6",
+   "coverage": "6/6",
+   "droplet_calc": "6/6",
+   "suppression": "6/6",
+   "apollo1": "6/6",
+   "mir": "6/6",
+   "cfi": "4/6",
+   "acme": "5/6",
+   "sofie": "6/6",
+   "recommend_test": "6/6",
+   "help": "6/6",
+   "offtopic": "6/6",
+   "export_empty": "0/6",
+   "spice": "5/6",
+   "daft": "5/6",
+   "flex2": "6/6",
+   "o2_whatif_value": "5/6"
+  }
+ },
+ "single": [
+  {
+   "id": "flex_explain-en-0",
+   "family": "flex_explain:en",
+   "topic": "flex_explain",
+   "style": "en",
+   "text": "What did the FLEX experiment measure?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.018,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_explain-en-1",
+   "family": "flex_explain:en",
+   "topic": "flex_explain",
+   "style": "en",
+   "text": "Tell me about FLEX.",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_explain-en-2",
+   "family": "flex_explain:en",
+   "topic": "flex_explain",
+   "style": "en",
+   "text": "Describe the Flame Extinguishment Experiment.",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence"
+   ],
+   "latency_s": 0.02,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "flex_explain-enx-0",
+   "family": "flex_explain:enx",
+   "topic": "flex_explain",
+   "style": "enx",
+   "text": "FLEX on the ISS - objectives and hardware?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_explain-enx-1",
+   "family": "flex_explain:enx",
+   "topic": "flex_explain",
+   "style": "enx",
+   "text": "Summarise PSI-69 for me",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_explain-enx-2",
+   "family": "flex_explain:enx",
+   "topic": "flex_explain",
+   "style": "enx",
+   "text": "what was flex trying to find out",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_explain-pt-0",
+   "family": "flex_explain:pt",
+   "topic": "flex_explain",
+   "style": "pt",
+   "text": "O que o experimento FLEX mediu?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_explain-pt-1",
+   "family": "flex_explain:pt",
+   "topic": "flex_explain",
+   "style": "pt",
+   "text": "Explique o FLEX",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_explain-pt-2",
+   "family": "flex_explain:pt",
+   "topic": "flex_explain",
+   "style": "pt",
+   "text": "Resuma o experimento FLEX",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_o2-en-0",
+   "family": "flex_o2:en",
+   "topic": "flex_o2",
+   "style": "en",
+   "text": "How does oxygen affect droplet burning rate in FLEX?",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "latency_s": 0.007,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_o2-en-1",
+   "family": "flex_o2:en",
+   "topic": "flex_o2",
+   "style": "en",
+   "text": "Plot FLEX burning rate against oxygen",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "latency_s": 0.007,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_o2-enx-0",
+   "family": "flex_o2:enx",
+   "topic": "flex_o2",
+   "style": "enx",
+   "text": "Show K vs X_O2 for the droplet tests",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_o2-enx-1",
+   "family": "flex_o2:enx",
+   "topic": "flex_o2",
+   "style": "enx",
+   "text": "droplet burning rate oxygen dependence chart",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_o2-pt-0",
+   "family": "flex_o2:pt",
+   "topic": "flex_o2",
+   "style": "pt",
+   "text": "Como o oxig\u00eanio afeta a taxa de queima das gotas no FLEX?",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "latency_s": 0.007,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex_o2-pt-1",
+   "family": "flex_o2:pt",
+   "topic": "flex_o2",
+   "style": "pt",
+   "text": "Fa\u00e7a um gr\u00e1fico da taxa de queima das gotas versus oxig\u00eanio",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex035-en-0",
+   "family": "flex035:en",
+   "topic": "flex035",
+   "style": "en",
+   "text": "What happened after the visible flame went out in FLEX-035?",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex035-en-1",
+   "family": "flex035:en",
+   "topic": "flex035",
+   "style": "en",
+   "text": "Investigate FLEX-035",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex035-enx-0",
+   "family": "flex035:enx",
+   "topic": "flex035",
+   "style": "enx",
+   "text": "FLEX 035 droplet diameter after extinction",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex035-enx-1",
+   "family": "flex035:enx",
+   "topic": "flex035",
+   "style": "enx",
+   "text": "Show the FLEX-035 d-squared curve",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex035-pt-0",
+   "family": "flex035:pt",
+   "topic": "flex035",
+   "style": "pt",
+   "text": "O que aconteceu depois que a chama vis\u00edvel apagou no FLEX-035?",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex035-pt-1",
+   "family": "flex035:pt",
+   "topic": "flex035",
+   "style": "pt",
+   "text": "Investigue o FLEX-035",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "cool_flame-en-0",
+   "family": "cool_flame:en",
+   "topic": "cool_flame",
+   "style": "en",
+   "text": "Can a droplet keep burning after the flame is no longer visible?",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": false,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "cool_flame-en-1",
+   "family": "cool_flame:en",
+   "topic": "cool_flame",
+   "style": "en",
+   "text": "What is a cool flame in droplet combustion?",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "cool_flame-enx-0",
+   "family": "cool_flame:enx",
+   "topic": "cool_flame",
+   "style": "enx",
+   "text": "droplet extinction then cool flame - evidence?",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "cool_flame-enx-1",
+   "family": "cool_flame:enx",
+   "topic": "cool_flame",
+   "style": "enx",
+   "text": "is visible extinction the end of droplet burning",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "cool_flame-pt-0",
+   "family": "cool_flame:pt",
+   "topic": "cool_flame",
+   "style": "pt",
+   "text": "Uma gota pode continuar queimando depois que a chama n\u00e3o \u00e9 mais vis\u00edvel?",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": false,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "cool_flame-pt-1",
+   "family": "cool_flame:pt",
+   "topic": "cool_flame",
+   "style": "pt",
+   "text": "O que \u00e9 uma chama fria na combust\u00e3o de gotas?",
+   "tools": [
+    "flex035_case_study"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire2-en-0",
+   "family": "saffire2:en",
+   "topic": "saffire2",
+   "style": "en",
+   "text": "Compare Saffire-II runs 2-5 and 2-6",
+   "tools": [
+    "saffire2_flow_case_study"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "saffire2_flow_case_study"
+   ],
+   "latency_s": 0.007,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire2-en-1",
+   "family": "saffire2:en",
+   "topic": "saffire2",
+   "style": "en",
+   "text": "Were Saffire-II samples 2-5 and 2-6 tested at the same airflow?",
+   "tools": [
+    "saffire2_flow_case_study"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs",
+    "experiment_overview",
+    "saffire2_flow_case_study",
+    "experiment_overview",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.02,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire2-enx-0",
+   "family": "saffire2:enx",
+   "topic": "saffire2",
+   "style": "enx",
+   "text": "saffire ii airflow measured vs nominal",
+   "tools": [
+    "saffire2_flow_case_study"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs",
+    "experiment_overview",
+    "saffire2_flow_case_study"
+   ],
+   "latency_s": 0.011,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire2-enx-1",
+   "family": "saffire2:enx",
+   "topic": "saffire2",
+   "style": "enx",
+   "text": "Saffire-2 sample 2-6 flow speed",
+   "tools": [
+    "saffire2_flow_case_study"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "saffire2_flow_case_study"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire2-pt-0",
+   "family": "saffire2:pt",
+   "topic": "saffire2",
+   "style": "pt",
+   "text": "Compare as amostras 2-5 e 2-6 do Saffire-II",
+   "tools": [
+    "saffire2_flow_case_study"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "saffire2_flow_case_study"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire2-pt-1",
+   "family": "saffire2:pt",
+   "topic": "saffire2",
+   "style": "pt",
+   "text": "O fluxo de ar das amostras do Saffire-II foi o mesmo?",
+   "tools": [
+    "saffire2_flow_case_study"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs",
+    "experiment_overview",
+    "saffire2_flow_case_study"
+   ],
+   "latency_s": 0.011,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire-en-0",
+   "family": "saffire:en",
+   "topic": "saffire",
+   "style": "en",
+   "text": "What was the Saffire-I experiment?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire-en-1",
+   "family": "saffire:en",
+   "topic": "saffire",
+   "style": "en",
+   "text": "Tell me about Saffire-III",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "saffire2_flow_case_study"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire-enx-0",
+   "family": "saffire:enx",
+   "topic": "saffire",
+   "style": "enx",
+   "text": "Saffire I objectives",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire-enx-1",
+   "family": "saffire:enx",
+   "topic": "saffire",
+   "style": "enx",
+   "text": "large scale fire in Cygnus Saffire-III summary",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "saffire2_flow_case_study"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire-pt-0",
+   "family": "saffire:pt",
+   "topic": "saffire",
+   "style": "pt",
+   "text": "O que foi o experimento Saffire-I?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "saffire-pt-1",
+   "family": "saffire:pt",
+   "topic": "saffire",
+   "style": "pt",
+   "text": "Fale sobre o Saffire-III",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "saffire2_flow_case_study"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "bass-en-0",
+   "family": "bass:en",
+   "topic": "bass",
+   "style": "en",
+   "text": "What was BASS-II?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "bass-en-1",
+   "family": "bass:en",
+   "topic": "bass",
+   "style": "en",
+   "text": "Describe the Burning and Suppression of Solids experiment BASS",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "bass-enx-0",
+   "family": "bass:enx",
+   "topic": "bass",
+   "style": "enx",
+   "text": "BASS-II glovebox tests summary",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "bass-enx-1",
+   "family": "bass:enx",
+   "topic": "bass",
+   "style": "enx",
+   "text": "PSI-25 overview",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "bass-pt-0",
+   "family": "bass:pt",
+   "topic": "bass",
+   "style": "pt",
+   "text": "O que foi o BASS-II?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "bass-pt-1",
+   "family": "bass:pt",
+   "topic": "bass",
+   "style": "pt",
+   "text": "Explique o experimento BASS",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "same-en-0",
+   "family": "same:en",
+   "topic": "same",
+   "style": "en",
+   "text": "How big are smoke particles from overheated spacecraft materials?",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "same-en-1",
+   "family": "same:en",
+   "topic": "same",
+   "style": "en",
+   "text": "Show smoke particle sizes from SAME-R",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.007,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "same-enx-0",
+   "family": "same:enx",
+   "topic": "same",
+   "style": "enx",
+   "text": "SAME-R aerosol AMD by material",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "same-enx-1",
+   "family": "same:enx",
+   "topic": "same",
+   "style": "enx",
+   "text": "smoke particle diameter chart",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "same-pt-0",
+   "family": "same:pt",
+   "topic": "same",
+   "style": "pt",
+   "text": "Qual o tamanho das part\u00edculas de fuma\u00e7a de materiais superaquecidos?",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "same-pt-1",
+   "family": "same:pt",
+   "topic": "same",
+   "style": "pt",
+   "text": "Mostre o tamanho das part\u00edculas de fuma\u00e7a do SAME-R",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "detection-en-0",
+   "family": "detection:en",
+   "topic": "detection",
+   "style": "en",
+   "text": "What should a spacecraft smoke detector be able to see?",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "detection-en-1",
+   "family": "detection:en",
+   "topic": "detection",
+   "style": "en",
+   "text": "How do I choose smoke detectors for a habitat?",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "detection-enx-0",
+   "family": "detection:enx",
+   "topic": "detection",
+   "style": "enx",
+   "text": "detector sensitivity requirements smoke particles",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "detection-enx-1",
+   "family": "detection:enx",
+   "topic": "detection",
+   "style": "enx",
+   "text": "fire detection in microgravity data",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "detection-pt-0",
+   "family": "detection:pt",
+   "topic": "detection",
+   "style": "pt",
+   "text": "O que um detector de fuma\u00e7a de nave precisa detectar?",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "detection-pt-1",
+   "family": "detection:pt",
+   "topic": "detection",
+   "style": "pt",
+   "text": "Como escolher detectores de fuma\u00e7a para um habitat?",
+   "tools": [
+    "smoke_particle_sizes"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_review-en-0",
+   "family": "lunar_review:en",
+   "topic": "lunar_review",
+   "style": "en",
+   "text": "I'm designing a lunar habitat. What are the main fire safety factors I should consider?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_review-en-1",
+   "family": "lunar_review:en",
+   "topic": "lunar_review",
+   "style": "en",
+   "text": "Fire safety review for a Moon base",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_review-enx-0",
+   "family": "lunar_review:enx",
+   "topic": "lunar_review",
+   "style": "enx",
+   "text": "lunar outpost fire protection considerations",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_review-enx-1",
+   "family": "lunar_review:enx",
+   "topic": "lunar_review",
+   "style": "enx",
+   "text": "planning a base on the moon - fire hazards?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_review-pt-0",
+   "family": "lunar_review:pt",
+   "topic": "lunar_review",
+   "style": "pt",
+   "text": "Estou projetando um habitat lunar. Quais fatores de seguran\u00e7a contra inc\u00eandio devo considerar?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_review-pt-1",
+   "family": "lunar_review:pt",
+   "topic": "lunar_review",
+   "style": "pt",
+   "text": "Revis\u00e3o de seguran\u00e7a contra inc\u00eandio para uma base lunar",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_chart-en-0",
+   "family": "lunar_chart:en",
+   "topic": "lunar_chart",
+   "style": "en",
+   "text": "Do a chart about the main factor on fire safety I should consider while projecting a lunar base.",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_chart-en-1",
+   "family": "lunar_chart:en",
+   "topic": "lunar_chart",
+   "style": "en",
+   "text": "Make a chart of the most important fire safety factors for a lunar habitat",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_chart-enx-0",
+   "family": "lunar_chart:enx",
+   "topic": "lunar_chart",
+   "style": "enx",
+   "text": "graph the key fire risks for my moon base",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_chart-enx-1",
+   "family": "lunar_chart:enx",
+   "topic": "lunar_chart",
+   "style": "enx",
+   "text": "visualize lunar base fire safety priorities",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_chart-pt-0",
+   "family": "lunar_chart:pt",
+   "topic": "lunar_chart",
+   "style": "pt",
+   "text": "Fa\u00e7a um gr\u00e1fico sobre o principal fator de seguran\u00e7a contra inc\u00eandio para uma base lunar",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "lunar_chart-pt-1",
+   "family": "lunar_chart:pt",
+   "topic": "lunar_chart",
+   "style": "pt",
+   "text": "Gere um gr\u00e1fico dos fatores de inc\u00eandio mais importantes para um habitat lunar",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mars_review-en-0",
+   "family": "mars_review:en",
+   "topic": "mars_review",
+   "style": "en",
+   "text": "How should I design fire protection for a Mars habitat?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mars_review-en-1",
+   "family": "mars_review:en",
+   "topic": "mars_review",
+   "style": "en",
+   "text": "What fire risks matter for a Mars base?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mars_review-enx-0",
+   "family": "mars_review:enx",
+   "topic": "mars_review",
+   "style": "enx",
+   "text": "martian habitat fire safety design",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mars_review-enx-1",
+   "family": "mars_review:enx",
+   "topic": "mars_review",
+   "style": "enx",
+   "text": "Mars base fire hazards and evidence",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mars_review-pt-0",
+   "family": "mars_review:pt",
+   "topic": "mars_review",
+   "style": "pt",
+   "text": "Como projetar a prote\u00e7\u00e3o contra inc\u00eandio de um habitat em Marte?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mars_review-pt-1",
+   "family": "mars_review:pt",
+   "topic": "mars_review",
+   "style": "pt",
+   "text": "Quais riscos de inc\u00eandio importam para uma base em Marte?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "station_review-en-0",
+   "family": "station_review:en",
+   "topic": "station_review",
+   "style": "en",
+   "text": "What fire safety factors matter most on a space station?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "station_review-en-1",
+   "family": "station_review:en",
+   "topic": "station_review",
+   "style": "en",
+   "text": "Review fire safety for an orbital station",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "station_review-enx-0",
+   "family": "station_review:enx",
+   "topic": "station_review",
+   "style": "enx",
+   "text": "ISS-like station fire protection priorities",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "station_review-enx-1",
+   "family": "station_review:enx",
+   "topic": "station_review",
+   "style": "enx",
+   "text": "space station fire hazards ranking",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "station_review-pt-0",
+   "family": "station_review:pt",
+   "topic": "station_review",
+   "style": "pt",
+   "text": "Quais fatores de seguran\u00e7a contra inc\u00eandio importam numa esta\u00e7\u00e3o espacial?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "station_review-pt-1",
+   "family": "station_review:pt",
+   "topic": "station_review",
+   "style": "pt",
+   "text": "Revise a seguran\u00e7a contra inc\u00eandio de uma esta\u00e7\u00e3o orbital",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "rover-en-0",
+   "family": "rover:en",
+   "topic": "rover",
+   "style": "en",
+   "text": "Fire safety for a pressurized rover?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "rover-en-1",
+   "family": "rover:en",
+   "topic": "rover",
+   "style": "en",
+   "text": "What should I consider for fire safety in a pressurized rover?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "rover-enx-0",
+   "family": "rover:enx",
+   "topic": "rover",
+   "style": "enx",
+   "text": "pressurized lunar rover fire hazards",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "rover-enx-1",
+   "family": "rover:enx",
+   "topic": "rover",
+   "style": "enx",
+   "text": "rover cabin fire protection",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "rover-pt-0",
+   "family": "rover:pt",
+   "topic": "rover",
+   "style": "pt",
+   "text": "Seguran\u00e7a contra inc\u00eandio em um rover pressurizado?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "rover-pt-1",
+   "family": "rover:pt",
+   "topic": "rover",
+   "style": "pt",
+   "text": "O que considerar sobre inc\u00eandio em um ve\u00edculo pressurizado rover?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "eva-en-0",
+   "family": "eva:en",
+   "topic": "eva",
+   "style": "en",
+   "text": "What would you recommend for an EVA suit?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "eva-en-1",
+   "family": "eva:en",
+   "topic": "eva",
+   "style": "en",
+   "text": "Fire safety considerations for a spacesuit",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "eva-enx-0",
+   "family": "eva:enx",
+   "topic": "eva",
+   "style": "enx",
+   "text": "EVA suit oxygen fire risk",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors",
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.007,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "eva-enx-1",
+   "family": "eva:enx",
+   "topic": "eva",
+   "style": "enx",
+   "text": "space suit flammability concerns",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "eva-pt-0",
+   "family": "eva:pt",
+   "topic": "eva",
+   "style": "pt",
+   "text": "O que voc\u00ea recomendaria para um traje EVA?",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "eva-pt-1",
+   "family": "eva:pt",
+   "topic": "eva",
+   "style": "pt",
+   "text": "Riscos de inc\u00eandio em um traje espacial",
+   "tools": [
+    "fire_safety_factors"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "battery-en-0",
+   "family": "battery:en",
+   "topic": "battery",
+   "style": "en",
+   "text": "How should I protect a battery compartment from fire?",
+   "tools": [
+    "fire_safety_factors",
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors",
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "battery-en-1",
+   "family": "battery:en",
+   "topic": "battery",
+   "style": "en",
+   "text": "Battery fire safety in a habitat",
+   "tools": [
+    "fire_safety_factors",
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "battery-enx-0",
+   "family": "battery:enx",
+   "topic": "battery",
+   "style": "enx",
+   "text": "lithium battery bay fire design",
+   "tools": [
+    "fire_safety_factors",
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors",
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "battery-enx-1",
+   "family": "battery:enx",
+   "topic": "battery",
+   "style": "enx",
+   "text": "batteries thermal runaway spacecraft",
+   "tools": [
+    "fire_safety_factors",
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "battery-pt-0",
+   "family": "battery:pt",
+   "topic": "battery",
+   "style": "pt",
+   "text": "Como proteger um compartimento de baterias contra inc\u00eandio?",
+   "tools": [
+    "fire_safety_factors",
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors",
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "battery-pt-1",
+   "family": "battery:pt",
+   "topic": "battery",
+   "style": "pt",
+   "text": "Seguran\u00e7a contra inc\u00eandio de baterias em um habitat",
+   "tools": [
+    "fire_safety_factors",
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_psi-en-0",
+   "family": "atm_psi:en",
+   "topic": "atm_psi",
+   "style": "en",
+   "text": "Assess a cabin atmosphere of 8.2 psi and 34% oxygen",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.017,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_psi-en-1",
+   "family": "atm_psi:en",
+   "topic": "atm_psi",
+   "style": "en",
+   "text": "Is 8.2 psi with 34% O2 covered by NASA tests?",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_psi-enx-0",
+   "family": "atm_psi:enx",
+   "topic": "atm_psi",
+   "style": "enx",
+   "text": "8.2 psia 34% O2 atmosphere evaluation",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_psi-enx-1",
+   "family": "atm_psi:enx",
+   "topic": "atm_psi",
+   "style": "enx",
+   "text": "pO2 for 8.2 psi at 34 percent oxygen",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "atm_psi-pt-0",
+   "family": "atm_psi:pt",
+   "topic": "atm_psi",
+   "style": "pt",
+   "text": "Avalie uma atmosfera de 8.2 psi e 34% de oxig\u00eanio",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_psi-pt-1",
+   "family": "atm_psi:pt",
+   "topic": "atm_psi",
+   "style": "pt",
+   "text": "8.2 psi com 34% de O2 foi testado pela NASA?",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_kpa-en-0",
+   "family": "atm_kpa:en",
+   "topic": "atm_kpa",
+   "style": "en",
+   "text": "Evaluate 70 kPa with 26.5% oxygen",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_kpa-en-1",
+   "family": "atm_kpa:en",
+   "topic": "atm_kpa",
+   "style": "en",
+   "text": "What is the oxygen partial pressure at 66.2 kPa and 28.5% O2?",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_kpa-enx-0",
+   "family": "atm_kpa:enx",
+   "topic": "atm_kpa",
+   "style": "enx",
+   "text": "70 kpa 26.5 % o2 coverage",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "evidence_coverage_matrix",
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_kpa-enx-1",
+   "family": "atm_kpa:enx",
+   "topic": "atm_kpa",
+   "style": "enx",
+   "text": "assess 1 atm 30% oxygen atmosphere",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_kpa-pt-0",
+   "family": "atm_kpa:pt",
+   "topic": "atm_kpa",
+   "style": "pt",
+   "text": "Avalie 70 kPa com 26.5% de oxig\u00eanio",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "atm_kpa-pt-1",
+   "family": "atm_kpa:pt",
+   "topic": "atm_kpa",
+   "style": "pt",
+   "text": "Qual a press\u00e3o parcial de oxig\u00eanio a 66.2 kPa e 28.5% de O2?",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "oxygen_general-en-0",
+   "family": "oxygen_general:en",
+   "topic": "oxygen_general",
+   "style": "en",
+   "text": "How does oxygen concentration affect the flammability of materials in space?",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence",
+    "assess_atmosphere"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.007,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "oxygen_general-en-1",
+   "family": "oxygen_general:en",
+   "topic": "oxygen_general",
+   "style": "en",
+   "text": "What changes if oxygen concentration increases?",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence",
+    "assess_atmosphere"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "oxygen_general-enx-0",
+   "family": "oxygen_general:enx",
+   "topic": "oxygen_general",
+   "style": "enx",
+   "text": "more O2 more fire? evidence",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence",
+    "assess_atmosphere"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "oxygen_general-enx-1",
+   "family": "oxygen_general:enx",
+   "topic": "oxygen_general",
+   "style": "enx",
+   "text": "effect of oxygen enrichment on flammability",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence",
+    "assess_atmosphere"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "oxygen_general-pt-0",
+   "family": "oxygen_general:pt",
+   "topic": "oxygen_general",
+   "style": "pt",
+   "text": "Como a concentra\u00e7\u00e3o de oxig\u00eanio afeta a inflamabilidade dos materiais no espa\u00e7o?",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence",
+    "assess_atmosphere"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "oxygen_general-pt-1",
+   "family": "oxygen_general:pt",
+   "topic": "oxygen_general",
+   "style": "pt",
+   "text": "O que muda se a concentra\u00e7\u00e3o de oxig\u00eanio aumentar?",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence",
+    "assess_atmosphere"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "gravity-en-0",
+   "family": "gravity:en",
+   "topic": "gravity",
+   "style": "en",
+   "text": "Compare orbital microgravity with lunar gravity.",
+   "tools": [
+    "compare_gravity_regimes"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_gravity_regimes"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "gravity-en-1",
+   "family": "gravity:en",
+   "topic": "gravity",
+   "style": "en",
+   "text": "How does fire behave in lunar gravity compared with microgravity?",
+   "tools": [
+    "compare_gravity_regimes"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_gravity_regimes"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "gravity-enx-0",
+   "family": "gravity:enx",
+   "topic": "gravity",
+   "style": "enx",
+   "text": "moon gravity vs orbit flame spread",
+   "tools": [
+    "compare_gravity_regimes"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_gravity_regimes"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "gravity-enx-1",
+   "family": "gravity:enx",
+   "topic": "gravity",
+   "style": "enx",
+   "text": "partial gravity vs microgravity flames",
+   "tools": [
+    "compare_gravity_regimes"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "gravity-pt-0",
+   "family": "gravity:pt",
+   "topic": "gravity",
+   "style": "pt",
+   "text": "Compare a microgravidade orbital com a gravidade lunar",
+   "tools": [
+    "compare_gravity_regimes"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_gravity_regimes"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "gravity-pt-1",
+   "family": "gravity:pt",
+   "topic": "gravity",
+   "style": "pt",
+   "text": "Como o fogo se comporta na gravidade lunar comparado \u00e0 microgravidade?",
+   "tools": [
+    "compare_gravity_regimes"
+   ],
+   "blocks": [
+    "chart",
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_gravity_regimes"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_cmp-en-0",
+   "family": "materials_cmp:en",
+   "topic": "materials_cmp",
+   "style": "en",
+   "text": "Can we compare silicone and PMMA?",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence"
+   ],
+   "latency_s": 0.007,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_cmp-en-1",
+   "family": "materials_cmp:en",
+   "topic": "materials_cmp",
+   "style": "en",
+   "text": "Which is more flammable in microgravity, silicone or PMMA?",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_cmp-enx-0",
+   "family": "materials_cmp:enx",
+   "topic": "materials_cmp",
+   "style": "enx",
+   "text": "silicone vs pmma microgravity data",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_cmp-enx-1",
+   "family": "materials_cmp:enx",
+   "topic": "materials_cmp",
+   "style": "enx",
+   "text": "compare Nomex and SIBAL fabric evidence",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_cmp-pt-0",
+   "family": "materials_cmp:pt",
+   "topic": "materials_cmp",
+   "style": "pt",
+   "text": "Podemos comparar silicone e PMMA?",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_cmp-pt-1",
+   "family": "materials_cmp:pt",
+   "topic": "materials_cmp",
+   "style": "pt",
+   "text": "Qual \u00e9 mais inflam\u00e1vel em microgravidade, silicone ou PMMA?",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_one-en-0",
+   "family": "materials_one:en",
+   "topic": "materials_one",
+   "style": "en",
+   "text": "Which NASA experiments are most relevant to Kapton?",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence"
+   ],
+   "latency_s": 0.003,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_one-en-1",
+   "family": "materials_one:en",
+   "topic": "materials_one",
+   "style": "en",
+   "text": "What do we know about Teflon smoke?",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.009,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_one-enx-0",
+   "family": "materials_one:enx",
+   "topic": "materials_one",
+   "style": "enx",
+   "text": "kapton evidence",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence"
+   ],
+   "latency_s": 0.003,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_one-enx-1",
+   "family": "materials_one:enx",
+   "topic": "materials_one",
+   "style": "enx",
+   "text": "teflon pyrolysis smoke data",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.008,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_one-pt-0",
+   "family": "materials_one:pt",
+   "topic": "materials_one",
+   "style": "pt",
+   "text": "Quais experimentos da NASA s\u00e3o relevantes para Kapton?",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence"
+   ],
+   "latency_s": 0.003,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "materials_one-pt-1",
+   "family": "materials_one:pt",
+   "topic": "materials_one",
+   "style": "pt",
+   "text": "O que sabemos sobre a fuma\u00e7a do Teflon?",
+   "tools": [
+    "materials_evidence"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.008,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "ventilation-en-0",
+   "family": "ventilation:en",
+   "topic": "ventilation",
+   "style": "en",
+   "text": "Compare ventilation designs for a battery bay: connected versus isolated compartments.",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors",
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "ventilation-en-1",
+   "family": "ventilation:en",
+   "topic": "ventilation",
+   "style": "en",
+   "text": "How does ventilation affect smoke spread between compartments?",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.012,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "ventilation-enx-0",
+   "family": "ventilation:enx",
+   "topic": "ventilation",
+   "style": "enx",
+   "text": "compartment smoke transport model",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.011,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "ventilation-enx-1",
+   "family": "ventilation:enx",
+   "topic": "ventilation",
+   "style": "enx",
+   "text": "isolated vs connected bays airflow",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "ventilation-pt-0",
+   "family": "ventilation:pt",
+   "topic": "ventilation",
+   "style": "pt",
+   "text": "Compare projetos de ventila\u00e7\u00e3o: compartimentos conectados versus isolados",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "ventilation-pt-1",
+   "family": "ventilation:pt",
+   "topic": "ventilation",
+   "style": "pt",
+   "text": "Como a ventila\u00e7\u00e3o afeta a fuma\u00e7a entre compartimentos?",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.011,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "vent_fail-en-0",
+   "family": "vent_fail:en",
+   "topic": "vent_fail",
+   "style": "en",
+   "text": "What happens if the ventilation system fails?",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "vent_fail-en-1",
+   "family": "vent_fail:en",
+   "topic": "vent_fail",
+   "style": "en",
+   "text": "What if the fans stop during a fire?",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "vent_fail-enx-0",
+   "family": "vent_fail:enx",
+   "topic": "vent_fail",
+   "style": "enx",
+   "text": "ventilation failure smoke detection microgravity",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.011,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "vent_fail-enx-1",
+   "family": "vent_fail:enx",
+   "topic": "vent_fail",
+   "style": "enx",
+   "text": "loss of airflow during a fire",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "vent_fail-pt-0",
+   "family": "vent_fail:pt",
+   "topic": "vent_fail",
+   "style": "pt",
+   "text": "O que acontece se a ventila\u00e7\u00e3o falhar?",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "vent_fail-pt-1",
+   "family": "vent_fail:pt",
+   "topic": "vent_fail",
+   "style": "pt",
+   "text": "E se os ventiladores pararem durante um inc\u00eandio?",
+   "tools": [
+    "compare_ventilation_designs"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "coverage-en-0",
+   "family": "coverage:en",
+   "topic": "coverage",
+   "style": "en",
+   "text": "What evidence gaps exist for spacecraft fire safety?",
+   "tools": [
+    "evidence_coverage_matrix"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "evidence_coverage_matrix"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "coverage-en-1",
+   "family": "coverage:en",
+   "topic": "coverage",
+   "style": "en",
+   "text": "Which evidence supports which engineering decisions?",
+   "tools": [
+    "evidence_coverage_matrix"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "evidence_coverage_matrix"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "coverage-enx-0",
+   "family": "coverage:enx",
+   "topic": "coverage",
+   "style": "enx",
+   "text": "evidence coverage map",
+   "tools": [
+    "evidence_coverage_matrix"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "evidence_coverage_matrix"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "coverage-enx-1",
+   "family": "coverage:enx",
+   "topic": "coverage",
+   "style": "enx",
+   "text": "what data exist and what is missing",
+   "tools": [
+    "evidence_coverage_matrix"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "evidence_coverage_matrix"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "coverage-pt-0",
+   "family": "coverage:pt",
+   "topic": "coverage",
+   "style": "pt",
+   "text": "Quais lacunas de evid\u00eancia existem para seguran\u00e7a contra inc\u00eandio?",
+   "tools": [
+    "evidence_coverage_matrix"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "evidence_coverage_matrix"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "coverage-pt-1",
+   "family": "coverage:pt",
+   "topic": "coverage",
+   "style": "pt",
+   "text": "Mostre a cobertura de evid\u00eancias",
+   "tools": [
+    "evidence_coverage_matrix"
+   ],
+   "blocks": [
+    "matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "evidence_coverage_matrix"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "droplet_calc-en-0",
+   "family": "droplet_calc:en",
+   "topic": "droplet_calc",
+   "style": "en",
+   "text": "How long does a 3 mm heptane droplet burn?",
+   "tools": [
+    "droplet_burn_time"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "droplet_burn_time"
+   ],
+   "latency_s": 0.003,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "droplet_calc-en-1",
+   "family": "droplet_calc:en",
+   "topic": "droplet_calc",
+   "style": "en",
+   "text": "Burn time of a 2 mm methanol droplet in air",
+   "tools": [
+    "droplet_burn_time"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "droplet_burn_time"
+   ],
+   "latency_s": 0.003,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "droplet_calc-enx-0",
+   "family": "droplet_calc:enx",
+   "topic": "droplet_calc",
+   "style": "enx",
+   "text": "d2 law burnout 4 mm heptane droplet",
+   "tools": [
+    "droplet_burn_time"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "droplet_burn_time"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "droplet_calc-enx-1",
+   "family": "droplet_calc:enx",
+   "topic": "droplet_calc",
+   "style": "enx",
+   "text": "droplet 1.5 mm heptane burning time",
+   "tools": [
+    "droplet_burn_time"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "droplet_burn_time"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "droplet_calc-pt-0",
+   "family": "droplet_calc:pt",
+   "topic": "droplet_calc",
+   "style": "pt",
+   "text": "Quanto tempo queima uma gota de heptano de 3 mm?",
+   "tools": [
+    "droplet_burn_time"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "droplet_burn_time"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "droplet_calc-pt-1",
+   "family": "droplet_calc:pt",
+   "topic": "droplet_calc",
+   "style": "pt",
+   "text": "Tempo de queima de uma gota de metanol de 2 mm",
+   "tools": [
+    "droplet_burn_time"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "droplet_burn_time"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "suppression-en-0",
+   "family": "suppression:en",
+   "topic": "suppression",
+   "style": "en",
+   "text": "How effective is CO2 or helium dilution at suppressing fires?",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence",
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence"
+   ],
+   "latency_s": 0.008,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "suppression-en-1",
+   "family": "suppression:en",
+   "topic": "suppression",
+   "style": "en",
+   "text": "What does NASA data say about fire suppression with inert gases?",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence",
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence"
+   ],
+   "latency_s": 0.011,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "suppression-enx-0",
+   "family": "suppression:enx",
+   "topic": "suppression",
+   "style": "enx",
+   "text": "helium vs nitrogen diluent extinction",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence",
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence"
+   ],
+   "latency_s": 0.007,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "suppression-enx-1",
+   "family": "suppression:enx",
+   "topic": "suppression",
+   "style": "enx",
+   "text": "inerting effectiveness microgravity",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence",
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence"
+   ],
+   "latency_s": 0.008,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "suppression-pt-0",
+   "family": "suppression:pt",
+   "topic": "suppression",
+   "style": "pt",
+   "text": "Qu\u00e3o eficaz \u00e9 a dilui\u00e7\u00e3o com CO2 ou h\u00e9lio para suprimir inc\u00eandios?",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence",
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "suppression-pt-1",
+   "family": "suppression:pt",
+   "topic": "suppression",
+   "style": "pt",
+   "text": "O que os dados da NASA dizem sobre supress\u00e3o com gases inertes?",
+   "tools": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence",
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "apollo1-en-0",
+   "family": "apollo1:en",
+   "topic": "apollo1",
+   "style": "en",
+   "text": "What happened in Apollo 1 and what does it teach about cabin fires?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "apollo1-en-1",
+   "family": "apollo1:en",
+   "topic": "apollo1",
+   "style": "en",
+   "text": "Lessons from the Apollo 1 fire",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "apollo1-enx-0",
+   "family": "apollo1:enx",
+   "topic": "apollo1",
+   "style": "enx",
+   "text": "apollo 1 pure oxygen fire lessons",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "apollo1-enx-1",
+   "family": "apollo1:enx",
+   "topic": "apollo1",
+   "style": "enx",
+   "text": "AS-204 fire cause",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "apollo1-pt-0",
+   "family": "apollo1:pt",
+   "topic": "apollo1",
+   "style": "pt",
+   "text": "O que aconteceu na Apollo 1 e o que ensina sobre inc\u00eandios em cabine?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "apollo1-pt-1",
+   "family": "apollo1:pt",
+   "topic": "apollo1",
+   "style": "pt",
+   "text": "Li\u00e7\u00f5es do inc\u00eandio da Apollo 1",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mir-en-0",
+   "family": "mir:en",
+   "topic": "mir",
+   "style": "en",
+   "text": "What can we learn from the Mir oxygen generator fire?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mir-en-1",
+   "family": "mir:en",
+   "topic": "mir",
+   "style": "en",
+   "text": "Mir 1997 fire lessons",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mir-enx-0",
+   "family": "mir:enx",
+   "topic": "mir",
+   "style": "enx",
+   "text": "oxygen candle fire station",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mir-enx-1",
+   "family": "mir:enx",
+   "topic": "mir",
+   "style": "enx",
+   "text": "Mir fire egress blocked",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mir-pt-0",
+   "family": "mir:pt",
+   "topic": "mir",
+   "style": "pt",
+   "text": "O que aprendemos com o inc\u00eandio do gerador de oxig\u00eanio da Mir?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "mir-pt-1",
+   "family": "mir:pt",
+   "topic": "mir",
+   "style": "pt",
+   "text": "Li\u00e7\u00f5es do inc\u00eandio da Mir em 1997",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "cfi-en-0",
+   "family": "cfi:en",
+   "topic": "cfi",
+   "style": "en",
+   "text": "What did the Cool Flames Investigation study?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": false,
+   "called": [],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "cfi-en-1",
+   "family": "cfi:en",
+   "topic": "cfi",
+   "style": "en",
+   "text": "Tell me about CFI",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "cfi-enx-0",
+   "family": "cfi:enx",
+   "topic": "cfi",
+   "style": "enx",
+   "text": "cool flames investigation ISS",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": false,
+   "called": [],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "cfi-enx-1",
+   "family": "cfi:enx",
+   "topic": "cfi",
+   "style": "enx",
+   "text": "PSI-39 summary",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "cfi-pt-0",
+   "family": "cfi:pt",
+   "topic": "cfi",
+   "style": "pt",
+   "text": "O que a investiga\u00e7\u00e3o de chamas frias CFI estudou?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "cfi-pt-1",
+   "family": "cfi:pt",
+   "topic": "cfi",
+   "style": "pt",
+   "text": "Fale sobre o CFI",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "acme-en-0",
+   "family": "acme:en",
+   "topic": "acme",
+   "style": "en",
+   "text": "What is ACME?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "acme-en-1",
+   "family": "acme:en",
+   "topic": "acme",
+   "style": "en",
+   "text": "Describe the ACME gaseous flame experiments",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "acme-enx-0",
+   "family": "acme:enx",
+   "topic": "acme",
+   "style": "enx",
+   "text": "ACME coflow laminar diffusion flames",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "acme-enx-1",
+   "family": "acme:enx",
+   "topic": "acme",
+   "style": "enx",
+   "text": "Advanced Combustion via Microgravity Experiments overview",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "acme-pt-0",
+   "family": "acme:pt",
+   "topic": "acme",
+   "style": "pt",
+   "text": "O que \u00e9 o ACME?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "acme-pt-1",
+   "family": "acme:pt",
+   "topic": "acme",
+   "style": "pt",
+   "text": "Descreva os experimentos de chamas gasosas ACME",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "sofie-en-0",
+   "family": "sofie:en",
+   "topic": "sofie",
+   "style": "en",
+   "text": "What is SoFIE?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "sofie-en-1",
+   "family": "sofie:en",
+   "topic": "sofie",
+   "style": "en",
+   "text": "Do you have SoFIE data?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "sofie-enx-0",
+   "family": "sofie:enx",
+   "topic": "sofie",
+   "style": "enx",
+   "text": "Solid Fuel Ignition and Extinction SoFIE results",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "sofie-enx-1",
+   "family": "sofie:enx",
+   "topic": "sofie",
+   "style": "enx",
+   "text": "sofie flammability exploration atmospheres",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "sofie-pt-0",
+   "family": "sofie:pt",
+   "topic": "sofie",
+   "style": "pt",
+   "text": "O que \u00e9 o SoFIE?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "sofie-pt-1",
+   "family": "sofie:pt",
+   "topic": "sofie",
+   "style": "pt",
+   "text": "Voc\u00ea tem dados do SoFIE?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "recommend_test-en-0",
+   "family": "recommend_test:en",
+   "topic": "recommend_test",
+   "style": "en",
+   "text": "Which experiment should I inspect before making this engineering decision?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "recommend_test-en-1",
+   "family": "recommend_test:en",
+   "topic": "recommend_test",
+   "style": "en",
+   "text": "What information would most change your recommendation?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "recommend_test-enx-0",
+   "family": "recommend_test:enx",
+   "topic": "recommend_test",
+   "style": "enx",
+   "text": "what data would most change the recommendation",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "recommend_test-enx-1",
+   "family": "recommend_test:enx",
+   "topic": "recommend_test",
+   "style": "enx",
+   "text": "which experiment should I inspect first",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "recommend_test-pt-0",
+   "family": "recommend_test:pt",
+   "topic": "recommend_test",
+   "style": "pt",
+   "text": "Qual experimento devo examinar antes de tomar essa decis\u00e3o de engenharia?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "recommend_test-pt-1",
+   "family": "recommend_test:pt",
+   "topic": "recommend_test",
+   "style": "pt",
+   "text": "O que mudaria sua recomenda\u00e7\u00e3o?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "help-en-0",
+   "family": "help:en",
+   "topic": "help",
+   "style": "en",
+   "text": "Hello",
+   "tools": [],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "help-en-1",
+   "family": "help:en",
+   "topic": "help",
+   "style": "en",
+   "text": "What can you do?",
+   "tools": [],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "help-enx-0",
+   "family": "help:enx",
+   "topic": "help",
+   "style": "enx",
+   "text": "hi",
+   "tools": [],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "help-enx-1",
+   "family": "help:enx",
+   "topic": "help",
+   "style": "enx",
+   "text": "help",
+   "tools": [],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "help-pt-0",
+   "family": "help:pt",
+   "topic": "help",
+   "style": "pt",
+   "text": "Ol\u00e1",
+   "tools": [],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "help-pt-1",
+   "family": "help:pt",
+   "topic": "help",
+   "style": "pt",
+   "text": "O que voc\u00ea faz?",
+   "tools": [],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "offtopic-en-0",
+   "family": "offtopic:en",
+   "topic": "offtopic",
+   "style": "en",
+   "text": "What is the weather on Mars?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "offtopic-en-1",
+   "family": "offtopic:en",
+   "topic": "offtopic",
+   "style": "en",
+   "text": "Who won the football game?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "offtopic-enx-0",
+   "family": "offtopic:enx",
+   "topic": "offtopic",
+   "style": "enx",
+   "text": "asdf qwerty",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "offtopic-enx-1",
+   "family": "offtopic:enx",
+   "topic": "offtopic",
+   "style": "enx",
+   "text": "tell me a joke about rockets",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "offtopic-pt-0",
+   "family": "offtopic:pt",
+   "topic": "offtopic",
+   "style": "pt",
+   "text": "Qual o clima em Marte?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "offtopic-pt-1",
+   "family": "offtopic:pt",
+   "topic": "offtopic",
+   "style": "pt",
+   "text": "Quem ganhou o jogo de futebol?",
+   "tools": [
+    "search_evidence"
+   ],
+   "blocks": [],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "export_empty-en-0",
+   "family": "export_empty:en",
+   "topic": "export_empty",
+   "style": "en",
+   "text": "Export the data",
+   "tools": [
+    "export_data"
+   ],
+   "blocks": [
+    "downloads"
+   ],
+   "tool_ok": true,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "export_data"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "export_empty-en-1",
+   "family": "export_empty:en",
+   "topic": "export_empty",
+   "style": "en",
+   "text": "Can you export the data behind that graph?",
+   "tools": [
+    "export_data"
+   ],
+   "blocks": [
+    "downloads"
+   ],
+   "tool_ok": true,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "export_data"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "export_empty-enx-0",
+   "family": "export_empty:enx",
+   "topic": "export_empty",
+   "style": "enx",
+   "text": "download csv",
+   "tools": [
+    "export_data"
+   ],
+   "blocks": [
+    "downloads"
+   ],
+   "tool_ok": true,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "export_data"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "export_empty-enx-1",
+   "family": "export_empty:enx",
+   "topic": "export_empty",
+   "style": "enx",
+   "text": "give me the raw data",
+   "tools": [
+    "export_data"
+   ],
+   "blocks": [
+    "downloads"
+   ],
+   "tool_ok": true,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "export_data"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "export_empty-pt-0",
+   "family": "export_empty:pt",
+   "topic": "export_empty",
+   "style": "pt",
+   "text": "Exportar os dados",
+   "tools": [
+    "export_data"
+   ],
+   "blocks": [
+    "downloads"
+   ],
+   "tool_ok": true,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "export_data"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "export_empty-pt-1",
+   "family": "export_empty:pt",
+   "topic": "export_empty",
+   "style": "pt",
+   "text": "Baixar o CSV",
+   "tools": [
+    "export_data"
+   ],
+   "blocks": [
+    "downloads"
+   ],
+   "tool_ok": true,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "export_data"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "spice-en-0",
+   "family": "spice:en",
+   "topic": "spice",
+   "style": "en",
+   "text": "What was SPICE?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "spice-en-1",
+   "family": "spice:en",
+   "topic": "spice",
+   "style": "en",
+   "text": "Tell me about the Smoke Point In Co-flow Experiment",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "spice-enx-0",
+   "family": "spice:enx",
+   "topic": "spice",
+   "style": "enx",
+   "text": "SPICE soot smoke point",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "spice-enx-1",
+   "family": "spice:enx",
+   "topic": "spice",
+   "style": "enx",
+   "text": "PSI-107 overview",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "spice-pt-0",
+   "family": "spice:pt",
+   "topic": "spice",
+   "style": "pt",
+   "text": "O que foi o SPICE?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "spice-pt-1",
+   "family": "spice:pt",
+   "topic": "spice",
+   "style": "pt",
+   "text": "Fale sobre o experimento SPICE",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "daft-en-0",
+   "family": "daft:en",
+   "topic": "daft",
+   "style": "en",
+   "text": "What was DAFT?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "daft-en-1",
+   "family": "daft:en",
+   "topic": "daft",
+   "style": "en",
+   "text": "Tell me about the Dust and Aerosol Measurement Feasibility Test",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "daft-enx-0",
+   "family": "daft:enx",
+   "topic": "daft",
+   "style": "enx",
+   "text": "DAFT dust aerosol ISS",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "daft-enx-1",
+   "family": "daft:enx",
+   "topic": "daft",
+   "style": "enx",
+   "text": "PSI-47 summary",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "daft-pt-0",
+   "family": "daft:pt",
+   "topic": "daft",
+   "style": "pt",
+   "text": "O que foi o DAFT?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "daft-pt-1",
+   "family": "daft:pt",
+   "topic": "daft",
+   "style": "pt",
+   "text": "Fale sobre o experimento DAFT",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex2-en-0",
+   "family": "flex2:en",
+   "topic": "flex2",
+   "style": "en",
+   "text": "What was FLEX-2?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex2-en-1",
+   "family": "flex2:en",
+   "topic": "flex2",
+   "style": "en",
+   "text": "Tell me about FLEX-2",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex2-enx-0",
+   "family": "flex2:enx",
+   "topic": "flex2",
+   "style": "enx",
+   "text": "flex 2 fuels and conditions",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex2-enx-1",
+   "family": "flex2:enx",
+   "topic": "flex2",
+   "style": "enx",
+   "text": "PSI-68 overview",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex2-pt-0",
+   "family": "flex2:pt",
+   "topic": "flex2",
+   "style": "pt",
+   "text": "O que foi o FLEX-2?",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "flex2-pt-1",
+   "family": "flex2:pt",
+   "topic": "flex2",
+   "style": "pt",
+   "text": "Fale sobre o FLEX-2",
+   "tools": [
+    "experiment_overview"
+   ],
+   "blocks": [
+    "table"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "o2_whatif_value-en-0",
+   "family": "o2_whatif_value:en",
+   "topic": "o2_whatif_value",
+   "style": "en",
+   "text": "What changes if O2 goes to 30% at 101 kPa?",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "o2_whatif_value-en-1",
+   "family": "o2_whatif_value:en",
+   "topic": "o2_whatif_value",
+   "style": "en",
+   "text": "What if we use 101 kPa and 30% oxygen?",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "o2_whatif_value-enx-0",
+   "family": "o2_whatif_value:enx",
+   "topic": "o2_whatif_value",
+   "style": "enx",
+   "text": "oxygen raised to 30 percent at 1 atm",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": false,
+   "blocks_ok": false,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "id": "o2_whatif_value-enx-1",
+   "family": "o2_whatif_value:enx",
+   "topic": "o2_whatif_value",
+   "style": "enx",
+   "text": "101 kPa, 30% O2 - covered?",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "o2_whatif_value-pt-0",
+   "family": "o2_whatif_value:pt",
+   "topic": "o2_whatif_value",
+   "style": "pt",
+   "text": "O que muda se o O2 for para 30% a 101 kPa?",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "id": "o2_whatif_value-pt-1",
+   "family": "o2_whatif_value:pt",
+   "topic": "o2_whatif_value",
+   "style": "pt",
+   "text": "E se usarmos 101 kPa e 30% de oxig\u00eanio?",
+   "tools": [
+    "assess_atmosphere"
+   ],
+   "blocks": [
+    "chart"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  }
+ ],
+ "multi": [
+  {
+   "id": "mt-0-0-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-0-0-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-0-0-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-0-1-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-0-1-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-0-1-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-0-2-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-0-2-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-0-2-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-1-0-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-1-0-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-1-0-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-1-1-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-1-1-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-1-1-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-1-2-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-1-2-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-1-2-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-2-0-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-2-0-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-2-0-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-2-1-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-2-1-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-2-1-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-2-2-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-2-2-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-2-2-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-3-0-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-3-0-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-3-0-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-3-1-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-3-1-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-3-1-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-3-2-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-3-2-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-3-2-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-4-0-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-4-0-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-4-0-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-4-1-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-4-1-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-4-1-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-4-2-0",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-4-2-1",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  },
+  {
+   "id": "mt-4-2-2",
+   "turns": 4,
+   "turns_passed": 4,
+   "pass": true,
+   "state_retained": true
+  }
+ ],
+ "holdout": [
+  {
+   "text": "I need to pick wall panels for a lunar lander cabin at 34% oxygen; what evidence exists?",
+   "expected_any": [
+    "fire_safety_factors",
+    "assess_atmosphere",
+    "materials_evidence",
+    "search_evidence"
+   ],
+   "tool_ok": false,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "evidence_coverage_matrix"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "text": "Is NASA-STD-6001 upward flammability testing conservative for microgravity?",
+   "expected_any": [
+    "search_evidence",
+    "materials_evidence",
+    "get_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "If a methanol leak forms 4 mm droplets, how long would they burn?",
+   "expected_any": [
+    "droplet_burn_time"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "droplet_burn_time"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Plot how much oxygen is available at 56.5 kPa and 34% compared with the ISS",
+   "expected_any": [
+    "assess_atmosphere"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors",
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Our station uses 0.2 m/s cabin airflow - does that make flames spread faster?",
+   "expected_any": [
+    "search_evidence",
+    "saffire2_flow_case_study",
+    "compare_ventilation_designs",
+    "fire_safety_factors"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "compare_ventilation_designs"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Which NASA experiment burned the largest sample ever in space?",
+   "expected_any": [
+    "search_evidence",
+    "experiment_overview"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Could a fire on Mars spread faster than on the Moon?",
+   "expected_any": [
+    "compare_gravity_regimes",
+    "fire_safety_factors"
+   ],
+   "tool_ok": false,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "text": "Show me the measured diameter curve for the heptane droplet that kept vaporizing",
+   "expected_any": [
+    "flex035_case_study"
+   ],
+   "tool_ok": false,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "text": "Is there any battery thermal runaway data in your database?",
+   "expected_any": [
+    "fire_safety_factors",
+    "search_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "How many combustion investigations are in PSI and how big is the archive?",
+   "expected_any": [
+    "search_evidence",
+    "evidence_coverage_matrix"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "What would happen to the burning rate if we replaced nitrogen with helium?",
+   "expected_any": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence",
+    "search_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Fa\u00e7a uma tabela comparando Kapton e Teflon",
+   "expected_any": [
+    "materials_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "materials_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Qual atmosfera \u00e9 mais segura: 66.2 kPa com 28.5% ou 56.5 kPa com 34%?",
+   "expected_any": [
+    "assess_atmosphere"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.002,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Quais experimentos usaram fuma\u00e7a e detectores?",
+   "expected_any": [
+    "smoke_particle_sizes",
+    "search_evidence",
+    "experiment_overview"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Explique por que a gravidade lunar n\u00e3o pode ser interpolada",
+   "expected_any": [
+    "compare_gravity_regimes",
+    "get_evidence",
+    "search_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "airlock dust and smoke detectors false alarms?",
+   "expected_any": [
+    "smoke_particle_sizes",
+    "search_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Give me a decision matrix for a crew capsule",
+   "expected_any": [
+    "fire_safety_factors"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Does the PSI FLEX table have any errors?",
+   "expected_any": [
+    "experiment_overview",
+    "flex_query",
+    "search_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "What did BASS-II do with nitrogen?",
+   "expected_any": [
+    "experiment_overview",
+    "search_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "How long until smoke from a battery bay reaches the crew module?",
+   "expected_any": [
+    "compare_ventilation_designs",
+    "fire_safety_factors"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors",
+    "compare_ventilation_designs",
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.01,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Convert 10.2 psi to kPa",
+   "expected_any": [
+    "convert_units",
+    "assess_atmosphere",
+    "search_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "I'm using Nomex and PMMA in a Mars habitat at 70 kPa and 26.5% O2 - review it",
+   "expected_any": [
+    "fire_safety_factors",
+    "materials_evidence",
+    "assess_atmosphere"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors",
+    "materials_evidence",
+    "assess_atmosphere"
+   ],
+   "latency_s": 0.007,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Did any silicone sample burn in Saffire-II?",
+   "expected_any": [
+    "materials_evidence",
+    "saffire2_flow_case_study",
+    "experiment_overview"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "experiment_overview",
+    "saffire2_flow_case_study",
+    "materials_evidence"
+   ],
+   "latency_s": 0.008,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "What's the evidence for cool flames at high pressure?",
+   "expected_any": [
+    "flex035_case_study",
+    "search_evidence",
+    "experiment_overview"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "flex035_case_study"
+   ],
+   "latency_s": 0.004,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Which is riskier, pure oxygen at 34 kPa or air at 101 kPa?",
+   "expected_any": [
+    "assess_atmosphere",
+    "search_evidence",
+    "chart_flex_burning_rate_vs_oxygen"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.001,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Summarize the lessons of Apollo 13 for oxygen tanks on a lunar base",
+   "expected_any": [
+    "search_evidence",
+    "fire_safety_factors"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors",
+    "chart_flex_burning_rate_vs_oxygen",
+    "search_evidence"
+   ],
+   "latency_s": 0.006,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Graph smoke particle size versus material",
+   "expected_any": [
+    "smoke_particle_sizes"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "smoke_particle_sizes"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "What experiments support suppression design?",
+   "expected_any": [
+    "evidence_coverage_matrix",
+    "search_evidence",
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "chart_flex_burning_rate_vs_oxygen",
+    "get_evidence"
+   ],
+   "latency_s": 0.005,
+   "mode": "offline",
+   "pass": true
+  },
+  {
+   "text": "Is the ISS cabin atmosphere covered by solid-material tests?",
+   "expected_any": [
+    "assess_atmosphere",
+    "search_evidence",
+    "evidence_coverage_matrix"
+   ],
+   "tool_ok": false,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "fire_safety_factors"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": false
+  },
+  {
+   "text": "Which of your findings has the biggest uncertainty?",
+   "expected_any": [
+    "search_evidence",
+    "get_evidence"
+   ],
+   "tool_ok": true,
+   "blocks_ok": true,
+   "no_error": true,
+   "called": [
+    "search_evidence"
+   ],
+   "latency_s": 0.0,
+   "mode": "offline",
+   "pass": true
+  }
+ ]
+}

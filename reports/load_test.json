@@ -1,0 +1,14 @@
+{
+ "users": 50,
+ "turns_per_user": 4,
+ "requests": 200,
+ "wall_s": 0.75,
+ "throughput_rps": 268.2,
+ "isolation_ok": 50,
+ "errors": [],
+ "latency_s": {
+  "p50": 0.093,
+  "p95": 0.502,
+  "max": 0.538
+ }
+}

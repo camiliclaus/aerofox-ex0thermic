@@ -1,0 +1,135 @@
+{
+ "generated_at": "2026-11-14T22:35:46Z",
+ "tables": {
+  "investigations": 24,
+  "catalog_summary": 139,
+  "flex_tests": 274,
+  "flex_droplet_fits": 260,
+  "flex035_timeseries": 1165,
+  "cfi_tests": 87,
+  "saffire_samples": 13,
+  "saffire2_flow": 9,
+  "bass2_tests": 129,
+  "same_r_tests": 109,
+  "same_reduced": 154,
+  "same_r_detectors": 109,
+  "table_PSI-10_flame_design_inverse_flame": 120,
+  "table_PSI-10_flame_design_normal_flame": 207,
+  "table_PSI-102_same": 8,
+  "table_PSI-106_slice": 12,
+  "table_PSI-107_spice": 469,
+  "table_PSI-142_data_summary_table": 8,
+  "table_PSI-159_cfi_g_inverse_flames": 154,
+  "table_PSI-159_cfi_g_normal_flames": 179,
+  "table_PSI-20_acme_bre": 18,
+  "table_PSI-21_cld_flame": 32,
+  "table_PSI-22_acme_e_field_flames": 32,
+  "table_PSI-23_acme_s_flame": 18,
+  "table_PSI-26_bass": 122,
+  "table_PSI-47_daft": 2,
+  "table_PSI-68_flex2": 8,
+  "psi117_mst_2024_burning_history_flame_diameter": 683,
+  "psi117_mst_2024_dext": 9,
+  "psi117_mst_2024_kavg": 19,
+  "psi117_mst_2024_radiance_flame_diameter": 683,
+  "psi117_proci_2019_oscillatory_cool_flame": 640,
+  "psi117_proci_2019_stable_cool": 243,
+  "psi117_proci_2023_alkane_extinction_diameter_1atm": 6,
+  "psi117_proci_2023_c12_extinction_diameter_vs_pressure": 6,
+  "psi117_proci_c12_2019_three_stage": 571,
+  "quality_audit_columns": 567
+ },
+ "catalog": {
+  "entries": 66567,
+  "unique_keys": 60797,
+  "unique_name_size_pairs": 60796,
+  "referenced_bytes": 13496753397871,
+  "referenced_bytes_dedup_name_size": 13471817736741
+ },
+ "log": [
+  {
+   "table": "flex_tests",
+   "action": "rename",
+   "detail": "column 'Burning rate; mm' interpreted as K in mm^2/s (test sheets state kavg (mm2/s))",
+   "rows_affected": null
+  },
+  {
+   "table": "flex_tests",
+   "action": "rename",
+   "detail": "columns 'O/N/CO initial ambient composition' interpreted as O2/N2/CO2 mole fractions",
+   "rows_affected": null
+  },
+  {
+   "table": "flex_tests",
+   "action": "rekey",
+   "detail": "official FLEX number assigned from CIR identifier using NASA/TP-2015-216046 test list",
+   "rows_affected": 119
+  },
+  {
+   "table": "flex_tests",
+   "action": "flag",
+   "detail": "ambient pressure <= 0 mmHg flagged (physically impossible for a burning test)",
+   "rows_affected": 1
+  },
+  {
+   "table": "flex_droplet_fits",
+   "action": "fit",
+   "detail": "K from OLS of d^2 vs t on 0.2*tb..0.9*tb (tb = tabulated burn time)",
+   "rows_affected": 260
+  },
+  {
+   "table": "saffire_samples",
+   "action": "units",
+   "detail": "Saffire-I table: length 40.6 cm and width 94 cm appear transposed relative to NTRS 20170008805 (94 x 40.6 cm sample, flow along 94 cm); stored as tabulated",
+   "rows_affected": null
+  },
+  {
+   "table": "saffire_samples",
+   "action": "correct",
+   "detail": "Saffire-II 2-4: thickness '037 mm' read as 0.37 mm (NTRS 20170008805 lists 0.37 mm)",
+   "rows_affected": 1
+  },
+  {
+   "table": "saffire_samples",
+   "action": "correct",
+   "detail": "Saffire-II 2-5: thickness '037 mm' read as 0.37 mm (NTRS 20170008805 lists 0.37 mm)",
+   "rows_affected": 1
+  },
+  {
+   "table": "saffire_samples",
+   "action": "correct",
+   "detail": "Saffire-II 2-6: thickness '037 mm' read as 0.37 mm (NTRS 20170008805 lists 0.37 mm)",
+   "rows_affected": 1
+  },
+  {
+   "table": "saffire_samples",
+   "action": "fill",
+   "detail": "Saffire-II 2-6 material blank in PSI table; filled from NTRS 20170008805",
+   "rows_affected": 1
+  },
+  {
+   "table": "saffire_samples",
+   "action": "fill",
+   "detail": "Saffire-II 2-9 material blank in PSI table; filled from NTRS 20170008805",
+   "rows_affected": 1
+  },
+  {
+   "table": "saffire2_flow",
+   "action": "units",
+   "detail": "RelativeSeconds column contains milliseconds; divided by 1000",
+   "rows_affected": null
+  },
+  {
+   "table": "bass2_tests",
+   "action": "flag",
+   "detail": "o2_final > o2_init + 1 vol% flagged as implausible (no O2 source in MSG work volume)",
+   "rows_affected": 2
+  },
+  {
+   "table": "same_reduced",
+   "action": "nullify",
+   "detail": "zero particle moments treated as not measured",
+   "rows_affected": null
+  }
+ ]
+}
